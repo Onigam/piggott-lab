@@ -1,0 +1,2483 @@
+{
+  "lang": "en",
+  "model": "eleven_v4",
+  "generatedAt": "2026-10-29T22:32:41.214Z",
+  "voiceLabel": {
+    "fr": "Voix de synthèse",
+    "en": "Synthetic voice"
+  },
+  "totalSeconds": 1011.36,
+  "segments": [
+    {
+      "id": "intro",
+      "scope": "intro",
+      "title": "Presentation of the lab",
+      "scene": "site",
+      "file": "intro.mp3",
+      "duration": 112.32,
+      "chars": 1688,
+      "hash": "d57141cd64e31287",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 7.2,
+          "text": "Picture a hillside swept by the wind, and, at the foot of the slope, a hamlet far from the power grid."
+        },
+        {
+          "t0": 7.2,
+          "t1": 9.16,
+          "text": "No line, no socket."
+        },
+        {
+          "t0": 9.16,
+          "t1": 12.16,
+          "text": "Just wind, planks, magnets…"
+        },
+        {
+          "t0": 12.16,
+          "t1": 13.6,
+          "text": "and patience."
+        },
+        {
+          "t0": 13.6,
+          "t1": 15.08,
+          "text": "Let’s follow a gust."
+        },
+        {
+          "t0": 15.08,
+          "t1": 21.12,
+          "text": "It rushes in from the far end of the valley, and climbs the guyed mast, all the way up to the machine."
+        },
+        {
+          "t0": 21.12,
+          "t1": 24.6,
+          "text": "There, three wooden blades, carved by hand."
+        },
+        {
+          "t0": 24.6,
+          "t1": 27.52,
+          "text": "It pushes: the rotor starts to turn."
+        },
+        {
+          "t0": 27.52,
+          "t1": 32.12,
+          "text": "Up there, the whole machine swivels on its mast to stay facing the wind."
+        },
+        {
+          "t0": 32.12,
+          "t1": 38.48,
+          "text": "At the heart of the machine, magnets sweep past copper coils: the gust becomes electric current!"
+        },
+        {
+          "t0": 38.48,
+          "t1": 41,
+          "text": "No gearbox, nothing superfluous."
+        },
+        {
+          "t0": 41,
+          "t1": 44.36,
+          "text": "The current runs down the mast, then through the technical room."
+        },
+        {
+          "t0": 44.36,
+          "t1": 47.88,
+          "text": "A switch, a rectifier, a fuse, a controller."
+        },
+        {
+          "t0": 47.88,
+          "t1": 52,
+          "text": "It ends up in a battery, which keeps the energy for windless days."
+        },
+        {
+          "t0": 52,
+          "t1": 55.6,
+          "text": "Back on the site, and in the house, a lamp comes on."
+        },
+        {
+          "t0": 55.6,
+          "t1": 60.32,
+          "text": "That is the journey: a gust, three blades, a few magnets…"
+        },
+        {
+          "t0": 60.32,
+          "t1": 61.52,
+          "text": "and light."
+        },
+        {
+          "t0": 61.52,
+          "t1": 63.68,
+          "text": "To begin, a few landmarks."
+        },
+        {
+          "t0": 63.68,
+          "t1": 70.08,
+          "text": "There are five views: the site, the turbine, the alternator, the blades and the technical room."
+        },
+        {
+          "t0": 70.08,
+          "t1": 74.36,
+          "text": "Click any part: its sheet opens, and you can listen to its story."
+        },
+        {
+          "t0": 74.36,
+          "t1": 79.72,
+          "text": "The assembly guide carves the blades, builds the alternator, then puts the machine together."
+        },
+        {
+          "t0": 79.72,
+          "t1": 84.08,
+          "text": "The installation guide goes from choosing the site to the first start-up."
+        },
+        {
+          "t0": 84.08,
+          "t1": 89.8,
+          "text": "The simulation lets you change the wind and the size of the machine, and watch the storm arrive."
+        },
+        {
+          "t0": 89.8,
+          "t1": 92.84,
+          "text": "Six lessons, with quizzes, explain the physics."
+        },
+        {
+          "t0": 92.84,
+          "t1": 95.68,
+          "text": "Eight drawings gather the technical plans."
+        },
+        {
+          "t0": 95.68,
+          "t1": 101.32,
+          "text": "One last thing: this lab is an educational reconstruction, inspired by a public video."
+        },
+        {
+          "t0": 101.32,
+          "t1": 104.6,
+          "text": "It is neither an official plan nor a maker’s product."
+        },
+        {
+          "t0": 104.6,
+          "t1": 109.28,
+          "text": "The machine shown is one point two metres across, and, unless I quote the video,"
+        },
+        {
+          "t0": 109.32,
+          "t1": 111.56,
+          "text": "the figures come from the simulation."
+        },
+        {
+          "t0": 111.56,
+          "t1": 112.32,
+          "text": "Over to you!"
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "home": true
+          }
+        },
+        {
+          "t": 13.6,
+          "do": {
+            "frame": [
+              "wind-turbine"
+            ]
+          }
+        },
+        {
+          "t": 17.36,
+          "do": {
+            "frame": [
+              "tower"
+            ]
+          }
+        },
+        {
+          "t": 21.12,
+          "do": {
+            "scene": "blades"
+          }
+        },
+        {
+          "t": 27.52,
+          "do": {
+            "scene": "turbine"
+          }
+        },
+        {
+          "t": 32.12,
+          "do": {
+            "scene": "alternator"
+          }
+        },
+        {
+          "t": 41,
+          "do": {
+            "scene": "shed"
+          }
+        },
+        {
+          "t": 47.88,
+          "do": {
+            "frame": [
+              "battery-bank"
+            ]
+          }
+        },
+        {
+          "t": 52,
+          "do": {
+            "scene": "site"
+          }
+        },
+        {
+          "t": 53.96,
+          "do": {
+            "frame": [
+              "house"
+            ]
+          }
+        },
+        {
+          "t": 61.52,
+          "do": {
+            "home": true
+          }
+        },
+        {
+          "t": 74.36,
+          "do": {
+            "mode": "assembly"
+          }
+        },
+        {
+          "t": 79.72,
+          "do": {
+            "mode": "install"
+          }
+        },
+        {
+          "t": 84.08,
+          "do": {
+            "mode": "sim"
+          }
+        },
+        {
+          "t": 89.8,
+          "do": {
+            "mode": "lessons"
+          }
+        },
+        {
+          "t": 92.84,
+          "do": {
+            "mode": "plans"
+          }
+        },
+        {
+          "t": 95.68,
+          "do": {
+            "mode": "explore"
+          }
+        },
+        {
+          "t": 101.32,
+          "do": {
+            "scene": "site"
+          }
+        },
+        {
+          "t": 111.56,
+          "do": {
+            "select": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-site",
+      "scope": "scene:site",
+      "title": "The site",
+      "scene": "site",
+      "file": "scene-site.mp3",
+      "duration": 34.48,
+      "chars": 527,
+      "hash": "586b3aa7fb21d5fe",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.72,
+          "text": "Here is the site, to scale: a field, a mast, a house."
+        },
+        {
+          "t0": 4.72,
+          "t1": 9.68,
+          "text": "First, the trees: they muddle the wind, and the wind decides everything."
+        },
+        {
+          "t0": 9.68,
+          "t1": 14.24,
+          "text": "In the middle, the guyed mast, which lifts the machine above the turbulence."
+        },
+        {
+          "t0": 14.24,
+          "t1": 18.8,
+          "text": "At the very top, the turbine, which turns as soon as the wind rises."
+        },
+        {
+          "t0": 18.8,
+          "t1": 23.28,
+          "text": "A cable comes down the mast and runs through the grass, to the technical room."
+        },
+        {
+          "t0": 23.28,
+          "t1": 27.2,
+          "text": "A little dry shed, where the electronics are kept out of the weather."
+        },
+        {
+          "t0": 27.2,
+          "t1": 30.24,
+          "text": "The house then takes its electricity from the battery."
+        },
+        {
+          "t0": 30.24,
+          "t1": 34.48,
+          "text": "A breeze, a mast, a cable: the wind becomes light!"
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "home": true
+          }
+        },
+        {
+          "t": 4.72,
+          "do": {
+            "flows": true
+          }
+        },
+        {
+          "t": 4.72,
+          "do": {
+            "frame": [
+              "obstacles"
+            ]
+          }
+        },
+        {
+          "t": 9.68,
+          "do": {
+            "frame": [
+              "tower"
+            ]
+          }
+        },
+        {
+          "t": 14.24,
+          "do": {
+            "frame": [
+              "wind-turbine"
+            ]
+          }
+        },
+        {
+          "t": 18.8,
+          "do": {
+            "frame": [
+              "cable-run"
+            ]
+          }
+        },
+        {
+          "t": 21.96,
+          "do": {
+            "frame": [
+              "technical-room"
+            ]
+          }
+        },
+        {
+          "t": 27.2,
+          "do": {
+            "frame": [
+              "house"
+            ]
+          }
+        },
+        {
+          "t": 30.24,
+          "do": {
+            "flows": false
+          }
+        },
+        {
+          "t": 30.24,
+          "do": {
+            "home": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-turbine",
+      "scope": "scene:turbine",
+      "title": "The turbine",
+      "scene": "turbine",
+      "file": "scene-turbine.mp3",
+      "duration": 40.08,
+      "chars": 621,
+      "hash": "1ffa8917c7a7c01e",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 2.8,
+          "text": "Here is the machine, at the top of the mast."
+        },
+        {
+          "t0": 2.8,
+          "t1": 6.4,
+          "text": "At the front, the rotor: three blades and a hub."
+        },
+        {
+          "t0": 6.4,
+          "t1": 9.68,
+          "text": "Behind it, the alternator, with no gearbox."
+        },
+        {
+          "t0": 9.68,
+          "t1": 15.92,
+          "text": "A welded steel frame carries it all, and swivels on the mast, thanks to a simple greased tube."
+        },
+        {
+          "t0": 15.92,
+          "t1": 19.24,
+          "text": "At the back, the tail keeps the machine facing the wind…"
+        },
+        {
+          "t0": 19.24,
+          "t1": 23.68,
+          "text": "on a tilted hinge, which lets it swing aside when the wind rises."
+        },
+        {
+          "t0": 23.68,
+          "t1": 28.4,
+          "text": "Look at the alternator in section: the magnets on one side, the coils on the other,"
+        },
+        {
+          "t0": 28.48,
+          "t1": 30.88,
+          "text": "and almost nothing between them."
+        },
+        {
+          "t0": 30.88,
+          "t1": 35.96,
+          "text": "Then let’s pull all the parts apart, one by one, as if taking the machine to pieces."
+        },
+        {
+          "t0": 35.96,
+          "t1": 40.08,
+          "text": "A tail that folds: that is the machine’s protection in a storm."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "home": true
+          }
+        },
+        {
+          "t": 2.8,
+          "do": {
+            "frame": [
+              "rotor"
+            ]
+          }
+        },
+        {
+          "t": 6.4,
+          "do": {
+            "frame": [
+              "alternator"
+            ]
+          }
+        },
+        {
+          "t": 9.68,
+          "do": {
+            "frame": [
+              "nacelle-frame"
+            ]
+          }
+        },
+        {
+          "t": 12.16,
+          "do": {
+            "frame": [
+              "yaw-bearing"
+            ]
+          }
+        },
+        {
+          "t": 15.92,
+          "do": {
+            "frame": [
+              "tail-vane"
+            ]
+          }
+        },
+        {
+          "t": 19.24,
+          "do": {
+            "frame": [
+              "tail-hinge"
+            ]
+          }
+        },
+        {
+          "t": 23.68,
+          "do": {
+            "frame": [
+              "alternator"
+            ]
+          }
+        },
+        {
+          "t": 23.68,
+          "do": {
+            "cutaway": true
+          }
+        },
+        {
+          "t": 30.88,
+          "do": {
+            "cutaway": false
+          }
+        },
+        {
+          "t": 30.88,
+          "do": {
+            "home": true
+          }
+        },
+        {
+          "t": 30.88,
+          "do": {
+            "explode": 0.6
+          }
+        },
+        {
+          "t": 35.96,
+          "do": {
+            "explode": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-alternator",
+      "scope": "scene:alternator",
+      "title": "The alternator",
+      "scene": "alternator",
+      "file": "scene-alternator.mp3",
+      "duration": 33.04,
+      "chars": 498,
+      "hash": "afea7b26f879153b",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.12,
+          "text": "Here is the heart of the machine, on the workbench."
+        },
+        {
+          "t0": 3.12,
+          "t1": 5.84,
+          "text": "A steel disc carries eight magnets."
+        },
+        {
+          "t0": 5.84,
+          "t1": 9.68,
+          "text": "Facing it, a resin disc embeds six copper coils."
+        },
+        {
+          "t0": 9.68,
+          "t1": 13.28,
+          "text": "Between the two, about one millimetre of empty space."
+        },
+        {
+          "t0": 13.28,
+          "t1": 17.68,
+          "text": "The disc turns with a car hub, on a stub axle that never moves."
+        },
+        {
+          "t0": 17.68,
+          "t1": 24.32,
+          "text": "In section, you can see the air gap: one millimetre of empty space, and that is where everything happens."
+        },
+        {
+          "t0": 24.32,
+          "t1": 29.92,
+          "text": "And exploded, everything that slides together, piece after piece, like a construction set."
+        },
+        {
+          "t0": 29.92,
+          "t1": 33.04,
+          "text": "Nothing touches: only a field crosses the gap."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "home": true
+          }
+        },
+        {
+          "t": 3.12,
+          "do": {
+            "frame": [
+              "magnet-rotor",
+              "magnets"
+            ]
+          }
+        },
+        {
+          "t": 5.84,
+          "do": {
+            "frame": [
+              "stator",
+              "coils"
+            ]
+          }
+        },
+        {
+          "t": 9.68,
+          "do": {
+            "frame": [
+              "air-gap"
+            ]
+          }
+        },
+        {
+          "t": 13.28,
+          "do": {
+            "frame": [
+              "bearing-hub",
+              "shaft"
+            ]
+          }
+        },
+        {
+          "t": 17.68,
+          "do": {
+            "home": true
+          }
+        },
+        {
+          "t": 17.68,
+          "do": {
+            "cutaway": true
+          }
+        },
+        {
+          "t": 24.32,
+          "do": {
+            "cutaway": false
+          }
+        },
+        {
+          "t": 24.32,
+          "do": {
+            "explode": 0.6
+          }
+        },
+        {
+          "t": 29.92,
+          "do": {
+            "explode": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-blades",
+      "scope": "scene:blades",
+      "title": "The blades",
+      "scene": "blades",
+      "file": "scene-blades.mp3",
+      "duration": 28.96,
+      "chars": 421,
+      "hash": "a55aa33182766e30",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.32,
+          "text": "Here, the blades are carved, by hand, with patience."
+        },
+        {
+          "t0": 4.32,
+          "t1": 8.24,
+          "text": "Each one is born from a plank of wood, light and straight."
+        },
+        {
+          "t0": 8.24,
+          "t1": 14,
+          "text": "Six templates give the shape: wide and thick at the root, slim and narrow at the tip."
+        },
+        {
+          "t0": 14,
+          "t1": 19.84,
+          "text": "First the windward face is carved, almost flat, then the back is rounded, like a wing."
+        },
+        {
+          "t0": 19.84,
+          "t1": 25.36,
+          "text": "Finally, a plywood disc clamps the three roots, a hundred and twenty degrees apart."
+        },
+        {
+          "t0": 25.36,
+          "t1": 28.96,
+          "text": "Three identical blades, and a perfectly round rotor."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "home": true
+          }
+        },
+        {
+          "t": 4.32,
+          "do": {
+            "frame": [
+              "blade-blank"
+            ]
+          }
+        },
+        {
+          "t": 8.24,
+          "do": {
+            "frame": [
+              "station-templates"
+            ]
+          }
+        },
+        {
+          "t": 14,
+          "do": {
+            "frame": [
+              "blade"
+            ]
+          }
+        },
+        {
+          "t": 19.84,
+          "do": {
+            "frame": [
+              "hub-disc"
+            ]
+          }
+        },
+        {
+          "t": 25.36,
+          "do": {
+            "home": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-shed",
+      "scope": "scene:shed",
+      "title": "The technical room",
+      "scene": "shed",
+      "file": "scene-shed.mp3",
+      "duration": 29.76,
+      "chars": 513,
+      "hash": "157d4d70cc65fb07",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.16,
+          "text": "Here is the technical room: a dry shed, and a wooden board."
+        },
+        {
+          "t0": 4.16,
+          "t1": 9.68,
+          "text": "The current first reaches the brake switch, then the rectifier, which turns it the right way round."
+        },
+        {
+          "t0": 9.68,
+          "t1": 12.32,
+          "text": "The fuse watches over the cable and the battery,"
+        },
+        {
+          "t0": 12.36,
+          "t1": 16.96,
+          "text": "the controller keeps an eye on the voltage, and the dump load burns off the surplus."
+        },
+        {
+          "t0": 16.96,
+          "t1": 20,
+          "text": "At the end, the battery, standing on the floor."
+        },
+        {
+          "t0": 20,
+          "t1": 25.72,
+          "text": "Follow the current: it comes in on the left, goes through every device, and runs to the battery."
+        },
+        {
+          "t0": 25.72,
+          "t1": 29.76,
+          "text": "Then let’s lift the devices off the board, one by one, to see their wires."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "home": true
+          }
+        },
+        {
+          "t": 4.16,
+          "do": {
+            "frame": [
+              "brake-switch"
+            ]
+          }
+        },
+        {
+          "t": 6.6,
+          "do": {
+            "frame": [
+              "rectifier"
+            ]
+          }
+        },
+        {
+          "t": 9.68,
+          "do": {
+            "frame": [
+              "fuse"
+            ]
+          }
+        },
+        {
+          "t": 12.36,
+          "do": {
+            "frame": [
+              "charge-controller"
+            ]
+          }
+        },
+        {
+          "t": 14.44,
+          "do": {
+            "frame": [
+              "dump-load"
+            ]
+          }
+        },
+        {
+          "t": 16.96,
+          "do": {
+            "frame": [
+              "battery-bank"
+            ]
+          }
+        },
+        {
+          "t": 20,
+          "do": {
+            "home": true
+          }
+        },
+        {
+          "t": 20,
+          "do": {
+            "flows": true
+          }
+        },
+        {
+          "t": 25.72,
+          "do": {
+            "flows": false
+          }
+        },
+        {
+          "t": 25.72,
+          "do": {
+            "explode": 0.6
+          }
+        },
+        {
+          "t": 29.76,
+          "do": {
+            "explode": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-wind-turbine",
+      "scope": "part:wind-turbine",
+      "title": "Wind turbine",
+      "scene": "site",
+      "file": "part-wind-turbine.mp3",
+      "duration": 23.2,
+      "chars": 376,
+      "hash": "afe3ebb74cda1656",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 7.12,
+          "text": "This is the machine from the video, seen from afar: one point two metres across, three blades, no gearbox."
+        },
+        {
+          "t0": 7.12,
+          "t1": 9.2,
+          "text": "It charges a twelve-volt battery."
+        },
+        {
+          "t0": 9.2,
+          "t1": 13.04,
+          "text": "The label says two hundred watts, without saying for what wind."
+        },
+        {
+          "t0": 13.04,
+          "t1": 17.84,
+          "text": "The simulation, for its part, finds about sixty watts at twelve metres per second."
+        },
+        {
+          "t0": 17.84,
+          "t1": 20.16,
+          "text": "It was not tuned to match the label."
+        },
+        {
+          "t0": 20.16,
+          "t1": 23.2,
+          "text": "Open the turbine view to see each part, one by one."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-tower",
+      "scope": "part:tower",
+      "title": "Tower",
+      "scene": "site",
+      "file": "part-tower.mp3",
+      "duration": 19.12,
+      "chars": 291,
+      "hash": "738916a6813fa5fc",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.48,
+          "text": "A plain steel water pipe, held by guy wires: the mast."
+        },
+        {
+          "t0": 4.48,
+          "t1": 7.92,
+          "text": "Its job: lift the machine above the turbulence."
+        },
+        {
+          "t0": 7.92,
+          "t1": 11.68,
+          "text": "Six metres if the spot is open, twelve or eighteen otherwise."
+        },
+        {
+          "t0": 11.68,
+          "t1": 13.36,
+          "text": "The higher, the better."
+        },
+        {
+          "t0": 13.36,
+          "t1": 19.12,
+          "text": "In France, a mast of twelve metres or more needs planning permission: check with your local authority."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-guy-wires",
+      "scope": "part:guy-wires",
+      "title": "Guy wires",
+      "scene": "site",
+      "file": "part-guy-wires.mp3",
+      "duration": 20.32,
+      "chars": 330,
+      "hash": "61a106834a788045",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.36,
+          "text": "Cables stretched from the mast to the ground, in several directions: the guy wires."
+        },
+        {
+          "t0": 5.36,
+          "t1": 7.6,
+          "text": "One level about every four metres."
+        },
+        {
+          "t0": 7.6,
+          "t1": 11.68,
+          "text": "Only the top ones really take the load; the others stiffen the tube."
+        },
+        {
+          "t0": 11.68,
+          "t1": 16,
+          "text": "A light guyed tube costs far less than a mast that stands alone."
+        },
+        {
+          "t0": 16,
+          "t1": 20.32,
+          "text": "Keep them clear of the blade tips, but not too far: the mast would bend more."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-tower-base",
+      "scope": "part:tower-base",
+      "title": "Hinged base",
+      "scene": "site",
+      "file": "part-tower-base.mp3",
+      "duration": 20.48,
+      "chars": 321,
+      "hash": "e8ddd718a8be616b",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 2.32,
+          "text": "The foot of the mast is hinged."
+        },
+        {
+          "t0": 2.32,
+          "t1": 7.04,
+          "text": "The machine is assembled on the ground, with the mast lying down, then raised,"
+        },
+        {
+          "t0": 7.12,
+          "t1": 9.84,
+          "text": "with guy wires and several pairs of hands."
+        },
+        {
+          "t0": 9.84,
+          "t1": 12.64,
+          "text": "And for maintenance, it comes back down!"
+        },
+        {
+          "t0": 12.64,
+          "t1": 16.48,
+          "text": "One rule: never stand under the machine during the lift."
+        },
+        {
+          "t0": 16.48,
+          "t1": 20.48,
+          "text": "A lifting rope has already broken: the machine fell about two metres."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-cable-run",
+      "scope": "part:cable-run",
+      "title": "Cable run",
+      "scene": "site",
+      "file": "part-cable-run.mp3",
+      "duration": 18.08,
+      "chars": 297,
+      "hash": "b367d852d8f22708",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.8,
+          "text": "Three wires leave the machine, run down the mast and across to the technical room."
+        },
+        {
+          "t0": 4.8,
+          "t1": 9.76,
+          "text": "At twelve volts the current is strong, and the loss in the cable grows as its square."
+        },
+        {
+          "t0": 9.76,
+          "t1": 15.52,
+          "text": "For five hundred watts, six square millimetres over thirty metres waste thirty-eight per cent!"
+        },
+        {
+          "t0": 15.52,
+          "t1": 18.08,
+          "text": "A thick cable beats a long cable."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "flows": true
+          }
+        },
+        {
+          "t": 18.08,
+          "do": {
+            "flows": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-technical-room",
+      "scope": "part:technical-room",
+      "title": "Technical room",
+      "scene": "site",
+      "file": "part-technical-room.mp3",
+      "duration": 15.92,
+      "chars": 253,
+      "hash": "2c2342a462323c23",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.44,
+          "text": "A dry shed, close to the house: the technical room."
+        },
+        {
+          "t0": 3.44,
+          "t1": 5.2,
+          "text": "The cable arrives here."
+        },
+        {
+          "t0": 5.2,
+          "t1": 8.32,
+          "text": "All the electronics sit on a single plywood board."
+        },
+        {
+          "t0": 8.32,
+          "t1": 12.08,
+          "text": "One place to protect and to watch, with the brake within reach."
+        },
+        {
+          "t0": 12.08,
+          "t1": 15.92,
+          "text": "Open the room view to follow the current, device after device."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-house",
+      "scope": "part:house",
+      "title": "House",
+      "scene": "site",
+      "file": "part-house.mp3",
+      "duration": 18.8,
+      "chars": 308,
+      "hash": "831efc32c0e8b8ca",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 2.48,
+          "text": "At the end of the journey, the house."
+        },
+        {
+          "t0": 2.48,
+          "t1": 8,
+          "text": "According to the video, this small machine powers a little lighting, or charges a computer."
+        },
+        {
+          "t0": 8,
+          "t1": 14.16,
+          "text": "The larger ones in the family, up to four point two metres, can power a whole home, heating excepted."
+        },
+        {
+          "t0": 14.16,
+          "t1": 18.8,
+          "text": "One tip: first estimate what you use, and only then the size of the machine."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-obstacles",
+      "scope": "part:obstacles",
+      "title": "Trees and obstacles",
+      "scene": "site",
+      "file": "part-obstacles.mp3",
+      "duration": 19.28,
+      "chars": 303,
+      "hash": "e06f9f7db98fdd87",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.68,
+          "text": "The video starts right here: where to put the turbine?"
+        },
+        {
+          "t0": 3.68,
+          "t1": 7.04,
+          "text": "A tree slows the wind and makes it turbulent behind it."
+        },
+        {
+          "t0": 7.04,
+          "t1": 10.96,
+          "text": "Look for open country, the prevailing winds, few obstacles."
+        },
+        {
+          "t0": 10.96,
+          "t1": 16.16,
+          "text": "A leaning tree, flattened grass: the wind is invisible, but it leaves traces."
+        },
+        {
+          "t0": 16.16,
+          "t1": 19.28,
+          "text": "Raising the mast costs less than changing the machine!"
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-rotor",
+      "scope": "part:rotor",
+      "title": "Rotor (blades and hub)",
+      "scene": "turbine",
+      "file": "part-rotor.mp3",
+      "duration": 23.12,
+      "chars": 352,
+      "hash": "f42177e10eb5f1a5",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.72,
+          "text": "Three wooden blades, clamped between plywood discs: the rotor."
+        },
+        {
+          "t0": 4.72,
+          "t1": 9.2,
+          "text": "It catches the wind and drives the alternator directly, with no gearbox."
+        },
+        {
+          "t0": 9.2,
+          "t1": 10.4,
+          "text": "Why three?"
+        },
+        {
+          "t0": 10.4,
+          "t1": 17.04,
+          "text": "A few narrow blades turning fast do the same job as many wide, slow ones: it is the right compromise."
+        },
+        {
+          "t0": 17.04,
+          "t1": 23.12,
+          "text": "A sixty-centimetre piece of wood that flies off does damage: balance and tighten before spinning it up."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-alternator",
+      "scope": "part:alternator",
+      "title": "Alternator",
+      "scene": "turbine",
+      "file": "part-alternator.mp3",
+      "duration": 22.32,
+      "chars": 348,
+      "hash": "6ac7fd0062fc4b2a",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.52,
+          "text": "This is the alternator: magnets on a steel disc, turning in front of copper coils."
+        },
+        {
+          "t0": 5.52,
+          "t1": 8.96,
+          "text": "No gearbox, and above all no iron in the coils."
+        },
+        {
+          "t0": 8.96,
+          "t1": 12.72,
+          "text": "No sticking point: the machine starts in a breath of wind."
+        },
+        {
+          "t0": 12.72,
+          "t1": 18.48,
+          "text": "When the wind picks up, it is the alternator that holds the blades back: the machine stays quiet."
+        },
+        {
+          "t0": 18.48,
+          "t1": 22.32,
+          "text": "At one turn per second, it gives about one point nine volts."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "cutaway": true
+          }
+        },
+        {
+          "t": 22.32,
+          "do": {
+            "cutaway": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-nacelle-frame",
+      "scope": "part:nacelle-frame",
+      "title": "Nacelle frame",
+      "scene": "turbine",
+      "file": "part-nacelle-frame.mp3",
+      "duration": 17.28,
+      "chars": 263,
+      "hash": "e860bd90931c9510",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.88,
+          "text": "A piece of steel angle, a pivot tube, a hinge tube: the nacelle frame."
+        },
+        {
+          "t0": 4.88,
+          "t1": 8.88,
+          "text": "Everything is welded square, which is what a village workshop can do."
+        },
+        {
+          "t0": 8.88,
+          "t1": 13.04,
+          "text": "At the end, a steel disc, the cradle, carries the alternator."
+        },
+        {
+          "t0": 13.04,
+          "t1": 17.28,
+          "text": "Weld in stages, alternating sides: the heat warps the piece."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-yaw-bearing",
+      "scope": "part:yaw-bearing",
+      "title": "Yaw bearing",
+      "scene": "turbine",
+      "file": "part-yaw-bearing.mp3",
+      "duration": 22.56,
+      "chars": 353,
+      "hash": "a99a6114aff86b11",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.8,
+          "text": "One tube that slides over another, with a little grease: the yaw bearing."
+        },
+        {
+          "t0": 4.8,
+          "t1": 7.52,
+          "text": "Crude, and yet it works very well!"
+        },
+        {
+          "t0": 7.52,
+          "t1": 12.96,
+          "text": "Notice that the rotor is not on the axis: it is offset by forty-one millimetres."
+        },
+        {
+          "t0": 12.96,
+          "t1": 18.24,
+          "text": "The wind pushes beside the axis, and keeps trying to turn the machine out of the wind."
+        },
+        {
+          "t0": 18.24,
+          "t1": 22.56,
+          "text": "That is the engine of the furling: without this offset, it would never fold."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-tail-hinge",
+      "scope": "part:tail-hinge",
+      "title": "Inclined tail hinge",
+      "scene": "turbine",
+      "file": "part-tail-hinge.mp3",
+      "duration": 21.12,
+      "chars": 310,
+      "hash": "013dcbcd69a166d4",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.52,
+          "text": "A tilted axis: that is the whole trick."
+        },
+        {
+          "t0": 3.52,
+          "t1": 7,
+          "text": "When the wind gets too strong, the tail swings aside…"
+        },
+        {
+          "t0": 7,
+          "t1": 8.24,
+          "text": "while rising."
+        },
+        {
+          "t0": 8.24,
+          "t1": 13.36,
+          "text": "Its own weight brings it back: no spring, which would vibrate, rust and break."
+        },
+        {
+          "t0": 13.36,
+          "t1": 18.4,
+          "text": "The axis leans by twenty degrees, and the tail opens about ninety-five degrees."
+        },
+        {
+          "t0": 18.4,
+          "t1": 21.12,
+          "text": "The heavier it is, the later it folds away."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "explode": 0.6
+          }
+        },
+        {
+          "t": 21.12,
+          "do": {
+            "explode": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-tail-boom",
+      "scope": "part:tail-boom",
+      "title": "Tail boom",
+      "scene": "turbine",
+      "file": "part-tail-boom.mp3",
+      "duration": 17.36,
+      "chars": 282,
+      "hash": "f5d9d522d51cbb4f",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.72,
+          "text": "A steel tube welded to the hinge: the tail boom."
+        },
+        {
+          "t0": 3.72,
+          "t1": 8.24,
+          "text": "The longer it is, the more leverage the tail has against the push of the wind."
+        },
+        {
+          "t0": 8.24,
+          "t1": 12.24,
+          "text": "Two lengths are published, five hundred and seven hundred millimetres."
+        },
+        {
+          "t0": 12.24,
+          "t1": 17.36,
+          "text": "First fit the boom on the hinge, set the stop, and only then weld the vane support."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-tail-vane",
+      "scope": "part:tail-vane",
+      "title": "Tail vane",
+      "scene": "turbine",
+      "file": "part-tail-vane.mp3",
+      "duration": 20.64,
+      "chars": 319,
+      "hash": "2a3fcbc44435f145",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.28,
+          "text": "A plain sheet of plywood: the tail vane."
+        },
+        {
+          "t0": 3.28,
+          "t1": 9.56,
+          "text": "Like the fin of a weathervane, it keeps the turbine facing the wind, up to about ten metres per second."
+        },
+        {
+          "t0": 9.56,
+          "t1": 15.36,
+          "text": "Beyond that, it gives way, and the machine turns edge-on to protect the electrics, says the video."
+        },
+        {
+          "t0": 15.36,
+          "t1": 19.12,
+          "text": "Too light, it folds too early; too heavy, too late."
+        },
+        {
+          "t0": 19.12,
+          "t1": 20.64,
+          "text": "It is set in the field!"
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-wire-loop",
+      "scope": "part:wire-loop",
+      "title": "Cable loop",
+      "scene": "turbine",
+      "file": "part-wire-loop.mp3",
+      "duration": 18.24,
+      "chars": 293,
+      "hash": "6d5866be79317d58",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.8,
+          "text": "The wire leaves the stator, goes down the pivot tube, then down the mast."
+        },
+        {
+          "t0": 4.8,
+          "t1": 7.24,
+          "text": "But the machine turns to follow the wind…"
+        },
+        {
+          "t0": 7.24,
+          "t1": 9.2,
+          "text": "and the wires turn with it!"
+        },
+        {
+          "t0": 9.2,
+          "t1": 13.52,
+          "text": "A loop of flexible cable lets them swivel without pulling or pinching."
+        },
+        {
+          "t0": 13.52,
+          "t1": 18.24,
+          "text": "Thread the wires first, then the tube: a wire gets pinched very quickly there."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-magnet-rotor",
+      "scope": "part:magnet-rotor",
+      "title": "Magnet rotor",
+      "scene": "alternator",
+      "file": "part-magnet-rotor.mp3",
+      "duration": 23.12,
+      "chars": 360,
+      "hash": "99dfcb63be5912c8",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.04,
+          "text": "A thick steel disc, cast in resin with its eight magnets: the rotor."
+        },
+        {
+          "t0": 5.04,
+          "t1": 11.04,
+          "text": "The steel closes the field from one magnet to the next, and the resin holds and protects the magnets."
+        },
+        {
+          "t0": 11.04,
+          "t1": 14.72,
+          "text": "It turns with the hub bell, with no brushes and no contact."
+        },
+        {
+          "t0": 14.72,
+          "t1": 20,
+          "text": "Just one rotor on this small machine; the large one, two point four metres, has two."
+        },
+        {
+          "t0": 20,
+          "t1": 23.12,
+          "text": "Steel only: neither aluminium nor stainless."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-magnets",
+      "scope": "part:magnets",
+      "title": "Neodymium magnets",
+      "scene": "alternator",
+      "file": "part-magnets.mp3",
+      "duration": 23.84,
+      "chars": 378,
+      "hash": "2d12caa25c09b7e0",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.2,
+          "text": "Eight neodymium magnets, glued north pole, then south pole, alternately."
+        },
+        {
+          "t0": 5.2,
+          "t1": 7.52,
+          "text": "That is what makes an alternating current."
+        },
+        {
+          "t0": 7.52,
+          "t1": 13.76,
+          "text": "Eight magnets for six coils: four to three, and that ratio gives three phases and a smooth torque."
+        },
+        {
+          "t0": 13.76,
+          "t1": 18.8,
+          "text": "Careful: they snap together, or onto steel, with a force that crushes fingers."
+        },
+        {
+          "t0": 18.8,
+          "t1": 21.2,
+          "text": "Hold one in both hands, and slide it."
+        },
+        {
+          "t0": 21.2,
+          "t1": 23.84,
+          "text": "Keep them away from bank cards and pacemakers."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "xray": true
+          }
+        },
+        {
+          "t": 23.84,
+          "do": {
+            "xray": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-stator",
+      "scope": "part:stator",
+      "title": "Resin-cast stator",
+      "scene": "alternator",
+      "file": "part-stator.mp3",
+      "duration": 18.08,
+      "chars": 278,
+      "hash": "bdcdb42461ee5951",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.2,
+          "text": "A polyester resin disc, reinforced with glass fibre and talc: the stator."
+        },
+        {
+          "t0": 5.2,
+          "t1": 8.4,
+          "text": "It embeds six coils, and the ends of three rods."
+        },
+        {
+          "t0": 8.4,
+          "t1": 9.52,
+          "text": "Iron inside?"
+        },
+        {
+          "t0": 9.52,
+          "t1": 12.32,
+          "text": "None, so no sticking point at start-up."
+        },
+        {
+          "t0": 12.32,
+          "t1": 15.04,
+          "text": "The talc helps carry the heat away from the copper."
+        },
+        {
+          "t0": 15.04,
+          "t1": 18.08,
+          "text": "It stays fixed, screwed onto the nacelle’s cradle."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "xray": true
+          }
+        },
+        {
+          "t": 18.08,
+          "do": {
+            "xray": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-coils",
+      "scope": "part:coils",
+      "title": "Coils",
+      "scene": "alternator",
+      "file": "part-coils.mp3",
+      "duration": 20.4,
+      "chars": 312,
+      "hash": "a18904d462d166d3",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.56,
+          "text": "Six coils of copper wire, wound on a former the size of the magnets."
+        },
+        {
+          "t0": 4.56,
+          "t1": 10.72,
+          "text": "Seventy-six turns each, in one point four millimetre wire: the video’s choice for twelve volts."
+        },
+        {
+          "t0": 10.72,
+          "t1": 13.4,
+          "text": "More turns, more volts at low speed…"
+        },
+        {
+          "t0": 13.4,
+          "t1": 15.56,
+          "text": "but a rotor held back harder."
+        },
+        {
+          "t0": 15.56,
+          "t1": 20.4,
+          "text": "All turns in the same direction: a single coil backwards, and the voltage drops!"
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "xray": true
+          }
+        },
+        {
+          "t": 20.4,
+          "do": {
+            "xray": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-star-wiring",
+      "scope": "part:star-wiring",
+      "title": "Star wiring",
+      "scene": "alternator",
+      "file": "part-star-wiring.mp3",
+      "duration": 28.24,
+      "chars": 385,
+      "hash": "602bf46cba2dfc62",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.12,
+          "text": "Six coils, numbered one to six."
+        },
+        {
+          "t0": 3.12,
+          "t1": 8.48,
+          "text": "Inputs one, two and three are joined: that is the neutral point of the star."
+        },
+        {
+          "t0": 8.48,
+          "t1": 13.44,
+          "text": "Outputs one, two and three join inputs four, five and six."
+        },
+        {
+          "t0": 13.44,
+          "t1": 19.28,
+          "text": "That leaves three wires, outputs four, five and six: the three phases, staggered."
+        },
+        {
+          "t0": 19.28,
+          "t1": 22.56,
+          "text": "A three-phase machine runs without vibrating."
+        },
+        {
+          "t0": 22.56,
+          "t1": 28.24,
+          "text": "Number the coils before fitting: once the resin is cast, a mistake can no longer be seen."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "xray": true
+          }
+        },
+        {
+          "t": 28.24,
+          "do": {
+            "xray": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-shaft",
+      "scope": "part:shaft",
+      "title": "Stub axle and cradle",
+      "scene": "alternator",
+      "file": "part-shaft.mp3",
+      "duration": 19.04,
+      "chars": 303,
+      "hash": "bf3af453b28437d4",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.8,
+          "text": "A car hub, cut in two: the part that turns, and the stub axle, which never turns."
+        },
+        {
+          "t0": 5.8,
+          "t1": 10.4,
+          "text": "It is screwed onto the cradle, a steel disc welded to the end of the frame."
+        },
+        {
+          "t0": 10.4,
+          "t1": 14.04,
+          "text": "Everything electrical stays fixed: no sliding contacts."
+        },
+        {
+          "t0": 14.04,
+          "t1": 19.04,
+          "text": "Weld the cradle in stages: the heat warps it, and the stator would no longer be parallel."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-bearing-hub",
+      "scope": "part:bearing-hub",
+      "title": "Bearing hub",
+      "scene": "alternator",
+      "file": "part-bearing-hub.mp3",
+      "duration": 18.88,
+      "chars": 307,
+      "hash": "6776f401b21020c9",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.44,
+          "text": "A rear car wheel hub, salvaged for its bearings."
+        },
+        {
+          "t0": 3.44,
+          "t1": 5.76,
+          "text": "Its bell turns on the stub axle."
+        },
+        {
+          "t0": 5.76,
+          "t1": 10.72,
+          "text": "It is ground down to its flat plate, and four long rods fix the magnet disc to it,"
+        },
+        {
+          "t0": 10.84,
+          "t1": 12.88,
+          "text": "then receive the blade rotor."
+        },
+        {
+          "t0": 12.88,
+          "t1": 16.32,
+          "text": "Adjust the bearings at the nut, then back it off a quarter turn."
+        },
+        {
+          "t0": 16.32,
+          "t1": 18.88,
+          "text": "And throw away the rear seal: it rubs too much."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "explode": 0.6
+          }
+        },
+        {
+          "t": 18.88,
+          "do": {
+            "explode": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-studs",
+      "scope": "part:studs",
+      "title": "Stator rods",
+      "scene": "alternator",
+      "file": "part-studs.mp3",
+      "duration": 16.8,
+      "chars": 265,
+      "hash": "1af69c06d5cc34a6",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.04,
+          "text": "Three threaded rods, split at one end, embedded in the stator’s resin, like a tripod."
+        },
+        {
+          "t0": 5.04,
+          "t1": 11.76,
+          "text": "Their nuts move it forward or back: that is how the air gap is set, with no machining at all."
+        },
+        {
+          "t0": 11.76,
+          "t1": 16.8,
+          "text": "Tighten all three together, in small turns, so the stator stays parallel to the disc."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "explode": 0.6
+          }
+        },
+        {
+          "t": 16.8,
+          "do": {
+            "explode": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-air-gap",
+      "scope": "part:air-gap",
+      "title": "Air gap",
+      "scene": "alternator",
+      "file": "part-air-gap.mp3",
+      "duration": 17.2,
+      "chars": 276,
+      "hash": "e10ce935d745250e",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 2.96,
+          "text": "How much space between the magnets and the stator?"
+        },
+        {
+          "t0": 2.96,
+          "t1": 4.72,
+          "text": "About one millimetre."
+        },
+        {
+          "t0": 4.72,
+          "t1": 7.36,
+          "text": "The narrower it is, the higher the voltage."
+        },
+        {
+          "t0": 7.36,
+          "t1": 11.28,
+          "text": "But leave some margin: reliability comes before performance!"
+        },
+        {
+          "t0": 11.28,
+          "t1": 15.44,
+          "text": "A test at one turn per second should give about one point nine volts."
+        },
+        {
+          "t0": 15.44,
+          "t1": 17.2,
+          "text": "If not, look at the air gap."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "cutaway": true
+          }
+        },
+        {
+          "t": 17.2,
+          "do": {
+            "cutaway": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-moulds",
+      "scope": "part:moulds",
+      "title": "Moulds (rotor, stator)",
+      "scene": "alternator",
+      "file": "part-moulds.mp3",
+      "duration": 20.08,
+      "chars": 306,
+      "hash": "0903183a0d456262",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.36,
+          "text": "Two plywood moulds, one for the stator, one for the rotor: the workshop’s tools."
+        },
+        {
+          "t0": 5.36,
+          "t1": 10.96,
+          "text": "They are waxed before every pour, then the resin, the glass fibre and the talc do the rest."
+        },
+        {
+          "t0": 10.96,
+          "t1": 15.12,
+          "text": "A pour gets no second chance: make the mould straight and clean."
+        },
+        {
+          "t0": 15.12,
+          "t1": 20.08,
+          "text": "The resin gives off toxic fumes: mask, gloves, goggles, window open."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-blade-blank",
+      "scope": "part:blade-blank",
+      "title": "Timber blank",
+      "scene": "blades",
+      "file": "part-blade-blank.mp3",
+      "duration": 19.04,
+      "chars": 295,
+      "hash": "b3741776d9a6e2c9",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 6.56,
+          "text": "It all starts with a beam: wood that is light, straight, with few knots, and that does not rot."
+        },
+        {
+          "t0": 6.56,
+          "t1": 10.08,
+          "text": "Spruce, Douglas fir, larch, says the video."
+        },
+        {
+          "t0": 10.08,
+          "t1": 14.96,
+          "text": "One beam gives all three blades, which then share the same weight and stiffness."
+        },
+        {
+          "t0": 14.96,
+          "t1": 19.04,
+          "text": "Knots towards the root, and four or five centimetres of margin at the tip."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-station-templates",
+      "scope": "part:station-templates",
+      "title": "Station templates",
+      "scene": "blades",
+      "file": "part-station-templates.mp3",
+      "duration": 16.56,
+      "chars": 267,
+      "hash": "9f6b69817a3483cc",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.12,
+          "text": "Six templates, six sections along the blade."
+        },
+        {
+          "t0": 3.12,
+          "t1": 6.32,
+          "text": "Each has its width, its thickness and its offset."
+        },
+        {
+          "t0": 6.32,
+          "t1": 11.28,
+          "text": "You carve, you try the template, you carve again, until it fits the blade."
+        },
+        {
+          "t0": 11.28,
+          "t1": 16.56,
+          "text": "Keep this set of templates: the day a blade needs replacing, you will find the exact shape again."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-blade",
+      "scope": "part:blade",
+      "title": "Blade",
+      "scene": "blades",
+      "file": "part-blade.mp3",
+      "duration": 23.84,
+      "chars": 361,
+      "hash": "c4362961b96cfb4b",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.44,
+          "text": "At the root, it is one hundred and fifty-three millimetres wide and forty-nine thick."
+        },
+        {
+          "t0": 5.44,
+          "t1": 10.24,
+          "text": "At the tip, only fifty-five millimetres wide and six thick are left."
+        },
+        {
+          "t0": 10.24,
+          "t1": 15.04,
+          "text": "First the windward face, almost flat, then the back, rounded like a wing."
+        },
+        {
+          "t0": 15.04,
+          "t1": 19.8,
+          "text": "It measures sixty centimetres, and all three must be perfectly identical."
+        },
+        {
+          "t0": 19.8,
+          "t1": 23.84,
+          "text": "Dust mask, and outdoors if you can: wood dust is a hazard."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-hub-disc",
+      "scope": "part:hub-disc",
+      "title": "Hub disc",
+      "scene": "blades",
+      "file": "part-hub-disc.mp3",
+      "duration": 21.04,
+      "chars": 336,
+      "hash": "3d83666bd211bae2",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.68,
+          "text": "A nine-millimetre plywood disc, and three blades screwed on a hundred and twenty degrees apart."
+        },
+        {
+          "t0": 5.68,
+          "t1": 9.6,
+          "text": "That is what turns three pieces of wood into a round rotor."
+        },
+        {
+          "t0": 9.6,
+          "t1": 12.88,
+          "text": "A plywood triangle clamps it all, on the wind side."
+        },
+        {
+          "t0": 12.88,
+          "t1": 16.32,
+          "text": "Assemble with several people, flat, on a clean floor."
+        },
+        {
+          "t0": 16.32,
+          "t1": 21.04,
+          "text": "An off-centre disc gives an unbalanced rotor, which only lead can correct."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-brake-switch",
+      "scope": "part:brake-switch",
+      "title": "Brake switch",
+      "scene": "shed",
+      "file": "part-brake-switch.mp3",
+      "duration": 22.56,
+      "chars": 348,
+      "hash": "b398c1bffab94956",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.68,
+          "text": "A two-pole switch, and a single gesture: stop."
+        },
+        {
+          "t0": 3.68,
+          "t1": 6.4,
+          "text": "Closed, it short-circuits the alternator."
+        },
+        {
+          "t0": 6.4,
+          "t1": 10.88,
+          "text": "The coils oppose the rotation: the rotor turns only very slowly."
+        },
+        {
+          "t0": 10.88,
+          "t1": 13.04,
+          "text": "No mechanical part to wear out."
+        },
+        {
+          "t0": 13.04,
+          "t1": 15.68,
+          "text": "Never on the battery: the fuse would blow."
+        },
+        {
+          "t0": 15.68,
+          "t1": 19.04,
+          "text": "Close it before climbing, lowering or touching the machine."
+        },
+        {
+          "t0": 19.04,
+          "t1": 22.56,
+          "text": "It is not a lock: never approach a machine that is turning."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-rectifier",
+      "scope": "part:rectifier",
+      "title": "Rectifier",
+      "scene": "shed",
+      "file": "part-rectifier.mp3",
+      "duration": 20.64,
+      "chars": 323,
+      "hash": "fbf56a7471f99419",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.68,
+          "text": "The machine produces alternating current, on three wires: the battery does not want it."
+        },
+        {
+          "t0": 5.68,
+          "t1": 10.48,
+          "text": "The rectifier, a diode bridge, lets current through in one direction only."
+        },
+        {
+          "t0": 10.48,
+          "t1": 12.92,
+          "text": "Nothing moves, nothing needs adjusting."
+        },
+        {
+          "t0": 12.92,
+          "t1": 17.92,
+          "text": "The price: a drop of about one and a half volts, which delays the start of charging."
+        },
+        {
+          "t0": 17.92,
+          "t1": 20.64,
+          "text": "An AC wire goes on any AC terminal."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "flows": true
+          }
+        },
+        {
+          "t": 20.64,
+          "do": {
+            "flows": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-fuse",
+      "scope": "part:fuse",
+      "title": "Fuse",
+      "scene": "shed",
+      "file": "part-fuse.mp3",
+      "duration": 20.64,
+      "chars": 304,
+      "hash": "156818369a756738",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.28,
+          "text": "On every circuit leaving a battery: a fuse."
+        },
+        {
+          "t0": 3.28,
+          "t1": 4.16,
+          "text": "An option?"
+        },
+        {
+          "t0": 4.16,
+          "t1": 6,
+          "text": "No: a safety rule."
+        },
+        {
+          "t0": 6,
+          "t1": 10.56,
+          "text": "A battery can deliver an enormous current in a short circuit, and without a fuse,"
+        },
+        {
+          "t0": 10.64,
+          "t1": 13.36,
+          "text": "the cable heats up until it catches fire."
+        },
+        {
+          "t0": 13.36,
+          "t1": 17.44,
+          "text": "It cuts off even if you are far away, asleep or distracted."
+        },
+        {
+          "t0": 17.44,
+          "t1": 20.64,
+          "text": "If it blows, find out why before replacing it."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-charge-controller",
+      "scope": "part:charge-controller",
+      "title": "Charge controller",
+      "scene": "shed",
+      "file": "part-charge-controller.mp3",
+      "duration": 21.28,
+      "chars": 340,
+      "hash": "e64c6213377a2d6a",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 2.32,
+          "text": "What harms a lead-acid battery?"
+        },
+        {
+          "t0": 2.32,
+          "t1": 5.52,
+          "text": "Draining it too far, or charging it too hard."
+        },
+        {
+          "t0": 5.52,
+          "t1": 11.08,
+          "text": "Below eleven and a half volts, it is too flat; above fourteen, the charge is too strong."
+        },
+        {
+          "t0": 11.08,
+          "t1": 14.8,
+          "text": "The controller keeps watch: it sends the excess to the dump load,"
+        },
+        {
+          "t0": 14.88,
+          "t1": 17.8,
+          "text": "and disconnects the house when the battery is too low."
+        },
+        {
+          "t0": 17.8,
+          "t1": 21.28,
+          "text": "With no voltmeter: dimming lamps mean a low battery."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-dump-load",
+      "scope": "part:dump-load",
+      "title": "Dump load",
+      "scene": "shed",
+      "file": "part-dump-load.mp3",
+      "duration": 21.36,
+      "chars": 330,
+      "hash": "f57c3925e2245ded",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.48,
+          "text": "Battery full, wind still blowing: where does the energy go?"
+        },
+        {
+          "t0": 4.48,
+          "t1": 9.44,
+          "text": "Into the dump load, a big resistor that the controller connects at fourteen volts."
+        },
+        {
+          "t0": 9.44,
+          "t1": 11.44,
+          "text": "It turns the surplus into heat."
+        },
+        {
+          "t0": 11.44,
+          "t1": 15.84,
+          "text": "Inelegant, but safe: nothing to adjust, nothing to wear out."
+        },
+        {
+          "t0": 15.84,
+          "t1": 21.36,
+          "text": "Heating water with that heat is a lovely idea, but size the dump load for the maximum current."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "flows": true
+          }
+        },
+        {
+          "t": 21.36,
+          "do": {
+            "flows": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-battery-bank",
+      "scope": "part:battery-bank",
+      "title": "Battery bank",
+      "scene": "shed",
+      "file": "part-battery-bank.mp3",
+      "duration": 22.24,
+      "chars": 340,
+      "hash": "6e0acc9efd9f8f92",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.44,
+          "text": "The battery: the reserve for windless days."
+        },
+        {
+          "t0": 3.44,
+          "t1": 6.96,
+          "text": "It receives the rectified current, and feeds the house."
+        },
+        {
+          "t0": 6.96,
+          "t1": 12.8,
+          "text": "The plans want it always charged: left flat too long, it sulphates and becomes useless."
+        },
+        {
+          "t0": 12.8,
+          "t1": 14.16,
+          "text": "The healthiest charge?"
+        },
+        {
+          "t0": 14.16,
+          "t1": 16.56,
+          "text": "A small current, for a long time."
+        },
+        {
+          "t0": 16.56,
+          "t1": 22.24,
+          "text": "Careful: it gives off a gas that can ignite, and nothing metal ever rests across its terminals."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "flows": true
+          }
+        },
+        {
+          "t": 22.24,
+          "do": {
+            "flows": false
+          }
+        }
+      ]
+    }
+  ]
+}
