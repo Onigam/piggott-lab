@@ -42,6 +42,7 @@ assumptions stated. "Unknown" means the sources are silent: it must be estimated
 | S8  | Wikipedia (EN), _Betz's law_                                                                           | https://en.wikipedia.org/wiki/Betz%27s_law                                                                      | limit 16/27 = 0.593; power in the wind ½ρSv³; large modern turbines reach 0.45–0.50                                                                                     | encyclopedia, secondary                                                                                       |
 | S9  | Service-public, _Installation d'une éolienne domestique ou agricole_                                   | https://entreprendre.service-public.gouv.fr/vosdroits/F33368                                                    | France: no formality below a 12 m mast in general, protected areas excepted; building permit from 12 m                                                                  | official page, summarised by a search result: re-read before the lab states it                                |
 | S10 | Windside, FAQ on power production (a vertical-axis maker)                                              | https://windside.com/faq/power-production/                                                                      | generic bracket of 100–300 kWh per m² of swept area per year for propellers in similar conditions; same mean wind, very different yield                                 | secondary, only a sanity bracket; not used as a validation source                                             |
+| S11 | Pure Self Made, _Wind turbine DIY book_ (the book the S1 video is inspired by, per the owner)          | https://pureselfmade.com/wind-turbine-diy-book/                                                                 | Piggott ferrite machines from about 600 W to about 3 kW, rotors 2 m to 4 m; no rated wind speed, no figure for 1.2 m                                                    | sales page, read once on 2026-10-29; no data of the book itself                                               |
 
 Credits for the lab: the video authors (S1 Low-tech Lab, who credit the Tripalium trainer who guided the build; S2 France 3
 Occitanie), the wiki authors (S3), Hugh Piggott (design and plans, S4–S5), the Tripalium network (S6). The lab is an
@@ -273,9 +274,22 @@ The owner answered "Je fais confiance à tes recommandations": every recommendat
 8. **Video details** (furling wind speed at 06:25, first reading at 08:09, mast height of the test): **not checked on the
    video** (nobody watched it); the estimates marked in §3 and the "to confirm" notes in §2 stand.
 
-## 9. Next steps (not started)
+### After wave 1 (2026-10-29)
 
-Wave 1 physics (tests first, from §2; wind and rotor modules, alternator, battery, furling, yearly yield) → wave 2 3D ‖ data
-(ids of §4) → wave 3 drawings ‖ lessons → wave 4 QA → checkpoint with the owner. The spoken guide only after the checkpoint
+Wave 1 (commit `7ad62d6`, `docs/physics.md` §7) found a peak battery power of 63 W for the 1.2 m machine (50 W at 10 m/s,
+60 W at 12 m/s), not the 200 W of the label (K2/K19), and 242 W for 2.4 m against "about 500 W" (K18). Nothing was tuned.
+
+9. **The owner's judgement: about 60 W is the right order for a machine of this size**, "it depends on the size" (the video
+   is inspired by the DIY wind-turbine book of S11). Consequence for now: the model stays as it is, with the sensitivity
+   note (`docs/physics.md` §7.4). **Caveat recorded**: S11's page gives no figure for 1.2 m; it presents Piggott ferrite
+   machines from about 600 W to about 3 kW with rotors from 2 m to 4 m. Scaled with the swept area (P ∝ D²), 600 W at 2 m
+   would give about 215 W at 1.2 m, the order of the label (S3), so S11 does not by itself support 60 W; what stays open is
+   the wind speed of those ratings. The first reading of S1 (08:09) is still to be read by the owner.
+
+## 9. Next steps
+
+Wave 1 physics is done (above). Next: wave 2 3D ‖ data (ids of §4) → wave 3 drawings ‖ lessons → wave 4 QA → checkpoint with
+the owner. The lessons must say that the machine's power curve is nearly linear in the wind speed once the rotor is held in
+the stall (physics §7.6), not a cube. The spoken guide only after the checkpoint
 (`lab-kit/docs/narration-style.md`; about 35 000 to 45 000 ElevenLabs credits in two languages, about 38 500 left). The
 lead asks the owner's approval before launching each wave (token cost: the ram lab used about twice the estimate).
