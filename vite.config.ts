@@ -5,5 +5,10 @@ export default defineConfig({
   base: './',
   build: { chunkSizeWarningLimit: 1500 },
   // the kit's dist uses extensionless relative imports: let Vite resolve them so a test may render the simulation panel
-  test: { include: ['src/**/*.test.ts'], server: { deps: { inline: ['@onigam/lab-kit'] } } },
+  // the simulation tests integrate a minute of life per scenario: on a shared CI runner, next to the 3D tests, 5 s is too short
+  test: {
+    include: ['src/**/*.test.ts'],
+    testTimeout: 30000,
+    server: { deps: { inline: ['@onigam/lab-kit'] } },
+  },
 });
