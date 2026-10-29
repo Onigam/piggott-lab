@@ -1,0 +1,87 @@
+# Requests to the lab kit
+
+Things the Piggott lab would like from `@onigam/lab-kit` (BRIEF.md §2: a missing building block becomes a change of the kit
+for all labs, never a local workaround). Written by the physics role, wave 1. The lab wrote the first four locally, in `src/sim`,
+and would drop its copy when the kit has them.
+
+## 1. Lead-acid battery, three-phase bridge, dump load and low-voltage disconnect in `sim/electric`
+
+`sim/electric` has `CU_RHO`, `cableResistance` and a 15S LiFePO4 `ocv`. The research said the electrical side "reuses the kit (rectifier, battery,
+cable, dump load)": it does not. The lab wrote (and tested) in `electrical.ts` and `alternator.ts`:
+
+- a 12 V lead-acid resting-voltage curve against state of charge, with an internal resistance and a charge polarisation that makes a
+  full battery refuse the current (scaled by 2 or 4 for 24 and 48 V banks);
+- the three-phase diode bridge with its equivalent DC resistance `2·R_ph + (3/π)·p·ω·L` and the air-gap power `I·(V_oc − R_x·I)`, which keeps the
+  books closed;
+- a shunt dump load that holds the bus at a set voltage up to a current limit, and a low-voltage disconnect with hysteresis;
+- the cable loss share of a power at a voltage (`cableLossShare`), the arithmetic of the K21 table.
+
+- **What**: `leadAcidOcv(soc, cells)`, `batteryResistance`, `bridgeDc(...)`, `shuntRegulate(...)`, `lvd(...)`, `cableLossShare(...)`, with the same
+  conventions as the existing `ocv` and `cableResistance`.
+- **Why**: any lab with a battery bank (Pelton on 48 V, the mass heater, the bioclimatic house, a PV lab) rewrites the same four functions.
+- **Needed by**: Piggott lab (done locally), Pelton lab (has its own 48 V version in `engine.ts`).
+
+## 2. Wind and statistics helpers in `sim`
+
+`weibullScale`, `weibullPdf`, `weibullCdf`, `weibullQuantile`, `gamma`, `normalCdf`, `normalQuantile`, a seeded generator (mulberry32 + Box-Muller) and an
+Ornstein-Uhlenbeck process read on a fixed time grid, so that a stochastic run is identical at any frame rate (`wind.ts`, `physics.ts`).
+
+- **What**: put them in `@onigam/lab-kit/sim/stats` (no DOM).
+- **Why**: every lab with a variable resource needs a seeded, frame-rate independent noise (wind, sun and clouds, a water source, a demand profile)
+  and a distribution for the yearly view; the Pelton and ram labs have none.
+- **Needed by**: Piggott lab; the solar and wind labs of the roadmap.
+
+## 3. `LineChart`: a clipped plot area and options that can change
+
+`LineChart` draws the series with `ctx.stroke()` and no clip, so a series that goes above `yMax` is drawn outside the plot, over the title and the
+legend. The power curve needs the lines of the wind power and of the Betz limit, which grow with the cube of the speed, to leave the chart through
+the top while the rotor and battery curves stay readable; the lab replaces the points above `yMax` by `NaN` (the pen lifts) and the line stops short of the edge.
+And `yMax` is given once, at construction: the lab keeps a reference to the options object and changes it before `draw()`, which works because the chart stores
+the object, but is not an interface.
+
+- **What**: clip the plot rectangle (`ctx.save(); ctx.rect(...); ctx.clip()`) when `yMax`/`yMin` are given, and add `setOptions({ yMin, yMax })` (or accept
+  `yMax: () => number`).
+- **Why**: any chart that compares a fast-growing reference (power in the wind, available head, the theoretical limit) with a real curve.
+- **Needed by**: Piggott lab (the power curve and the Betz limit); the Pelton lab would use it for the hydraulic power.
+
+## 4. A loss-bar helper
+
+Pelton's panel builds the "from the resource to the battery" bar by hand (a `loss-bar` flex row of coloured `span`s and a `loss-legend`), with colours written inline.
+The Piggott panel does the same with the kit's CSS variables (`--water`, `--copper`, `--sun`, `--violet`, `--ink-4`). The CSS classes exist in the kit, the builder does not.
+
+- **What**: `lossBar(rows: { label: string; watts: number; colour?: string }[])` returning the bar and its legend, with the kit palette as default.
+- **Why**: the same chain of losses is shown by every energy lab, and the colours should not be chosen lab by lab.
+- **Needed by**: Piggott lab, Pelton lab, any lab with a chain of conversions.
+
+## 5. Importing the kit under Node without configuration
+
+`dist/**/*.js` imports its siblings without extensions (`./lang`), which Node's ES module resolution cannot follow: a test that renders a panel (which imports
+`@onigam/lab-kit/i18n` and `/ui`) fails with "Cannot find module …/dist/i18n/lang". Each lab needs `test.server.deps.inline: ['@onigam/lab-kit']` in its
+`vite.config.ts` (the Piggott lab added that one line; the ram lab has it too).
+
+- **What**: emit `.js` extensions in the compiled imports of the kit (or an `exports` map that Node can follow).
+- **Why**: a panel smoke test should not need a bundler's help, and the kit is imported by the Node tests of `src/sim` only through `sim/*` today.
+- **Needed by**: every lab that tests its panel (ram, Piggott).
+
+## 6. A fake DOM for panel tests
+
+`src/panels/test-dom.ts` (a small stand-in for `document`, the canvas context and `ResizeObserver`, with `find`, `querySelector`, `click`, `dispatch`) is copied from lab
+to lab. It belongs in the kit as `@onigam/lab-kit/testing`, with `installFakeDom()`.
+
+- **What**: publish it with its small API.
+- **Why**: one copy to maintain; the labs' panel tests stay short.
+- **Needed by**: ram lab, Piggott lab.
+
+## 7. Following a scripted change: `slider` and `toggle` handles
+
+A scenario can move a slider (the wind of the storm) or flip a switch (the brake, the battery) while the panel is open, and the kit does not re-render a panel in
+simulation mode. `slider()` and `toggle()` return a bare `label`, so the lab finds the `input` and the `output` with `querySelector` to follow the simulation.
+
+- **What**: return `{ el, set(value) }` (or put a `data-key` on the element and offer `syncControls(root, values)`).
+- **Why**: every lab with scripted scenarios (ram: the stroke nut; Piggott: the wind ramp, the brake, the battery) has the same problem.
+- **Needed by**: Piggott lab (done with `querySelector` in `followScript`), ram lab.
+
+## 8. Seconding the ram lab's requests
+
+`StripAlarm` with an action (here: close the brake switch, reconnect the battery from the strip) and a `title` on `StripValue` (for the definition of λ or Cp). The
+panel of the Piggott lab would use both. A `CurveChart` with its own units (ram lab's request 1) would serve the power curve and the Cp(λ) chart, which use `LineChart` with markers.
