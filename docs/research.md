@@ -17,16 +17,16 @@ assumptions stated. "Unknown" means the sources are silent: it must be estimated
   The second video named in the roadmap (France 3, 1:35) is a short report on a course: it gives the human story, not figures.
 - **One version**, no V1/V2. The size range (1.0 to 4.2 m rotors in the Tripalium family) becomes a **diameter parameter** of
   the simulation, not a second machine (§6).
-- **Level proposed**: Full, but kept lean — four worlds (`site`, `turbine`, `alternator`, `blades`), about 40 parts, 6 lessons
-  (the owner found 12–14 too many on the ram lab), about 7 drawings. A Lite variant (two worlds, ~25 parts, 3–4 drawings) is
-  described in §4 if the cost matters more.
+- **Level (confirmed by the owner, 2026-10-29)**: Full, but kept lean — four worlds (`site`, `turbine`, `alternator`,
+  `blades`), about 40 parts, 6 lessons (the owner found 12–14 too many on the ram lab), about 7 drawings. A Lite variant (two
+  worlds, ~25 parts, 3–4 drawings) is described in §4 and was not chosen.
 - **Official data exist, unlike the ram**: the maker publishes his plans for free, with dimensions of the 1.2 m machine
   (blade stations, magnets, coils, tail geometry), and the wiki gives the video build almost to the screw. The 3D model can
   follow them; the lab credits them and reuses no text, drawing or footage (§7).
 - **What the sources do not give**: the power curve (watts against wind speed), the cut-in wind speed, the rotor power
   coefficient curve, the wind speed at which "200 W" is reached, and the furling wind speed other than "about 10 m/s". The
   physics role derives them from the figures below and the lab says which are derived (§2, §5).
-- To confirm with the owner: §8.
+- Decisions of the owner: §8 (all recommendations adopted on 2026-10-29).
 
 ## 1. Sources
 
@@ -254,27 +254,26 @@ scales in 3D: not proposed.
   or footage from the videos; the dimensions of the plans are facts published by their author, credited and not copied as
   text or drawings.
 
-## 8. Open questions for the owner
+## 8. Decisions of the owner (2026-10-29)
 
-1. **Level**: Full as proposed (4 worlds, ~40 parts, 6 lessons, ~7 drawings) or Lite (2 worlds, ~25 parts, 3–4 drawings)?
-   Full probably costs about twice as much in agents (the ram lab took about 7.8 million tokens for its enrichment, review
-   and QA waves); the roadmap marks Piggott as Full.
-2. **Main source**: the Low-tech Lab video (S1) with the wiki figures (S3) and the maker's plans (S4)? (Recommended: yes.)
-3. **The machine**: the 1.2 m / 200 W / 12 V of the video, with the rotor diameter as a parameter from 1.0 to 4.2 m? (Yes / a
-   fixed size only.)
-4. **Dimensions**: use the maker's published dimensions (blade stations, magnets, coils, tail geometry) in the 3D model and
-   the part sheets, with credit and a "take a course" warning? (Recommended: yes. Otherwise we stay at approximate sizes.)
-5. **Story and the "aha"**: the storm (the tail folds, power plateaus) and the cubic law, plus the yearly yield with a
-   sober capacity factor. OK, or another thread?
-6. **Sites**: generic presets (calm valley, hamlet, windy plateau) rather than a real place such as the Causse Méjean?
-   (Recommended: generic.)
-7. **Winding resistance puzzle** (§2 check 4): fine to report the alternator efficiency the physics finds, even if the 200 W
-   is then reached later than the sources suggest, rather than tune the model to print 200 W?
-8. **Watching the video**: I cannot watch it, only read the garbled captions. Could you check three things on the video: the
-   wind speed given for the furling (06:25, "10 m/s"?), the first reading at the end (08:09, "on était à 1…"), and the mast
-   height used in the test? Or accept the estimates marked in §3.
+The owner answered "Je fais confiance à tes recommandations": every recommendation below is adopted.
 
-## 9. Next steps
+1. **Level: Full** (4 worlds, ~40 parts, 6 lessons, ~7 drawings), not Lite. Full probably costs about twice as much in agents
+   (the ram lab took about 7.8 million tokens for its enrichment, review and QA waves); the roadmap marks Piggott as Full.
+2. **Main source: the Low-tech Lab video (S1)**, with the wiki figures (S3) and the maker's plans (S4).
+3. **The machine: 1.2 m / 200 W / 12 V of the video**, with the rotor diameter as a simulation parameter from 1.0 to 4.2 m
+   (no second machine).
+4. **Dimensions: the maker's published ones** (blade stations, magnets, coils, tail geometry) in the 3D model and the part
+   sheets, with credit and a "take a course" warning.
+5. **Story and the "aha"**: the storm (the tail folds, power plateaus) and the cubic law, plus the yearly yield with a sober
+   capacity factor.
+6. **Sites: generic presets** (calm valley, hamlet, windy plateau), not a real place.
+7. **Winding resistance puzzle** (§2 check 4): the physics **reports the alternator efficiency it finds**, even if the 200 W is
+   then reached later than the sources suggest; the model is never tuned to print 200 W.
+8. **Video details** (furling wind speed at 06:25, first reading at 08:09, mast height of the test): **not checked on the
+   video** (nobody watched it); the estimates marked in §3 and the "to confirm" notes in §2 stand.
+
+## 9. Next steps (not started)
 
 Wave 1 physics (tests first, from §2; wind and rotor modules, alternator, battery, furling, yearly yield) → wave 2 3D ‖ data
 (ids of §4) → wave 3 drawings ‖ lessons → wave 4 QA → checkpoint with the owner. The spoken guide only after the checkpoint
