@@ -85,3 +85,38 @@ simulation mode. `slider()` and `toggle()` return a bare `label`, so the lab fin
 
 `StripAlarm` with an action (here: close the brake switch, reconnect the battery from the strip) and a `title` on `StripValue` (for the definition of λ or Cp). The
 panel of the Piggott lab would use both. A `CurveChart` with its own units (ram lab's request 1) would serve the power curve and the Cp(λ) chart, which use `LineChart` with markers.
+
+## 9. The ram lab's 3D helpers, in the kit (3D role, wave 2)
+
+The Piggott worlds needed `mergeStatic` / `dynamic()` (one mesh per material, colours in the vertices), the section tool `CutKit` (clipping plane, flat caps drawn from the 2D
+section of each part, now with a tint per cap), `lathe` / `hexNut` / `paperFloor` / `FlowDots`, and the widened thin line with its picking (`minWidthMaterial`, `pickAlong`: a 60 mm mast or a 4 mm guy
+is invisible from 40 m). All of it was ported from the ram lab (`src/three/merge.ts`, `cut.ts`, `common.ts`, `site/pipes.ts`) with small changes and is now in a third repository.
+
+- **What**: `@onigam/lab-kit/three/extras` (or merged into `three`): `mergeStatic`, `dynamic`, `CutKit`, `lathe`, `hexNut`, `paperFloor`, `FlowDots`, `minWidthMaterial`, `pickAlong`, plus the sky of the site worlds (`createSky`: Preetham sky,
+  sun by the hour, night, shadow aimed at a point).
+- **Why**: three labs carry the same 700 lines; a fix of the merge (the mirrored meshes, the clipped materials) must reach all of them.
+- **Needed by**: ram lab, Piggott lab; Pelton and the next labs with a landscape.
+
+## 10. A way to attach an overlay to a part without making it a part's mesh
+
+The blur disc of the rotor (a translucent sheet that must never be picked, ghosted or hidden by isolate) and the section caps are kept out of `PartEntry.meshes` by setting
+`mesh.userData.ownerPart` before `registry.add` (the registry skips meshes that already have an owner), and the world hides them itself when the part is ghosted or hidden. It works but depends on that detail.
+
+- **What**: `registry.overlay(partId, object)`: the object follows the part (explode), is excluded from `meshes` and `pickables()`, and is hidden by the registry when the part is `hidden`, `ghost` or `wire`.
+- **Why**: same need for flow dots, sections, blur sheets and water in every lab.
+- **Needed by**: Piggott (blur disc, caps), ram (water, caps), Pelton (jets).
+
+## 11. `registry.bounds` and instanced meshes
+
+`PartRegistry.bounds(id)` uses `Box3.setFromObject(object, true)`, which for an `InstancedMesh` reads a bounding box that three computes once; a world that changes the instance matrices (the trees of the site follow
+`obstacleHeight`) must call `computeBoundingBox()` itself, otherwise `frameParts` frames the old size.
+
+- **What**: have `bounds` call `computeBoundingBox()` on instanced meshes (or document it).
+- **Needed by**: Piggott (trees), ram (forest tiles).
+
+## 12. Guide steps with a part that moves along a curve or turns
+
+Some insertion paths are not a straight offset: the tail sleeve slides up an inclined pipe and the rods turn into their nuts. `registry.add(..., explode, custom)` covers the straight ones (and a `custom(f)` that moves
+sub-groups, as the blades world does for the plywood triangle); an `explode` that is a function of `f` returning a position and a rotation would let the guide show a part that screws in.
+
+- **Needed by**: Piggott (nuts, rods, sleeve), the ram lab (the stroke nut).
