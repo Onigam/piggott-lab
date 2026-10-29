@@ -49,6 +49,11 @@ const ALLOWED = new Set([
 ]);
 
 describe('interface strings', () => {
+  it('never shows a research code (K22, S4…) to the visitor: sources are named in words', () => {
+    for (const [key, [fr, en]] of entries) {
+      for (const text of [fr, en]) expect(text, key).not.toMatch(/\b[KS]\d{1,2}\b/);
+    }
+  });
   it('there are strings to check', () => {
     expect(entries.length).toBeGreaterThan(120);
   });
