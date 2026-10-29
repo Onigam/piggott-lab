@@ -30,14 +30,14 @@
       "scope": "scene:turbine",
       "title": "L’éolienne",
       "scene": "turbine",
-      "text": "[[home]] Voici la machine, tout en haut du mât. [[frame:rotor]] À l’avant, le rotor : trois pales et un moyeu. [[frame:alternator]] Derrière, l’alternateur, sans engrenage. [[frame:nacelle-frame]] Un cadre d’acier soudé porte le tout, [[frame:yaw-bearing]] et pivote sur le mât, grâce à un simple tube graissé. [[frame:tail-vane]] À l’arrière, la queue garde la machine face au vent… [[frame:tail-hinge]] sur une charnière inclinée, qui lui permet de s’écarter quand le vent forcit. [[home]] [[cutaway:on]] Regardez l’alternateur en coupe. [[cutaway:off]] [[explode:0.6]] Puis écartons les pièces. [[explode:0]] Une queue qui plie : voilà la sécurité de la machine dans la tempête."
+      "text": "[[home]] Voici la machine, tout en haut du mât. [[frame:rotor]] À l’avant, le rotor : trois pales et un moyeu. [[frame:alternator]] Derrière, l’alternateur, sans engrenage. [[frame:nacelle-frame]] Un cadre d’acier soudé porte le tout, [[frame:yaw-bearing]] et pivote sur le mât, grâce à un simple tube graissé. [[frame:tail-vane]] À l’arrière, la queue garde la machine face au vent… [[frame:tail-hinge]] sur une charnière inclinée, qui lui permet de s’écarter quand le vent forcit. [[frame:alternator]] [[cutaway:on]] Regardez l’alternateur en coupe : les aimants d’un côté, les bobines de l’autre, et presque rien entre les deux. [[cutaway:off]] [[home]] [[explode:0.6]] Puis écartons toutes les pièces, une à une, comme pour démonter la machine. [[explode:0]] Une queue qui plie : voilà la sécurité de la machine dans la tempête."
     },
     {
       "id": "scene-alternator",
       "scope": "scene:alternator",
       "title": "L’alternateur",
       "scene": "alternator",
-      "text": "[[home]] Voici le cœur de la machine, posé sur l’établi. [[frame:magnet-rotor,magnets]] Un disque d’acier porte huit aimants. [[frame:stator,coils]] Face à lui, un disque de résine noie six bobines de cuivre. [[frame:air-gap]] Entre les deux, environ un millimètre de vide. [[frame:bearing-hub,shaft]] Le disque tourne avec un moyeu de voiture, sur une fusée qui ne bouge jamais. [[home]] [[cutaway:on]] En coupe, on voit l’entrefer… [[cutaway:off]] [[explode:0.6]] et en éclaté, tout ce qui s’enfile. [[explode:0]] Rien ne se touche : seul un champ traverse le vide."
+      "text": "[[home]] Voici le cœur de la machine, posé sur l’établi. [[frame:magnet-rotor,magnets]] Un disque d’acier porte huit aimants. [[frame:stator,coils]] Face à lui, un disque de résine noie six bobines de cuivre. [[frame:air-gap]] Entre les deux, environ un millimètre de vide. [[frame:bearing-hub,shaft]] Le disque tourne avec un moyeu de voiture, sur une fusée qui ne bouge jamais. [[home]] [[cutaway:on]] En coupe, on voit l’entrefer : un millimètre de vide, et c’est là que tout se joue. [[cutaway:off]] [[explode:0.6]] Et en éclaté, tout ce qui s’enfile, pièce après pièce, comme un jeu de construction. [[explode:0]] Rien ne se touche : seul un champ traverse le vide."
     },
     {
       "id": "scene-blades",
@@ -51,7 +51,7 @@
       "scope": "scene:shed",
       "title": "Le local technique",
       "scene": "shed",
-      "text": "[[home]] Voici le local technique : un cabanon sec, et un panneau de bois. [[frame:brake-switch]] Le courant arrive d’abord à l’interrupteur de freinage, [[frame:rectifier]] puis au redresseur, qui le met à l’endroit. [[frame:fuse]] Le fusible veille sur le câble et sur la batterie, [[frame:charge-controller]] le régulateur surveille la tension, [[frame:dump-load]] et le délesteur brûle le surplus. [[frame:battery-bank]] Au bout, la batterie, posée au sol. [[home]] [[flows:on]] Suivez le courant, de la gauche vers la batterie. [[flows:off]] [[explode:0.6]] Puis décollons les appareils du panneau. [[explode:0]]"
+      "text": "[[home]] Voici le local technique : un cabanon sec, et un panneau de bois. [[frame:brake-switch]] Le courant arrive d’abord à l’interrupteur de freinage, [[frame:rectifier]] puis au redresseur, qui le met à l’endroit. [[frame:fuse]] Le fusible veille sur le câble et sur la batterie, [[frame:charge-controller]] le régulateur surveille la tension, [[frame:dump-load]] et le délesteur brûle le surplus. [[frame:battery-bank]] Au bout, la batterie, posée au sol. [[home]] [[flows:on]] Suivez le courant : il entre par la gauche, traverse chaque appareil, et file vers la batterie. [[flows:off]] [[explode:0.6]] Puis décollons les appareils du panneau, un par un, pour voir leurs fils. [[explode:0]]"
     },
     {
       "id": "part-wind-turbine",

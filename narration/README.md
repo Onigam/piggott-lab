@@ -1,8 +1,8 @@
 # Narration scripts (French and English)
 
 `fr.json` and `en.json` follow `lab-kit/docs/narration.md`: 42 segments each (`intro`, 5 worlds, 36 parts: site 8, turbine 8, alternator 10,
-blades 4, shed 6), no lesson segments. **No audio has been generated and no credit spent**: the lab does not declare `narration` yet
-(`src/lab.ts`) and `public/audio` does not exist. That waits for the owner's yes, then the kit bump to v0.4.0 (speaker button, first-visit
+blades 4, shed 6), no lesson segments. **A French sample has been generated (the introduction and the turbine world, 2 293 credits, 2026-10-29, owner's yes); the rest is not**: the lab does not declare `narration` yet
+(`src/lab.ts`) and `public/audio` is not committed (excluded locally in `.git/info/exclude`; it holds the sample, whose manifest is the cache that keeps the introduction from being billed twice). The turbine world was edited after the sample (longer section and explode), so it will be generated again. That waits for the owner's yes, then the kit bump to v0.4.0 (speaker button, first-visit
 invitation).
 
 Check the cost without spending anything:
@@ -10,7 +10,7 @@ Check the cost without spending anything:
 
 ## Budget (spoken characters, cues removed)
 
-- French **16 301** (intro 1 834, worlds 2 242, parts 12 225), English **15 455** (intro 1 707, worlds 2 309, parts 11 439). About 31 800 credits
+- French **16 614** (intro 1 834, worlds 2 555, parts 12 225), English **15 777** (intro 1 707, worlds 2 631, parts 11 439). About 32 400 credits
   for the two languages; the owner's ceiling is 30 000 per language (`src/narration.test.ts`).
 - Ordinary part 250 to 330 characters; the biggest are `magnets` (431 in French) and `star-wiring` (387 in English).
 

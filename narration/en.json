@@ -30,14 +30,14 @@
       "scope": "scene:turbine",
       "title": "The turbine",
       "scene": "turbine",
-      "text": "[[home]] Here is the machine, at the top of the mast. [[frame:rotor]] At the front, the rotor: three blades and a hub. [[frame:alternator]] Behind it, the alternator, with no gearbox. [[frame:nacelle-frame]] A welded steel frame carries it all, [[frame:yaw-bearing]] and swivels on the mast, thanks to a simple greased tube. [[frame:tail-vane]] At the back, the tail keeps the machine facing the wind… [[frame:tail-hinge]] on a tilted hinge, which lets it swing aside when the wind rises. [[home]] [[cutaway:on]] Look at the alternator in section. [[cutaway:off]] [[explode:0.6]] Then let’s pull the parts apart. [[explode:0]] A tail that folds: that is the machine’s protection in a storm."
+      "text": "[[home]] Here is the machine, at the top of the mast. [[frame:rotor]] At the front, the rotor: three blades and a hub. [[frame:alternator]] Behind it, the alternator, with no gearbox. [[frame:nacelle-frame]] A welded steel frame carries it all, [[frame:yaw-bearing]] and swivels on the mast, thanks to a simple greased tube. [[frame:tail-vane]] At the back, the tail keeps the machine facing the wind… [[frame:tail-hinge]] on a tilted hinge, which lets it swing aside when the wind rises. [[frame:alternator]] [[cutaway:on]] Look at the alternator in section: the magnets on one side, the coils on the other, and almost nothing between them. [[cutaway:off]] [[home]] [[explode:0.6]] Then let’s pull all the parts apart, one by one, as if taking the machine to pieces. [[explode:0]] A tail that folds: that is the machine’s protection in a storm."
     },
     {
       "id": "scene-alternator",
       "scope": "scene:alternator",
       "title": "The alternator",
       "scene": "alternator",
-      "text": "[[home]] Here is the heart of the machine, on the workbench. [[frame:magnet-rotor,magnets]] A steel disc carries eight magnets. [[frame:stator,coils]] Facing it, a resin disc embeds six copper coils. [[frame:air-gap]] Between the two, about one millimetre of empty space. [[frame:bearing-hub,shaft]] The disc turns with a car hub, on a stub axle that never moves. [[home]] [[cutaway:on]] In section, you can see the air gap… [[cutaway:off]] [[explode:0.6]] and exploded, everything that slides together. [[explode:0]] Nothing touches: only a field crosses the gap."
+      "text": "[[home]] Here is the heart of the machine, on the workbench. [[frame:magnet-rotor,magnets]] A steel disc carries eight magnets. [[frame:stator,coils]] Facing it, a resin disc embeds six copper coils. [[frame:air-gap]] Between the two, about one millimetre of empty space. [[frame:bearing-hub,shaft]] The disc turns with a car hub, on a stub axle that never moves. [[home]] [[cutaway:on]] In section, you can see the air gap: one millimetre of empty space, and that is where everything happens. [[cutaway:off]] [[explode:0.6]] And exploded, everything that slides together, piece after piece, like a construction set. [[explode:0]] Nothing touches: only a field crosses the gap."
     },
     {
       "id": "scene-blades",
@@ -51,7 +51,7 @@
       "scope": "scene:shed",
       "title": "The technical room",
       "scene": "shed",
-      "text": "[[home]] Here is the technical room: a dry shed, and a wooden board. [[frame:brake-switch]] The current first reaches the brake switch, [[frame:rectifier]] then the rectifier, which turns it the right way round. [[frame:fuse]] The fuse watches over the cable and the battery, [[frame:charge-controller]] the controller keeps an eye on the voltage, [[frame:dump-load]] and the dump load burns off the surplus. [[frame:battery-bank]] At the end, the battery, standing on the floor. [[home]] [[flows:on]] Follow the current, from the left towards the battery. [[flows:off]] [[explode:0.6]] Then let’s lift the devices off the board. [[explode:0]]"
+      "text": "[[home]] Here is the technical room: a dry shed, and a wooden board. [[frame:brake-switch]] The current first reaches the brake switch, [[frame:rectifier]] then the rectifier, which turns it the right way round. [[frame:fuse]] The fuse watches over the cable and the battery, [[frame:charge-controller]] the controller keeps an eye on the voltage, [[frame:dump-load]] and the dump load burns off the surplus. [[frame:battery-bank]] At the end, the battery, standing on the floor. [[home]] [[flows:on]] Follow the current: it comes in on the left, goes through every device, and runs to the battery. [[flows:off]] [[explode:0.6]] Then let’s lift the devices off the board, one by one, to see their wires. [[explode:0]]"
     },
     {
       "id": "part-wind-turbine",
