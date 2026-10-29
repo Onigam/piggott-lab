@@ -136,6 +136,12 @@ export interface PiggottState {
   /** Air density, kg/m³. */
   airDensity: number;
 
+  // ---- the machine and its site as set in the parameters (the 3D view draws them at this size)
+  /** Rotor diameter, m, mast height (hub height), m, and height of the trees near the mast, m (0 = open field). */
+  diameter: number;
+  mastHeight: number;
+  obstacleHeight: number;
+
   // ---- rotor (fast clock: slowed by slowMo)
   /** Rotor speed, rpm and rad/s. */
   rpm: number;

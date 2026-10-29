@@ -541,6 +541,9 @@ export class PiggottSim implements LabSim {
     s.windMean = this.windMean;
     s.turbulence = turbulenceIntensity(p.mastHeight, p.obstacleHeight) * p.gusts;
     s.airDensity = cfg.rho;
+    s.diameter = p.diameter;
+    s.mastHeight = p.mastHeight;
+    s.obstacleHeight = p.obstacleHeight;
 
     s.rpm = o.rpm;
     s.omega = o.omega;
@@ -631,6 +634,9 @@ function emptyState(): PiggottState {
     windMean: 0,
     turbulence: 0,
     airDensity: 0,
+    diameter: 0,
+    mastHeight: 0,
+    obstacleHeight: 0,
     rpm: 0,
     omega: 0,
     tipSpeed: 0,
