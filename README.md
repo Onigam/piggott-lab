@@ -17,9 +17,10 @@ electricity), built on the same frame, [lab-kit](https://github.com/Onigam/lab-k
 - **A simulation** of the machine (a pure, unit-tested physics model): wind with gusts and a yearly distribution, a rotor held
   back by its alternator, a lead-acid battery with its dump load and cable, furling in a storm, three sites, eleven scenarios,
   and a rotor diameter from 1.0 to 4.2 m.
-- **A catalogue of 35 parts** whose sheets say what each part does, how it is made and what to watch for.
-
-Still to come: the A3 design drawings and the short lessons with a quiz (their modes stay hidden until they exist).
+- **Eight A3 design drawings** generated from the same dimensions as the 3D model (the machine, the blade, furling, the
+  alternator, the winding, the tower, the electrical schematic, power by size), **six short lessons with a quiz**, and a
+  **catalogue of 35 parts** whose sheets say what each part does, how it is made and what to watch for.
+- **A size comparison** in the simulation: the model's power for the seven rotor diameters of the family on one chart.
 
 ## What is real and what is not
 
@@ -52,7 +53,7 @@ Vercel. `npm run kit:bump` moves to a newer lab-kit.
 ## Project layout
 
 - `src/three/` the four worlds and `dims.ts`, the single source of dimensions (metres, each tagged); `src/sim/` the pure
-  physics; `src/data/` parts, guides, chapters; `src/panels/` the simulation panel; `src/lab.ts` describes the lab to the kit;
+  physics; `src/data/` parts, guides, chapters, lessons; `src/drawings/` the A3 sheets; `src/panels/` the simulation panel; `src/lab.ts` describes the lab to the kit;
   `src/part-ids.ts` freezes the 35 part ids shared by all of them.
 - `docs/` research notes and sources, physics notes, 3D and data notes, requests to the kit; `BRIEF.md` is the brief the agent
   team works from.
@@ -73,8 +74,8 @@ socle, [lab-kit](https://github.com/Onigam/lab-kit).
 **Ce qu'il contient.** Quatre mondes 3D (le **site**, la **machine** sur son mât, son **alternateur**, les **pales** en cours de
 taille) avec éclaté, rayons X, isolement, coupe et flux ; des guides de **montage** (24 étapes) et d'**installation** (12 étapes) ;
 une **simulation** (vent avec rafales, rotor freiné par son alternateur, batterie, délesteur, câble, repliement dans la tempête,
-trois sites, onze scénarios, diamètre de 1,0 à 4,2 m) ; un catalogue de **35 pièces**. Les plans A3 et les leçons arrivent
-ensuite : leurs modes restent masqués d'ici là.
+trois sites, onze scénarios, diamètre de 1,0 à 4,2 m, comparaison des sept tailles sur un graphique) ; **huit plans A3** générés
+des cotes du modèle 3D ; **six leçons** avec quiz ; un catalogue de **35 pièces**.
 
 **Ce qui est réel, ce qui ne l'est pas.** Reconstitution pédagogique indépendante, aucune image de la vidéo reprise. Source
 principale : la vidéo du Low-tech Lab, avec les chiffres de leur wiki, les plans publiés par Hugh Piggott et le réseau Tripalium.

@@ -1,11 +1,13 @@
 import { configureDrawings } from '@onigam/lab-kit/drawings';
-import { strL } from '@onigam/lab-kit/i18n';
+import { l, strL } from '@onigam/lab-kit/i18n';
 import { h, icon, ICONS, type AppContext, type LabDefinition } from '@onigam/lab-kit/ui';
 import { ASSEMBLY } from './data/assembly';
 import { CHAPTERS } from './data/chapters';
 import { INSTALL } from './data/install';
+import { LESSONS } from './data/lessons';
 import { OVERVIEWS } from './data/overviews';
 import { PARTS } from './data/parts';
+import { SHEETS } from './drawings';
 import { num, t, type UiKey } from './i18n/ui';
 import { SimPanel } from './panels/sim';
 import { PiggottSim } from './sim/engine';
@@ -15,7 +17,7 @@ import { createAlternatorScene, createBladesScene, createSiteScene, createTurbin
 // The lab described to the kit. Edit the content here and in src/data, src/three, src/sim, src/drawings;
 // the kit supplies the whole application frame (see BRIEF.md: the frame is locked).
 
-configureDrawings({ project: { fr: 'PIGGOTT LAB — dispositif', en: 'PIGGOTT LAB — device' } });
+configureDrawings({ project: { fr: 'PIGGOTT LAB — éolienne', en: 'PIGGOTT LAB — wind turbine' } });
 
 const SEVERE_ALARMS = new Set<AlarmKey>(['overspeed', 'runaway', 'overcharge', 'overload']);
 
@@ -166,7 +168,20 @@ export const lab: LabDefinition<PiggottSim> = {
     assembly: { scene: 'blades', steps: ASSEMBLY },
     install: { scene: 'site', steps: INSTALL },
   },
-  // lessons and drawings come with wave 3: their modes stay hidden until then
+  lessons: { items: LESSONS, intro: strL('lessonsIntroPiggott') },
+  plans: {
+    sheets: SHEETS,
+    groups: [
+      { id: 'machine', label: l('La machine', 'The machine') },
+      { id: 'alternator', label: l('L’alternateur', 'The alternator') },
+      { id: 'site', label: l('Site et électricité', 'Site and electricity') },
+      { id: 'performance', label: l('Puissance', 'Power') },
+    ],
+    intro: l(
+      'Huit plans A3 générés à partir des cotes du modèle 3D : la machine, la pale, le repliement, l’alternateur, le bobinage, le mât, le schéma électrique et la puissance selon la taille. Reconstitution pédagogique, pas un plan de construction.',
+      'Eight A3 drawings generated from the 3D model’s dimensions: the machine, the blade, furling, the alternator, the winding, the tower, the electrical schematic and power by size. Educational reconstruction, not a construction plan.',
+    ),
+  },
   simPanel: (ctx: AppContext<PiggottSim>) => new SimPanel(ctx),
   strip: {
     values: (sim) => {
