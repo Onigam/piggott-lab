@@ -206,6 +206,8 @@ export const lab: LabDefinition<PiggottSim> = {
       'Eight A3 drawings generated from the 3D model’s dimensions: the machine, the blade, furling, the alternator, the winding, the tower, the electrical schematic and power by size. Educational reconstruction, not a construction plan.',
     ),
   },
+  // spoken guide: audio and subtitles generated from narration/<lang>.json (see narration/README.md)
+  narration: { manifest: 'audio/{lang}/manifest.json' },
   simPanel: (ctx: AppContext<PiggottSim>) => new SimPanel(ctx),
   strip: {
     values: (sim) => {

@@ -1,0 +1,2488 @@
+{
+  "lang": "fr",
+  "model": "eleven_v4",
+  "generatedAt": "2026-10-29T19:55:43.995Z",
+  "voiceLabel": {
+    "fr": "Voix de synthèse",
+    "en": "Synthetic voice"
+  },
+  "totalSeconds": 958,
+  "segments": [
+    {
+      "id": "intro",
+      "scope": "intro",
+      "title": "Présentation du labo",
+      "scene": "site",
+      "file": "intro.mp3",
+      "duration": 110.24,
+      "chars": 1815,
+      "hash": "1a9b0c709b7f2aa1",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 6.48,
+          "text": "Imaginez une colline balayée par le vent, et, au pied de la pente, un hameau loin du réseau électrique."
+        },
+        {
+          "t0": 6.48,
+          "t1": 8.4,
+          "text": "Pas de ligne, pas de prise."
+        },
+        {
+          "t0": 8.4,
+          "t1": 11.48,
+          "text": "Juste du vent, des planches, des aimants…"
+        },
+        {
+          "t0": 11.48,
+          "t1": 13.12,
+          "text": "et de la patience."
+        },
+        {
+          "t0": 13.12,
+          "t1": 14.64,
+          "text": "Suivons une rafale."
+        },
+        {
+          "t0": 14.64,
+          "t1": 20.24,
+          "text": "Elle arrive du fond de la vallée, et grimpe le long du mât haubané, tout en haut, jusqu’à la machine."
+        },
+        {
+          "t0": 20.24,
+          "t1": 23.12,
+          "text": "Là, trois pales de bois, taillées à la main."
+        },
+        {
+          "t0": 23.12,
+          "t1": 26,
+          "text": "Elle pousse : le rotor se met à tourner."
+        },
+        {
+          "t0": 26,
+          "t1": 30.24,
+          "text": "Là-haut, toute la machine pivote sur son mât, pour rester face au vent."
+        },
+        {
+          "t0": 30.24,
+          "t1": 36.72,
+          "text": "Au cœur de la machine, des aimants défilent devant des bobines de cuivre : la rafale devient courant électrique !"
+        },
+        {
+          "t0": 36.72,
+          "t1": 39.44,
+          "text": "Sans engrenage, sans rien de superflu."
+        },
+        {
+          "t0": 39.44,
+          "t1": 43.16,
+          "text": "Le courant descend le long du mât, puis traverse le local technique."
+        },
+        {
+          "t0": 43.16,
+          "t1": 47.52,
+          "text": "Un interrupteur, un redresseur, un fusible, un régulateur."
+        },
+        {
+          "t0": 47.52,
+          "t1": 51.52,
+          "text": "Il finit dans une batterie, qui garde l’énergie pour les jours sans vent."
+        },
+        {
+          "t0": 51.52,
+          "t1": 55.2,
+          "text": "Retour sur le site, et dans la maison, une lampe s’allume."
+        },
+        {
+          "t0": 55.2,
+          "t1": 59.4,
+          "text": "Voilà le voyage : une rafale, trois pales, quelques aimants…"
+        },
+        {
+          "t0": 59.4,
+          "t1": 60.88,
+          "text": "et de la lumière."
+        },
+        {
+          "t0": 60.88,
+          "t1": 62.96,
+          "text": "Pour commencer, quelques repères."
+        },
+        {
+          "t0": 62.96,
+          "t1": 69.28,
+          "text": "Il y a cinq vues : le site, l’éolienne, l’alternateur, les pales et le local technique."
+        },
+        {
+          "t0": 69.28,
+          "t1": 73.76,
+          "text": "Cliquez sur une pièce : sa fiche s’ouvre, et vous pouvez écouter son histoire."
+        },
+        {
+          "t0": 73.76,
+          "t1": 79.04,
+          "text": "Le guide de montage taille les pales, construit l’alternateur, puis assemble la machine."
+        },
+        {
+          "t0": 79.04,
+          "t1": 82.88,
+          "text": "Le guide d’installation va du choix du site à la première mise en route."
+        },
+        {
+          "t0": 82.88,
+          "t1": 88.32,
+          "text": "La simulation vous laisse changer le vent, la taille de la machine, et voir arriver la tempête."
+        },
+        {
+          "t0": 88.32,
+          "t1": 91.4,
+          "text": "Six leçons, avec des quiz, expliquent la physique."
+        },
+        {
+          "t0": 91.4,
+          "t1": 94.16,
+          "text": "Huit plans réunissent les dessins techniques."
+        },
+        {
+          "t0": 94.16,
+          "t1": 100.04,
+          "text": "Une dernière chose : ce laboratoire est une reconstitution pédagogique, inspirée d’une vidéo publique."
+        },
+        {
+          "t0": 100.04,
+          "t1": 103.24,
+          "text": "Ce n’est ni un plan officiel, ni un produit de fabricant."
+        },
+        {
+          "t0": 103.24,
+          "t1": 107.28,
+          "text": "La machine montrée mesure un mètre vingt, et, sauf quand je cite la vidéo,"
+        },
+        {
+          "t0": 107.36,
+          "t1": 109.48,
+          "text": "les chiffres viennent de la simulation."
+        },
+        {
+          "t0": 109.48,
+          "t1": 110.24,
+          "text": "À vous de jouer !"
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "home": true
+          }
+        },
+        {
+          "t": 13.12,
+          "do": {
+            "frame": [
+              "wind-turbine"
+            ]
+          }
+        },
+        {
+          "t": 16.16,
+          "do": {
+            "frame": [
+              "tower"
+            ]
+          }
+        },
+        {
+          "t": 20.24,
+          "do": {
+            "scene": "blades"
+          }
+        },
+        {
+          "t": 26,
+          "do": {
+            "scene": "turbine"
+          }
+        },
+        {
+          "t": 30.24,
+          "do": {
+            "scene": "alternator"
+          }
+        },
+        {
+          "t": 39.44,
+          "do": {
+            "scene": "shed"
+          }
+        },
+        {
+          "t": 47.52,
+          "do": {
+            "frame": [
+              "battery-bank"
+            ]
+          }
+        },
+        {
+          "t": 51.52,
+          "do": {
+            "scene": "site"
+          }
+        },
+        {
+          "t": 53.76,
+          "do": {
+            "frame": [
+              "house"
+            ]
+          }
+        },
+        {
+          "t": 60.88,
+          "do": {
+            "home": true
+          }
+        },
+        {
+          "t": 73.76,
+          "do": {
+            "mode": "assembly"
+          }
+        },
+        {
+          "t": 79.04,
+          "do": {
+            "mode": "install"
+          }
+        },
+        {
+          "t": 82.88,
+          "do": {
+            "mode": "sim"
+          }
+        },
+        {
+          "t": 88.32,
+          "do": {
+            "mode": "lessons"
+          }
+        },
+        {
+          "t": 91.4,
+          "do": {
+            "mode": "plans"
+          }
+        },
+        {
+          "t": 94.16,
+          "do": {
+            "mode": "explore"
+          }
+        },
+        {
+          "t": 100.04,
+          "do": {
+            "scene": "site"
+          }
+        },
+        {
+          "t": 109.48,
+          "do": {
+            "select": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-site",
+      "scope": "scene:site",
+      "title": "Le site",
+      "scene": "site",
+      "file": "scene-site.mp3",
+      "duration": 30.8,
+      "chars": 513,
+      "hash": "148cb898946eee8e",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.56,
+          "text": "Voici le site, à l’échelle : un champ, un mât, une maison."
+        },
+        {
+          "t0": 4.56,
+          "t1": 8.76,
+          "text": "D’abord les arbres : ils brouillent le vent, et c’est lui qui décide de tout."
+        },
+        {
+          "t0": 8.76,
+          "t1": 13.09,
+          "text": "Au milieu, le mât haubané, qui hisse la machine au-dessus des turbulences."
+        },
+        {
+          "t0": 13.09,
+          "t1": 16.72,
+          "text": "Tout en haut, l’éolienne, qui tourne dès que le vent se lève."
+        },
+        {
+          "t0": 16.72,
+          "t1": 20.72,
+          "text": "Un câble descend du mât et court dans l’herbe, jusqu’au local technique."
+        },
+        {
+          "t0": 20.72,
+          "t1": 23.72,
+          "text": "Un petit cabanon sec, où l’électronique est à l’abri."
+        },
+        {
+          "t0": 23.72,
+          "t1": 26.64,
+          "text": "La maison prend ensuite son électricité sur la batterie."
+        },
+        {
+          "t0": 26.64,
+          "t1": 30.8,
+          "text": "Une brise, un mât, un câble : le vent devient lumière !"
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "home": true
+          }
+        },
+        {
+          "t": 4.56,
+          "do": {
+            "flows": true
+          }
+        },
+        {
+          "t": 4.56,
+          "do": {
+            "frame": [
+              "obstacles"
+            ]
+          }
+        },
+        {
+          "t": 8.76,
+          "do": {
+            "frame": [
+              "tower"
+            ]
+          }
+        },
+        {
+          "t": 13.09,
+          "do": {
+            "frame": [
+              "wind-turbine"
+            ]
+          }
+        },
+        {
+          "t": 16.72,
+          "do": {
+            "frame": [
+              "cable-run"
+            ]
+          }
+        },
+        {
+          "t": 19.2,
+          "do": {
+            "frame": [
+              "technical-room"
+            ]
+          }
+        },
+        {
+          "t": 23.72,
+          "do": {
+            "frame": [
+              "house"
+            ]
+          }
+        },
+        {
+          "t": 26.64,
+          "do": {
+            "flows": false
+          }
+        },
+        {
+          "t": 26.64,
+          "do": {
+            "home": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-turbine",
+      "scope": "scene:turbine",
+      "title": "L’éolienne",
+      "scene": "turbine",
+      "file": "scene-turbine.mp3",
+      "duration": 34.88,
+      "chars": 608,
+      "hash": "677de9ccf0333f75",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 2.4,
+          "text": "Voici la machine, tout en haut du mât."
+        },
+        {
+          "t0": 2.4,
+          "t1": 5.68,
+          "text": "À l’avant, le rotor : trois pales et un moyeu."
+        },
+        {
+          "t0": 5.68,
+          "t1": 8.64,
+          "text": "Derrière, l’alternateur, sans engrenage."
+        },
+        {
+          "t0": 8.64,
+          "t1": 14.04,
+          "text": "Un cadre d’acier soudé porte le tout, et pivote sur le mât, grâce à un simple tube graissé."
+        },
+        {
+          "t0": 14.04,
+          "t1": 16.96,
+          "text": "À l’arrière, la queue garde la machine face au vent…"
+        },
+        {
+          "t0": 16.96,
+          "t1": 21.04,
+          "text": "sur une charnière inclinée, qui lui permet de s’écarter quand le vent forcit."
+        },
+        {
+          "t0": 21.04,
+          "t1": 25.12,
+          "text": "Regardez l’alternateur en coupe : les aimants d’un côté, les bobines de l’autre,"
+        },
+        {
+          "t0": 25.2,
+          "t1": 27.12,
+          "text": "et presque rien entre les deux."
+        },
+        {
+          "t0": 27.12,
+          "t1": 31.04,
+          "text": "Puis écartons toutes les pièces, une à une, comme pour démonter la machine."
+        },
+        {
+          "t0": 31.04,
+          "t1": 34.88,
+          "text": "Une queue qui plie : voilà la sécurité de la machine dans la tempête."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "home": true
+          }
+        },
+        {
+          "t": 2.4,
+          "do": {
+            "frame": [
+              "rotor"
+            ]
+          }
+        },
+        {
+          "t": 5.68,
+          "do": {
+            "frame": [
+              "alternator"
+            ]
+          }
+        },
+        {
+          "t": 8.64,
+          "do": {
+            "frame": [
+              "nacelle-frame"
+            ]
+          }
+        },
+        {
+          "t": 10.84,
+          "do": {
+            "frame": [
+              "yaw-bearing"
+            ]
+          }
+        },
+        {
+          "t": 14.04,
+          "do": {
+            "frame": [
+              "tail-vane"
+            ]
+          }
+        },
+        {
+          "t": 16.96,
+          "do": {
+            "frame": [
+              "tail-hinge"
+            ]
+          }
+        },
+        {
+          "t": 21.04,
+          "do": {
+            "frame": [
+              "alternator"
+            ]
+          }
+        },
+        {
+          "t": 21.04,
+          "do": {
+            "cutaway": true
+          }
+        },
+        {
+          "t": 27.12,
+          "do": {
+            "cutaway": false
+          }
+        },
+        {
+          "t": 27.12,
+          "do": {
+            "home": true
+          }
+        },
+        {
+          "t": 27.12,
+          "do": {
+            "explode": 0.6
+          }
+        },
+        {
+          "t": 31.04,
+          "do": {
+            "explode": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-alternator",
+      "scope": "scene:alternator",
+      "title": "L’alternateur",
+      "scene": "alternator",
+      "file": "scene-alternator.mp3",
+      "duration": 30.56,
+      "chars": 491,
+      "hash": "19b5c76390d37da0",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.2,
+          "text": "Voici le cœur de la machine, posé sur l’établi."
+        },
+        {
+          "t0": 3.2,
+          "t1": 5.56,
+          "text": "Un disque d’acier porte huit aimants."
+        },
+        {
+          "t0": 5.56,
+          "t1": 9.48,
+          "text": "Face à lui, un disque de résine noie six bobines de cuivre."
+        },
+        {
+          "t0": 9.48,
+          "t1": 12.44,
+          "text": "Entre les deux, environ un millimètre de vide."
+        },
+        {
+          "t0": 12.44,
+          "t1": 17.04,
+          "text": "Le disque tourne avec un moyeu de voiture, sur une fusée qui ne bouge jamais."
+        },
+        {
+          "t0": 17.04,
+          "t1": 22.36,
+          "text": "En coupe, on voit l’entrefer : un millimètre de vide, et c’est là que tout se joue."
+        },
+        {
+          "t0": 22.36,
+          "t1": 27.2,
+          "text": "Et en éclaté, tout ce qui s’enfile, pièce après pièce, comme un jeu de construction."
+        },
+        {
+          "t0": 27.2,
+          "t1": 30.56,
+          "text": "Rien ne se touche : seul un champ traverse le vide."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "home": true
+          }
+        },
+        {
+          "t": 3.2,
+          "do": {
+            "frame": [
+              "magnet-rotor",
+              "magnets"
+            ]
+          }
+        },
+        {
+          "t": 5.56,
+          "do": {
+            "frame": [
+              "stator",
+              "coils"
+            ]
+          }
+        },
+        {
+          "t": 9.48,
+          "do": {
+            "frame": [
+              "air-gap"
+            ]
+          }
+        },
+        {
+          "t": 12.44,
+          "do": {
+            "frame": [
+              "bearing-hub",
+              "shaft"
+            ]
+          }
+        },
+        {
+          "t": 17.04,
+          "do": {
+            "home": true
+          }
+        },
+        {
+          "t": 17.04,
+          "do": {
+            "cutaway": true
+          }
+        },
+        {
+          "t": 22.36,
+          "do": {
+            "cutaway": false
+          }
+        },
+        {
+          "t": 22.36,
+          "do": {
+            "explode": 0.6
+          }
+        },
+        {
+          "t": 27.2,
+          "do": {
+            "explode": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-blades",
+      "scope": "scene:blades",
+      "title": "Les pales",
+      "scene": "blades",
+      "file": "scene-blades.mp3",
+      "duration": 25.44,
+      "chars": 400,
+      "hash": "ac2cf183f2484d4e",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.08,
+          "text": "Ici, on taille les pales, à la main, avec patience."
+        },
+        {
+          "t0": 4.08,
+          "t1": 7.68,
+          "text": "Chacune naît d’un plateau de bois, léger et droit."
+        },
+        {
+          "t0": 7.68,
+          "t1": 12.96,
+          "text": "Six gabarits donnent la forme : large et épaisse au pied, fine et étroite au bout."
+        },
+        {
+          "t0": 12.96,
+          "t1": 18.2,
+          "text": "On creuse d’abord la face au vent, presque plate, puis on arrondit le dos, comme une aile."
+        },
+        {
+          "t0": 18.2,
+          "t1": 22.72,
+          "text": "Enfin, un disque de contreplaqué serre les trois pieds, à cent vingt degrés."
+        },
+        {
+          "t0": 22.72,
+          "t1": 25.44,
+          "text": "Trois pales identiques, et un rotor tout rond."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "home": true
+          }
+        },
+        {
+          "t": 4.08,
+          "do": {
+            "frame": [
+              "blade-blank"
+            ]
+          }
+        },
+        {
+          "t": 7.68,
+          "do": {
+            "frame": [
+              "station-templates"
+            ]
+          }
+        },
+        {
+          "t": 12.96,
+          "do": {
+            "frame": [
+              "blade"
+            ]
+          }
+        },
+        {
+          "t": 18.2,
+          "do": {
+            "frame": [
+              "hub-disc"
+            ]
+          }
+        },
+        {
+          "t": 22.72,
+          "do": {
+            "home": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-shed",
+      "scope": "scene:shed",
+      "title": "Le local technique",
+      "scene": "shed",
+      "file": "scene-shed.mp3",
+      "duration": 28.64,
+      "chars": 492,
+      "hash": "f111a0769371f781",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.44,
+          "text": "Voici le local technique : un cabanon sec, et un panneau de bois."
+        },
+        {
+          "t0": 4.44,
+          "t1": 9.88,
+          "text": "Le courant arrive d’abord à l’interrupteur de freinage, puis au redresseur, qui le met à l’endroit."
+        },
+        {
+          "t0": 9.88,
+          "t1": 14.8,
+          "text": "Le fusible veille sur le câble et sur la batterie, le régulateur surveille la tension,"
+        },
+        {
+          "t0": 14.84,
+          "t1": 17.08,
+          "text": "et le délesteur brûle le surplus."
+        },
+        {
+          "t0": 17.08,
+          "t1": 19.6,
+          "text": "Au bout, la batterie, posée au sol."
+        },
+        {
+          "t0": 19.6,
+          "t1": 24.96,
+          "text": "Suivez le courant : il entre par la gauche, traverse chaque appareil, et file vers la batterie."
+        },
+        {
+          "t0": 24.96,
+          "t1": 28.64,
+          "text": "Puis décollons les appareils du panneau, un par un, pour voir leurs fils."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "home": true
+          }
+        },
+        {
+          "t": 4.44,
+          "do": {
+            "frame": [
+              "brake-switch"
+            ]
+          }
+        },
+        {
+          "t": 7.2,
+          "do": {
+            "frame": [
+              "rectifier"
+            ]
+          }
+        },
+        {
+          "t": 9.88,
+          "do": {
+            "frame": [
+              "fuse"
+            ]
+          }
+        },
+        {
+          "t": 12.76,
+          "do": {
+            "frame": [
+              "charge-controller"
+            ]
+          }
+        },
+        {
+          "t": 14.84,
+          "do": {
+            "frame": [
+              "dump-load"
+            ]
+          }
+        },
+        {
+          "t": 17.08,
+          "do": {
+            "frame": [
+              "battery-bank"
+            ]
+          }
+        },
+        {
+          "t": 19.6,
+          "do": {
+            "home": true
+          }
+        },
+        {
+          "t": 19.6,
+          "do": {
+            "flows": true
+          }
+        },
+        {
+          "t": 24.96,
+          "do": {
+            "flows": false
+          }
+        },
+        {
+          "t": 24.96,
+          "do": {
+            "explode": 0.6
+          }
+        },
+        {
+          "t": 28.64,
+          "do": {
+            "explode": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-wind-turbine",
+      "scope": "part:wind-turbine",
+      "title": "Éolienne",
+      "scene": "site",
+      "file": "part-wind-turbine.mp3",
+      "duration": 21.04,
+      "chars": 396,
+      "hash": "5b4d6234a7234e4e",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 6.16,
+          "text": "Voici la machine de la vidéo, vue de loin : un mètre vingt de diamètre, trois pales, pas d’engrenage."
+        },
+        {
+          "t0": 6.16,
+          "t1": 8.12,
+          "text": "Elle charge une batterie de douze volts."
+        },
+        {
+          "t0": 8.12,
+          "t1": 11.32,
+          "text": "L’étiquette annonce deux cents watts, sans dire pour quel vent."
+        },
+        {
+          "t0": 11.32,
+          "t1": 15.64,
+          "text": "La simulation, elle, trouve environ soixante watts à douze mètres par seconde."
+        },
+        {
+          "t0": 15.64,
+          "t1": 17.88,
+          "text": "On ne l’a pas réglée pour coller à l’étiquette."
+        },
+        {
+          "t0": 17.88,
+          "t1": 21.04,
+          "text": "Ouvrez la vue de l’éolienne pour voir chaque pièce, une à une."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-tower",
+      "scope": "part:tower",
+      "title": "Mât",
+      "scene": "site",
+      "file": "part-tower.mp3",
+      "duration": 17.68,
+      "chars": 291,
+      "hash": "ed24834dfecba5ac",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.68,
+          "text": "Un simple tuyau d’eau en acier, haubané : le mât."
+        },
+        {
+          "t0": 3.68,
+          "t1": 7.28,
+          "text": "Sa mission : hisser la machine au-dessus des turbulences."
+        },
+        {
+          "t0": 7.28,
+          "t1": 11.04,
+          "text": "Six mètres si le lieu est dégagé, douze ou dix-huit sinon."
+        },
+        {
+          "t0": 11.04,
+          "t1": 12.4,
+          "text": "Plus haut vaut mieux."
+        },
+        {
+          "t0": 12.4,
+          "t1": 17.68,
+          "text": "En France, un mât de douze mètres ou plus demande un permis de construire : renseignez-vous en mairie."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-guy-wires",
+      "scope": "part:guy-wires",
+      "title": "Haubans",
+      "scene": "site",
+      "file": "part-guy-wires.mp3",
+      "duration": 19.28,
+      "chars": 341,
+      "hash": "c8e54f42c43ead16",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.8,
+          "text": "Des câbles tendus du mât vers le sol, dans plusieurs directions : les haubans."
+        },
+        {
+          "t0": 4.8,
+          "t1": 7.04,
+          "text": "Un niveau tous les quatre mètres environ."
+        },
+        {
+          "t0": 7.04,
+          "t1": 11.32,
+          "text": "Seuls ceux du haut portent vraiment l’effort, les autres raidissent le tube."
+        },
+        {
+          "t0": 11.32,
+          "t1": 15.36,
+          "text": "Un tube léger haubané coûte bien moins cher qu’un mât qui tient seul."
+        },
+        {
+          "t0": 15.36,
+          "t1": 19.28,
+          "text": "Écartez-les du bout des pales, mais pas trop : le mât plierait davantage."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-tower-base",
+      "scope": "part:tower-base",
+      "title": "Pied de mât articulé",
+      "scene": "site",
+      "file": "part-tower-base.mp3",
+      "duration": 18,
+      "chars": 322,
+      "hash": "08f2d2e707f9dea1",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 2,
+          "text": "Le pied du mât est articulé."
+        },
+        {
+          "t0": 2,
+          "t1": 8.2,
+          "text": "On assemble la machine au sol, mât couché, puis on le relève, avec des haubans et plusieurs paires de bras."
+        },
+        {
+          "t0": 8.2,
+          "t1": 10.43,
+          "text": "Et pour l’entretien, on le redescend !"
+        },
+        {
+          "t0": 10.43,
+          "t1": 14.08,
+          "text": "Une règle : ne vous tenez jamais sous la machine pendant la levée."
+        },
+        {
+          "t0": 14.08,
+          "t1": 18,
+          "text": "Une corde de levage a déjà cassé : la machine est tombée d’environ deux mètres."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-cable-run",
+      "scope": "part:cable-run",
+      "title": "Câble vers les batteries",
+      "scene": "site",
+      "file": "part-cable-run.mp3",
+      "duration": 17.6,
+      "chars": 326,
+      "hash": "da36236dad329ed6",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.96,
+          "text": "Trois fils partent de la machine, descendent dans le mât et courent jusqu’au local technique."
+        },
+        {
+          "t0": 4.96,
+          "t1": 9.92,
+          "text": "En douze volts, le courant est fort, et la perte dans le câble grandit comme son carré."
+        },
+        {
+          "t0": 9.92,
+          "t1": 15.15,
+          "text": "Pour cinq cents watts, six millimètres carrés sur trente mètres en gaspillent trente-huit pour cent !"
+        },
+        {
+          "t0": 15.15,
+          "t1": 17.6,
+          "text": "Un gros câble vaut mieux qu’un long câble."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "flows": true
+          }
+        },
+        {
+          "t": 17.6,
+          "do": {
+            "flows": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-technical-room",
+      "scope": "part:technical-room",
+      "title": "Local technique",
+      "scene": "site",
+      "file": "part-technical-room.mp3",
+      "duration": 16.32,
+      "chars": 286,
+      "hash": "6268abbd4e1a017f",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.52,
+          "text": "Un cabanon sec, près de la maison : le local technique."
+        },
+        {
+          "t0": 3.52,
+          "t1": 4.88,
+          "text": "Le câble y arrive."
+        },
+        {
+          "t0": 4.88,
+          "t1": 8.16,
+          "text": "Toute l’électronique tient sur un seul panneau de contreplaqué."
+        },
+        {
+          "t0": 8.16,
+          "t1": 12.52,
+          "text": "Un seul endroit à protéger et à surveiller, avec le frein à portée de main."
+        },
+        {
+          "t0": 12.52,
+          "t1": 16.32,
+          "text": "Ouvrez la vue du local pour suivre le courant, appareil après appareil."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-house",
+      "scope": "part:house",
+      "title": "Habitation",
+      "scene": "site",
+      "file": "part-house.mp3",
+      "duration": 18.96,
+      "chars": 337,
+      "hash": "6ceb480dd7869802",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 2.24,
+          "text": "Au bout du voyage, la maison."
+        },
+        {
+          "t0": 2.24,
+          "t1": 7.6,
+          "text": "D’après la vidéo, cette petite machine alimente un peu d’éclairage, ou recharge un ordinateur."
+        },
+        {
+          "t0": 7.6,
+          "t1": 10.56,
+          "text": "Les plus grandes de la famille, jusqu’à quatre mètres vingt,"
+        },
+        {
+          "t0": 10.59,
+          "t1": 13.76,
+          "text": "peuvent alimenter un foyer entier, chauffage excepté."
+        },
+        {
+          "t0": 13.76,
+          "t1": 18.96,
+          "text": "Un conseil : estimez d’abord ce que vous consommez, et ensuite seulement la taille de la machine."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-obstacles",
+      "scope": "part:obstacles",
+      "title": "Arbres et obstacles",
+      "scene": "site",
+      "file": "part-obstacles.mp3",
+      "duration": 18.48,
+      "chars": 321,
+      "hash": "affe6f3a2395a4b3",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.39,
+          "text": "La vidéo commence par là : où poser l’éolienne ?"
+        },
+        {
+          "t0": 3.39,
+          "t1": 6.64,
+          "text": "Un arbre ralentit le vent et le rend turbulent derrière lui."
+        },
+        {
+          "t0": 6.64,
+          "t1": 10.32,
+          "text": "Cherchez un paysage dégagé, les vents dominants, peu d’obstacles."
+        },
+        {
+          "t0": 10.32,
+          "t1": 15.52,
+          "text": "Un arbre penché, une herbe couchée : le vent est invisible, mais il laisse des traces."
+        },
+        {
+          "t0": 15.52,
+          "t1": 18.48,
+          "text": "Monter le mât coûte moins cher que de changer de machine !"
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-rotor",
+      "scope": "part:rotor",
+      "title": "Rotor (pales et moyeu)",
+      "scene": "turbine",
+      "file": "part-rotor.mp3",
+      "duration": 20.96,
+      "chars": 389,
+      "hash": "53700122b4d15af3",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.64,
+          "text": "Trois pales de bois, serrées entre des disques de contreplaqué : le rotor."
+        },
+        {
+          "t0": 4.64,
+          "t1": 8.32,
+          "text": "Il attrape le vent et entraîne l’alternateur, sans réducteur."
+        },
+        {
+          "t0": 8.32,
+          "t1": 9.36,
+          "text": "Pourquoi trois ?"
+        },
+        {
+          "t0": 9.36,
+          "t1": 15.44,
+          "text": "Peu de pales étroites qui tournent vite font le même travail que beaucoup de pales larges et lentes : c’est le bon compromis."
+        },
+        {
+          "t0": 15.44,
+          "t1": 20.96,
+          "text": "Un bout de bois de soixante centimètres qui s’échappe fait des dégâts : équilibrez et serrez avant de lancer."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-alternator",
+      "scope": "part:alternator",
+      "title": "Alternateur",
+      "scene": "turbine",
+      "file": "part-alternator.mp3",
+      "duration": 21.28,
+      "chars": 366,
+      "hash": "1e5fa1a6ab44d48d",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.84,
+          "text": "Voici l’alternateur : des aimants sur un disque d’acier, qui tournent devant des bobines de cuivre."
+        },
+        {
+          "t0": 5.84,
+          "t1": 9.12,
+          "text": "Pas d’engrenage, et surtout pas de fer dans les bobines."
+        },
+        {
+          "t0": 9.12,
+          "t1": 12.8,
+          "text": "Aucun point dur : la machine démarre dans un souffle de vent."
+        },
+        {
+          "t0": 12.8,
+          "t1": 17.68,
+          "text": "Quand le vent forcit, c’est lui qui retient les pales : la machine reste silencieuse."
+        },
+        {
+          "t0": 17.68,
+          "t1": 21.28,
+          "text": "À un tour par seconde, il donne environ un virgule neuf volt."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "cutaway": true
+          }
+        },
+        {
+          "t": 21.28,
+          "do": {
+            "cutaway": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-nacelle-frame",
+      "scope": "part:nacelle-frame",
+      "title": "Cadre de nacelle",
+      "scene": "turbine",
+      "file": "part-nacelle-frame.mp3",
+      "duration": 17.2,
+      "chars": 290,
+      "hash": "0546b45f0cd6e681",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.88,
+          "text": "Un morceau de cornière d’acier, un tube pivot, un tube de charnière : le cadre de nacelle."
+        },
+        {
+          "t0": 5.88,
+          "t1": 9.2,
+          "text": "Tout est soudé d’équerre, ce qu’un atelier de village sait faire."
+        },
+        {
+          "t0": 9.2,
+          "t1": 13.12,
+          "text": "Au bout, un disque d’acier, le berceau, porte l’alternateur."
+        },
+        {
+          "t0": 13.12,
+          "t1": 17.2,
+          "text": "Soudez par étapes, en alternant les côtés : la chaleur déforme la pièce."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-yaw-bearing",
+      "scope": "part:yaw-bearing",
+      "title": "Pivot d’orientation",
+      "scene": "turbine",
+      "file": "part-yaw-bearing.mp3",
+      "duration": 21.6,
+      "chars": 385,
+      "hash": "60b2c7afb309bd9c",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.04,
+          "text": "Un tube qui s’enfile sur un autre, avec un peu de graisse : le pivot d’orientation."
+        },
+        {
+          "t0": 5.04,
+          "t1": 8.16,
+          "text": "Rudimentaire, et pourtant ça marche très bien !"
+        },
+        {
+          "t0": 8.16,
+          "t1": 12.64,
+          "text": "Remarquez que le rotor n’est pas sur l’axe : il est décalé de quarante et un millimètres."
+        },
+        {
+          "t0": 12.64,
+          "t1": 17.47,
+          "text": "Le vent pousse à côté de l’axe, et cherche sans cesse à tourner la machine hors du vent."
+        },
+        {
+          "t0": 17.47,
+          "t1": 21.6,
+          "text": "C’est le moteur du repli : sans ce décalage, elle ne se replierait jamais."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-tail-hinge",
+      "scope": "part:tail-hinge",
+      "title": "Charnière inclinée",
+      "scene": "turbine",
+      "file": "part-tail-hinge.mp3",
+      "duration": 19.6,
+      "chars": 323,
+      "hash": "8f4f3800058bd754",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 2.96,
+          "text": "Un axe incliné : c’est toute l’astuce."
+        },
+        {
+          "t0": 2.96,
+          "t1": 5.88,
+          "text": "Quand le vent devient trop fort, la queue s’écarte…"
+        },
+        {
+          "t0": 5.88,
+          "t1": 6.88,
+          "text": "en montant."
+        },
+        {
+          "t0": 6.88,
+          "t1": 12.16,
+          "text": "Son propre poids la ramène : pas de ressort, qui vibrerait, rouillerait et casserait."
+        },
+        {
+          "t0": 12.16,
+          "t1": 16.96,
+          "text": "L’axe penche de vingt degrés, et la queue s’ouvre d’environ quatre-vingt-quinze degrés."
+        },
+        {
+          "t0": 16.96,
+          "t1": 19.6,
+          "text": "Plus elle est lourde, plus elle s’efface tard."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "explode": 0.6
+          }
+        },
+        {
+          "t": 19.6,
+          "do": {
+            "explode": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-tail-boom",
+      "scope": "part:tail-boom",
+      "title": "Bras de queue",
+      "scene": "turbine",
+      "file": "part-tail-boom.mp3",
+      "duration": 16.8,
+      "chars": 305,
+      "hash": "d89ce7d6b5058b37",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.6,
+          "text": "Un tube d’acier soudé sur la charnière : le bras de queue."
+        },
+        {
+          "t0": 3.6,
+          "t1": 7.24,
+          "text": "Plus il est long, plus la queue a de levier contre la poussée du vent."
+        },
+        {
+          "t0": 7.24,
+          "t1": 10.96,
+          "text": "Deux longueurs sont publiées, cinq cents et sept cents millimètres."
+        },
+        {
+          "t0": 10.96,
+          "t1": 16.8,
+          "text": "Montez d’abord le bras sur la charnière, réglez la butée, et seulement ensuite soudez le support du safran."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-tail-vane",
+      "scope": "part:tail-vane",
+      "title": "Safran",
+      "scene": "turbine",
+      "file": "part-tail-vane.mp3",
+      "duration": 19.76,
+      "chars": 334,
+      "hash": "d616d29c678ca4cc",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.36,
+          "text": "Une simple plaque de contreplaqué : le safran."
+        },
+        {
+          "t0": 3.36,
+          "t1": 9.12,
+          "text": "Comme la dérive d’une girouette, il garde l’éolienne face au vent, jusqu’à environ dix mètres par seconde."
+        },
+        {
+          "t0": 9.12,
+          "t1": 14.76,
+          "text": "Ensuite, il cède, et la machine se met en drapeau pour protéger l’électricité, dit la vidéo."
+        },
+        {
+          "t0": 14.76,
+          "t1": 18.44,
+          "text": "Trop léger, il se replie trop tôt ; trop lourd, trop tard."
+        },
+        {
+          "t0": 18.44,
+          "t1": 19.76,
+          "text": "Ça se règle sur le terrain !"
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-wire-loop",
+      "scope": "part:wire-loop",
+      "title": "Boucle de câble",
+      "scene": "turbine",
+      "file": "part-wire-loop.mp3",
+      "duration": 17.76,
+      "chars": 295,
+      "hash": "5d04bcdb1268aceb",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.72,
+          "text": "Le fil sort du stator, descend dans le tube pivot, puis dans le mât."
+        },
+        {
+          "t0": 4.72,
+          "t1": 7.08,
+          "text": "Mais la machine tourne pour suivre le vent…"
+        },
+        {
+          "t0": 7.08,
+          "t1": 9.12,
+          "text": "et les fils tournent avec elle !"
+        },
+        {
+          "t0": 9.12,
+          "t1": 13.28,
+          "text": "Une boucle de câble souple les laisse pivoter sans tirer ni pincer."
+        },
+        {
+          "t0": 13.28,
+          "t1": 17.76,
+          "text": "Enfilez d’abord les fils, puis le tube : un fil se pince très vite à cet endroit."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-magnet-rotor",
+      "scope": "part:magnet-rotor",
+      "title": "Disque à aimants (rotor)",
+      "scene": "alternator",
+      "file": "part-magnet-rotor.mp3",
+      "duration": 21.76,
+      "chars": 361,
+      "hash": "27d1edca572238c5",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.28,
+          "text": "Un disque d’acier épais, coulé dans la résine avec ses huit aimants : le rotor."
+        },
+        {
+          "t0": 5.28,
+          "t1": 10.28,
+          "text": "L’acier referme le champ d’un aimant à l’autre, et la résine tient et protège les aimants."
+        },
+        {
+          "t0": 10.28,
+          "t1": 13.72,
+          "text": "Il tourne avec la cloche du moyeu, sans balais, sans contact."
+        },
+        {
+          "t0": 13.72,
+          "t1": 18.92,
+          "text": "Un seul rotor sur cette petite machine ; la grande, de deux mètres quarante, en a deux."
+        },
+        {
+          "t0": 18.92,
+          "t1": 21.76,
+          "text": "Acier seulement : ni aluminium, ni inox."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-magnets",
+      "scope": "part:magnets",
+      "title": "Aimants néodyme",
+      "scene": "alternator",
+      "file": "part-magnets.mp3",
+      "duration": 23.68,
+      "chars": 429,
+      "hash": "4ed351a82b8636aa",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.88,
+          "text": "Huit aimants néodyme, collés un pôle nord, puis un pôle sud, en alternance."
+        },
+        {
+          "t0": 4.88,
+          "t1": 7.2,
+          "text": "C’est elle qui fait un courant alternatif."
+        },
+        {
+          "t0": 7.2,
+          "t1": 13.04,
+          "text": "Huit aimants pour six bobines : quatre pour trois, et ce rapport donne trois phases et un couple régulier."
+        },
+        {
+          "t0": 13.04,
+          "t1": 18.24,
+          "text": "Attention : ils se plaquent l’un à l’autre, ou sur l’acier, avec une force qui écrase les doigts."
+        },
+        {
+          "t0": 18.24,
+          "t1": 20.96,
+          "text": "Tenez-en un à deux mains, et faites-le glisser."
+        },
+        {
+          "t0": 20.96,
+          "t1": 23.68,
+          "text": "Loin des cartes bancaires et des stimulateurs cardiaques."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "xray": true
+          }
+        },
+        {
+          "t": 23.68,
+          "do": {
+            "xray": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-stator",
+      "scope": "part:stator",
+      "title": "Stator coulé en résine",
+      "scene": "alternator",
+      "file": "part-stator.mp3",
+      "duration": 17.52,
+      "chars": 279,
+      "hash": "31d87cbe8c6f3e4c",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.52,
+          "text": "Un disque de résine polyester, armé de fibre de verre et de talc : le stator."
+        },
+        {
+          "t0": 5.52,
+          "t1": 8.24,
+          "text": "Il noie six bobines, et le bout de trois tiges."
+        },
+        {
+          "t0": 8.24,
+          "t1": 9.17,
+          "text": "Du fer dedans ?"
+        },
+        {
+          "t0": 9.17,
+          "t1": 12.08,
+          "text": "Aucun, donc aucun point dur au démarrage."
+        },
+        {
+          "t0": 12.08,
+          "t1": 14.64,
+          "text": "Le talc aide à évacuer la chaleur du cuivre."
+        },
+        {
+          "t0": 14.64,
+          "t1": 17.52,
+          "text": "Il reste fixe, vissé sur le berceau de la nacelle."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "xray": true
+          }
+        },
+        {
+          "t": 17.52,
+          "do": {
+            "xray": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-coils",
+      "scope": "part:coils",
+      "title": "Bobines",
+      "scene": "alternator",
+      "file": "part-coils.mp3",
+      "duration": 19.28,
+      "chars": 357,
+      "hash": "546fe5399d9963a9",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.36,
+          "text": "Six bobines de fil de cuivre, enroulées sur un gabarit de la taille des aimants."
+        },
+        {
+          "t0": 4.36,
+          "t1": 10.56,
+          "text": "Soixante-seize tours chacune, avec du fil de un virgule quatre millimètre : le choix de la vidéo pour du douze volts."
+        },
+        {
+          "t0": 10.56,
+          "t1": 13.16,
+          "text": "Plus de tours, plus de volts à basse vitesse…"
+        },
+        {
+          "t0": 13.16,
+          "t1": 14.99,
+          "text": "mais un rotor plus retenu."
+        },
+        {
+          "t0": 14.99,
+          "t1": 19.28,
+          "text": "Tous les tours dans le même sens : une seule bobine à l’envers, et la tension chute !"
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "xray": true
+          }
+        },
+        {
+          "t": 19.28,
+          "do": {
+            "xray": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-star-wiring",
+      "scope": "part:star-wiring",
+      "title": "Couplage étoile",
+      "scene": "alternator",
+      "file": "part-star-wiring.mp3",
+      "duration": 25.52,
+      "chars": 401,
+      "hash": "94d8edc38ca68e35",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.12,
+          "text": "Six bobines, numérotées de un à six."
+        },
+        {
+          "t0": 3.12,
+          "t1": 8,
+          "text": "Les entrées un, deux et trois sont réunies : c’est le point neutre de l’étoile."
+        },
+        {
+          "t0": 8,
+          "t1": 13.08,
+          "text": "Les sorties un, deux et trois rejoignent les entrées quatre, cinq et six."
+        },
+        {
+          "t0": 13.08,
+          "t1": 18.48,
+          "text": "Restent trois fils, les sorties quatre, cinq et six : les trois phases, décalées."
+        },
+        {
+          "t0": 18.48,
+          "t1": 21.12,
+          "text": "Une machine à trois phases tourne sans vibrer."
+        },
+        {
+          "t0": 21.12,
+          "t1": 25.52,
+          "text": "Numérotez avant de poser : une fois la résine coulée, une erreur ne se voit plus."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "xray": true
+          }
+        },
+        {
+          "t": 25.52,
+          "do": {
+            "xray": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-shaft",
+      "scope": "part:shaft",
+      "title": "Fusée et berceau",
+      "scene": "alternator",
+      "file": "part-shaft.mp3",
+      "duration": 17.84,
+      "chars": 325,
+      "hash": "1539313ab6b21df1",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.64,
+          "text": "Un moyeu de voiture, coupé en deux : la partie qui tourne, et la fusée, qui ne tourne jamais."
+        },
+        {
+          "t0": 5.64,
+          "t1": 9.63,
+          "text": "Elle est vissée sur le berceau, un disque d’acier soudé au bout du cadre."
+        },
+        {
+          "t0": 9.63,
+          "t1": 13.2,
+          "text": "Tout ce qui est électrique reste fixe : pas de contact glissant."
+        },
+        {
+          "t0": 13.2,
+          "t1": 17.84,
+          "text": "Soudez le berceau par étapes : la chaleur le gauchit, et le stator ne serait plus parallèle."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-bearing-hub",
+      "scope": "part:bearing-hub",
+      "title": "Moyeu à roulements",
+      "scene": "alternator",
+      "file": "part-bearing-hub.mp3",
+      "duration": 19.36,
+      "chars": 332,
+      "hash": "81c0b8121cbb3b6f",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.76,
+          "text": "Un moyeu de roue arrière de voiture, récupéré pour ses roulements."
+        },
+        {
+          "t0": 3.76,
+          "t1": 5.92,
+          "text": "Sa cloche tourne sur la fusée."
+        },
+        {
+          "t0": 5.92,
+          "t1": 8.4,
+          "text": "On la meule jusqu’à sa plaque plate."
+        },
+        {
+          "t0": 8.4,
+          "t1": 13.44,
+          "text": "Quatre longues tiges y fixent le disque à aimants, puis reçoivent le rotor des pales."
+        },
+        {
+          "t0": 13.44,
+          "t1": 16.96,
+          "text": "Réglez les roulements à l’écrou, puis desserrez d’un quart de tour."
+        },
+        {
+          "t0": 16.96,
+          "t1": 19.36,
+          "text": "Et jetez le joint arrière : il frotte trop."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "explode": 0.6
+          }
+        },
+        {
+          "t": 19.36,
+          "do": {
+            "explode": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-studs",
+      "scope": "part:studs",
+      "title": "Tiges du stator",
+      "scene": "alternator",
+      "file": "part-studs.mp3",
+      "duration": 16.48,
+      "chars": 288,
+      "hash": "c231a72965637496",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.72,
+          "text": "Trois tiges filetées, fendues à un bout, noyées dans la résine du stator, comme un trépied."
+        },
+        {
+          "t0": 5.72,
+          "t1": 11.6,
+          "text": "Leurs écrous le font avancer ou reculer : c’est avec eux qu’on règle l’entrefer, sans aucun usinage."
+        },
+        {
+          "t0": 11.6,
+          "t1": 16.48,
+          "text": "Serrez les trois ensemble, par petits tours, pour que le stator reste bien parallèle au disque."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "explode": 0.6
+          }
+        },
+        {
+          "t": 16.48,
+          "do": {
+            "explode": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-air-gap",
+      "scope": "part:air-gap",
+      "title": "Entrefer",
+      "scene": "alternator",
+      "file": "part-air-gap.mp3",
+      "duration": 16.64,
+      "chars": 284,
+      "hash": "f9ad0d9d485351ae",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 2.75,
+          "text": "Combien d’espace entre les aimants et le stator ?"
+        },
+        {
+          "t0": 2.75,
+          "t1": 4.32,
+          "text": "Environ un millimètre."
+        },
+        {
+          "t0": 4.32,
+          "t1": 6.88,
+          "text": "Plus il est étroit, plus la tension monte."
+        },
+        {
+          "t0": 6.88,
+          "t1": 11.12,
+          "text": "Mais laissez de la marge : la fiabilité passe avant la performance !"
+        },
+        {
+          "t0": 11.12,
+          "t1": 14.96,
+          "text": "Un test à un tour par seconde doit donner environ un virgule neuf volt."
+        },
+        {
+          "t0": 14.96,
+          "t1": 16.64,
+          "text": "Sinon, regardez l’entrefer."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "cutaway": true
+          }
+        },
+        {
+          "t": 16.64,
+          "do": {
+            "cutaway": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-moulds",
+      "scope": "part:moulds",
+      "title": "Moules (rotor, stator)",
+      "scene": "alternator",
+      "file": "part-moulds.mp3",
+      "duration": 19.44,
+      "chars": 338,
+      "hash": "cfedc3ae2fca3b62",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.36,
+          "text": "Deux moules en contreplaqué, un pour le stator, un pour le rotor : les outils de l’atelier."
+        },
+        {
+          "t0": 5.36,
+          "t1": 10.72,
+          "text": "On les cire avant chaque coulée, puis la résine, la fibre de verre et le talc font le reste."
+        },
+        {
+          "t0": 10.72,
+          "t1": 14.76,
+          "text": "Une coulée n’a pas de seconde chance : faites le moule droit et propre."
+        },
+        {
+          "t0": 14.76,
+          "t1": 19.44,
+          "text": "La résine dégage des vapeurs toxiques : masque, gants, lunettes, fenêtre ouverte."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-blade-blank",
+      "scope": "part:blade-blank",
+      "title": "Plateau de bois",
+      "scene": "blades",
+      "file": "part-blade-blank.mp3",
+      "duration": 17.76,
+      "chars": 309,
+      "hash": "78456b4590a325ca",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.68,
+          "text": "Tout commence par une poutre : un bois léger, droit, sans trop de nœuds, et qui ne pourrit pas."
+        },
+        {
+          "t0": 5.68,
+          "t1": 9.28,
+          "text": "De l’épicéa, du douglas, du mélèze, dit la vidéo."
+        },
+        {
+          "t0": 9.28,
+          "t1": 14.32,
+          "text": "Une seule poutre donne les trois pales, qui auront ainsi le même poids et la même rigidité."
+        },
+        {
+          "t0": 14.32,
+          "t1": 17.76,
+          "text": "Les nœuds vers le pied, et quatre ou cinq centimètres de marge au bout."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-station-templates",
+      "scope": "part:station-templates",
+      "title": "Gabarits de sections",
+      "scene": "blades",
+      "file": "part-station-templates.mp3",
+      "duration": 17.68,
+      "chars": 286,
+      "hash": "0628ccd54e9a7f71",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.04,
+          "text": "Six gabarits, six sections le long de la pale."
+        },
+        {
+          "t0": 3.04,
+          "t1": 6.72,
+          "text": "Chacune a sa largeur, son épaisseur et son décalage."
+        },
+        {
+          "t0": 6.72,
+          "t1": 12.24,
+          "text": "On creuse, on essaie le gabarit, on creuse encore, jusqu’à ce qu’il épouse la pale."
+        },
+        {
+          "t0": 12.24,
+          "t1": 17.68,
+          "text": "Gardez ce jeu de gabarits : le jour où il faudra remplacer une pale, vous retrouverez la forme exacte."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-blade",
+      "scope": "part:blade",
+      "title": "Pale",
+      "scene": "blades",
+      "file": "part-blade.mp3",
+      "duration": 22.48,
+      "chars": 416,
+      "hash": "f6c281a2dacf0257",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.72,
+          "text": "Au pied, elle fait cent cinquante-trois millimètres de large et quarante-neuf d’épaisseur."
+        },
+        {
+          "t0": 4.72,
+          "t1": 9.31,
+          "text": "Au bout, il ne reste que cinquante-cinq millimètres de large et six d’épaisseur."
+        },
+        {
+          "t0": 9.31,
+          "t1": 13.64,
+          "text": "D’abord la face au vent, presque plate, puis le dos, arrondi comme une aile."
+        },
+        {
+          "t0": 13.64,
+          "t1": 18.2,
+          "text": "Elle mesure soixante centimètres, et les trois doivent être parfaitement identiques."
+        },
+        {
+          "t0": 18.2,
+          "t1": 22.48,
+          "text": "Masque anti-poussière, et si possible dehors : la poussière de bois est un danger."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-hub-disc",
+      "scope": "part:hub-disc",
+      "title": "Disque de moyeu",
+      "scene": "blades",
+      "file": "part-hub-disc.mp3",
+      "duration": 19.12,
+      "chars": 341,
+      "hash": "868c2b3243bc2ee4",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 5.08,
+          "text": "Un disque de contreplaqué de neuf millimètres, et trois pales vissées à cent vingt degrés."
+        },
+        {
+          "t0": 5.08,
+          "t1": 8.4,
+          "text": "Voilà ce qui change trois morceaux de bois en un rotor rond."
+        },
+        {
+          "t0": 8.4,
+          "t1": 11.52,
+          "text": "Un triangle de contreplaqué serre le tout, côté vent."
+        },
+        {
+          "t0": 11.52,
+          "t1": 14.6,
+          "text": "Assemblez à plusieurs, à plat, sur un sol propre."
+        },
+        {
+          "t0": 14.6,
+          "t1": 19.12,
+          "text": "Un disque mal centré donne un rotor déséquilibré, qu’on ne rattrape qu’avec du plomb."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-brake-switch",
+      "scope": "part:brake-switch",
+      "title": "Interrupteur de freinage",
+      "scene": "shed",
+      "file": "part-brake-switch.mp3",
+      "duration": 22.88,
+      "chars": 402,
+      "hash": "0fe2478265590ceb",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.12,
+          "text": "Un interrupteur à deux pôles, et un seul geste : l’arrêt."
+        },
+        {
+          "t0": 4.12,
+          "t1": 6.96,
+          "text": "Fermé, il met l’alternateur en court-circuit."
+        },
+        {
+          "t0": 6.96,
+          "t1": 11.32,
+          "text": "Les bobines s’opposent à la rotation : le rotor ne tourne plus que très lentement."
+        },
+        {
+          "t0": 11.32,
+          "t1": 13.32,
+          "text": "Aucune pièce mécanique à user."
+        },
+        {
+          "t0": 13.32,
+          "t1": 15.8,
+          "text": "Jamais sur la batterie : le fusible sauterait."
+        },
+        {
+          "t0": 15.8,
+          "t1": 19.52,
+          "text": "Fermez-le avant de monter, de descendre ou de toucher la machine."
+        },
+        {
+          "t0": 19.52,
+          "t1": 22.88,
+          "text": "Ce n’est pas un verrou : on ne s’approche pas d’une machine qui tourne."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-rectifier",
+      "scope": "part:rectifier",
+      "title": "Redresseur",
+      "scene": "shed",
+      "file": "part-rectifier.mp3",
+      "duration": 19.84,
+      "chars": 347,
+      "hash": "4121fa8beaa0dc28",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 4.8,
+          "text": "La machine produit un courant alternatif, à trois fils : la batterie n’en veut pas."
+        },
+        {
+          "t0": 4.8,
+          "t1": 9.28,
+          "text": "Le redresseur, un pont de diodes, ne laisse passer le courant que dans un sens."
+        },
+        {
+          "t0": 9.28,
+          "t1": 11.48,
+          "text": "Rien ne bouge, rien ne se règle."
+        },
+        {
+          "t0": 11.48,
+          "t1": 16.52,
+          "text": "Le prix à payer : une chute d’environ un volt et demi, qui retarde le début de la charge."
+        },
+        {
+          "t0": 16.52,
+          "t1": 19.84,
+          "text": "Un fil alternatif va sur n’importe quelle borne alternative."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "flows": true
+          }
+        },
+        {
+          "t": 19.84,
+          "do": {
+            "flows": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-fuse",
+      "scope": "part:fuse",
+      "title": "Fusible",
+      "scene": "shed",
+      "file": "part-fuse.mp3",
+      "duration": 18.88,
+      "chars": 323,
+      "hash": "8efc9a789921db59",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.2,
+          "text": "Sur chaque circuit qui part d’une batterie : un fusible."
+        },
+        {
+          "t0": 3.2,
+          "t1": 4,
+          "text": "Une option ?"
+        },
+        {
+          "t0": 4,
+          "t1": 6.32,
+          "text": "Non : une règle de sécurité."
+        },
+        {
+          "t0": 6.32,
+          "t1": 10.56,
+          "text": "Une batterie peut débiter un courant énorme dans un court-circuit, et sans fusible,"
+        },
+        {
+          "t0": 10.6,
+          "t1": 12.96,
+          "text": "le câble chauffe jusqu’à l’incendie."
+        },
+        {
+          "t0": 12.96,
+          "t1": 16.04,
+          "text": "Il coupe même si l’on est loin, endormi ou distrait."
+        },
+        {
+          "t0": 16.04,
+          "t1": 18.88,
+          "text": "S’il saute, cherchez pourquoi avant de le changer."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-charge-controller",
+      "scope": "part:charge-controller",
+      "title": "Régulateur de charge",
+      "scene": "shed",
+      "file": "part-charge-controller.mp3",
+      "duration": 19.12,
+      "chars": 372,
+      "hash": "1487d068fff5f3a0",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 2.03,
+          "text": "Qu’est-ce qui abîme une batterie au plomb ?"
+        },
+        {
+          "t0": 2.03,
+          "t1": 4.44,
+          "text": "La vider trop, ou la charger trop fort."
+        },
+        {
+          "t0": 4.44,
+          "t1": 9.64,
+          "text": "Sous onze volts et demi, elle est trop déchargée ; au-dessus de quatorze, la charge est trop forte."
+        },
+        {
+          "t0": 9.64,
+          "t1": 12.88,
+          "text": "Le régulateur veille : il envoie l’excédent au délesteur,"
+        },
+        {
+          "t0": 12.92,
+          "t1": 15.68,
+          "text": "et il débranche la maison quand la batterie est trop basse."
+        },
+        {
+          "t0": 15.68,
+          "t1": 19.12,
+          "text": "Sans voltmètre : des lampes qui faiblissent disent une batterie basse."
+        }
+      ],
+      "cues": []
+    },
+    {
+      "id": "part-dump-load",
+      "scope": "part:dump-load",
+      "title": "Délesteur",
+      "scene": "shed",
+      "file": "part-dump-load.mp3",
+      "duration": 19.2,
+      "chars": 340,
+      "hash": "a1687363798e19f6",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.47,
+          "text": "Batterie pleine, vent toujours là : où va l’énergie ?"
+        },
+        {
+          "t0": 3.47,
+          "t1": 7.96,
+          "text": "Dans le délesteur, une grosse résistance que le régulateur branche à quatorze volts."
+        },
+        {
+          "t0": 7.96,
+          "t1": 10.16,
+          "text": "Elle transforme le surplus en chaleur."
+        },
+        {
+          "t0": 10.16,
+          "t1": 13.88,
+          "text": "Inélégant, mais sûr : rien à régler, rien à user."
+        },
+        {
+          "t0": 13.88,
+          "t1": 16.24,
+          "text": "Chauffer de l’eau avec cette chaleur est une belle idée,"
+        },
+        {
+          "t0": 16.28,
+          "t1": 19.2,
+          "text": "mais dimensionnez le délesteur pour le courant maximal."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "flows": true
+          }
+        },
+        {
+          "t": 19.2,
+          "do": {
+            "flows": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-battery-bank",
+      "scope": "part:battery-bank",
+      "title": "Batteries",
+      "scene": "shed",
+      "file": "part-battery-bank.mp3",
+      "duration": 20.64,
+      "chars": 362,
+      "hash": "eebcfa88d4dfd863",
+      "captions": [
+        {
+          "t0": 0,
+          "t1": 3.04,
+          "text": "La batterie : la réserve des jours sans vent."
+        },
+        {
+          "t0": 3.04,
+          "t1": 6.32,
+          "text": "Elle reçoit le courant redressé, et nourrit la maison."
+        },
+        {
+          "t0": 6.32,
+          "t1": 11.92,
+          "text": "Les plans la veulent toujours chargée : vidée trop longtemps, elle se sulfate et devient inutilisable."
+        },
+        {
+          "t0": 11.92,
+          "t1": 13.48,
+          "text": "La charge la plus saine ?"
+        },
+        {
+          "t0": 13.48,
+          "t1": 15.52,
+          "text": "Un petit courant, pendant longtemps."
+        },
+        {
+          "t0": 15.52,
+          "t1": 20.64,
+          "text": "Attention : elle dégage un gaz qui s’enflamme, et rien de métallique ne se pose sur ses bornes."
+        }
+      ],
+      "cues": [
+        {
+          "t": 0,
+          "do": {
+            "flows": true
+          }
+        },
+        {
+          "t": 20.64,
+          "do": {
+            "flows": false
+          }
+        }
+      ]
+    }
+  ]
+}
