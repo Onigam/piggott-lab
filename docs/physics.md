@@ -136,7 +136,7 @@ The yaw angle grows with the wind: 6° at 10 m/s, 25° at 12, 46° at 16, 57° a
 
 - **Fast** (rotor speed, yaw, gusts): `J·dω/dt = T_aero − T_elec − T_friction` with a fixed step of 20 ms whatever the frame rate, at
   `dt × slowMo`. One implicit Euler step per tick, solved by bisection on a function that increases with ω, so no frame is
-  unstable. `J = 0.13 kg·m²` at 1.2 m (**estimate**, §3; ≈ 0.08 for three 0.35 kg blades, 0.04 for two steel discs with magnets),
+  unstable. `J = 0.13 kg·m²` at 1.2 m (**estimate**, §3; ≈ 0.08 for three 0.35 kg blades, 0.02 for the one steel disc with magnets (the machine has one rotor, not two: research K6 corrected), the rest rounds it up to 0.13),
   friction `0.05 N·m + 0.0005·ω` (estimate). The rotor reaches 350 rpm in about 5 s from rest in 8 m/s.
 - **Slow** (clock, weather, battery, energy counters, scripted events): integrate the _averages_ of the steady-state model over
   the gusts (5-point Gauss-Hermite on the wind speed), × `dt × timeScale`. At ×3600 a day passes in 24 s. The averages are solved

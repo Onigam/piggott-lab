@@ -52,9 +52,10 @@ export const CT_FULL = 8 / 9;
 export const LAMBDA_CT = 4;
 
 /**
- * Moment of inertia of the rotating assembly (3 wooden blades + 2 steel discs with magnets + hub) at D = 1.2 m,
+ * Moment of inertia of the rotating assembly (3 wooden blades + one steel disc with magnets + hub) at D = 1.2 m,
  * kg·m². estimate: 3 × 0.35 kg of timber at a radius of gyration ≈ 0.28 m (blade stations of S4 p. 43 give ≈ 0.8 L per
- * blade), 2 discs 230 × 6 mm of steel (K6) with 8 magnets of 46 × 30 × 10 mm. Not in any source; scales with D⁵.
+ * blade), one disc 230 × 6 mm of steel (K6) with 8 magnets of 46 × 30 × 10 mm, resin and the trailer hub (rounded up
+ * from about 0.11). Not in any source; scales with D⁵.
  */
 export const INERTIA_REF = 0.13;
 /** Bearing friction torque, N·m, and its viscous part, N·m·s/rad, at D = 1.2 m. estimate (trailer hub bearings, S4 p. 44). */

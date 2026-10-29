@@ -34,11 +34,12 @@ export const PART_CATEGORIES: Record<WorldId, Record<string, PartCategory>> = {
     'tail-vane': 'mechanical',
     'wire-loop': 'electrical',
   },
-  // the axial-flux alternator, in section and exploded (reached from `alternator`); `air-gap` is shown as a gauge,
-  // `moulds` are the workshop tools of the resin casting
+  // the axial-flux alternator, in section and exploded (reached from `alternator`); the 1.2 m machine of the video (wiki S3)
+  // has ONE magnet rotor; FIXED: `shaft` = the car-hub stub axle screwed on the cradle, `stator` hung on the cradle by the 3
+  // `studs`; TURNING: `bearing-hub` (hub bell, bearings, the 4 long rotor rods) with `magnet-rotor` and `magnets`;
+  // `air-gap` is shown as a gauge, `moulds` are the workshop tools of the resin casting
   alternator: {
-    'magnet-rotor-front': 'mechanical',
-    'magnet-rotor-rear': 'mechanical',
+    'magnet-rotor': 'mechanical',
     magnets: 'electrical',
     stator: 'electrical',
     coils: 'electrical',
