@@ -71,14 +71,16 @@ describe('what the panel offers', () => {
     expect(chips.map((c) => c.textContent)).toEqual(SCENARIO_IDS.map((id) => str(SCENARIO_KEYS[id])));
     expect(SCENARIO_IDS).toHaveLength(11);
   });
-  it('has three sections of controls: site, machine, electrics, with the sliders and toggles of the brief', () => {
+  it('has three sections of controls: site, machine, electrics, with the sliders and toggles of the brief, then the closed Sizes section', () => {
     const { root } = open();
     const sections = root.find('details.sim-section');
     expect(sections.map((s) => s.find('summary')[0].textContent)).toEqual([
       str('secSite'),
       str('secMachine'),
       str('secElectric'),
+      str('secSizes'),
     ]);
+    expect(sections.map((s) => s.open)).toEqual([true, true, true, false]);
     const labels = root.find('label').map((l) => l.textContent);
     for (const key of [
       'meanWind',
@@ -102,7 +104,7 @@ describe('what the panel offers', () => {
     expect(root.find('input').filter((i) => i.getAttribute('type') === 'range').length).toBeGreaterThanOrEqual(12);
     expect(root.find('input').filter((i) => i.getAttribute('type') === 'checkbox').length).toBeGreaterThanOrEqual(5);
   });
-  it('shows the live readouts and six charts', () => {
+  it('shows the live readouts and seven charts (the seventh is in the closed Sizes section)', () => {
     const { root } = open();
     const readouts = root.find('.readout').map((r) => r.textContent);
     expect(readouts.length).toBeGreaterThanOrEqual(20);
@@ -120,7 +122,7 @@ describe('what the panel offers', () => {
         String(key),
       ).toBe(true);
     }
-    expect(root.find('canvas')).toHaveLength(6);
+    expect(root.find('canvas')).toHaveLength(7); // six charts and the chart of the Sizes section
   });
   it('shows the yearly yield and the rotor-to-battery chain', () => {
     const { root, sim, panel } = open();

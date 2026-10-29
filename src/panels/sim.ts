@@ -29,6 +29,7 @@ import {
   weibullChartData,
   type Readout,
 } from './model';
+import { SizesSection } from './sizes';
 
 // Simulation mode: presets and scenarios, the live readouts, the chain of power from rotor to battery, grouped controls
 // and charts (power curve, Cp(λ), the last minute, the Weibull year). Built only from the kit's widgets and charts.
@@ -82,6 +83,8 @@ export class SimPanel implements PanelController {
   private rpmChart: LineChart;
   private liveChart: LineChart;
   private weibullChart: LineChart;
+  /** The "Sizes" section: the seven diameters of the family on one chart (sizes.ts). Closed, it costs nothing. */
+  private sizes: SizesSection;
 
   private lastReadouts = 0;
   private lastCharts = 0;
@@ -95,6 +98,7 @@ export class SimPanel implements PanelController {
 
   constructor(private ctx: AppContext<PiggottSim>) {
     const sim = () => this.ctx.sim;
+    this.sizes = new SizesSection(() => this.ctx.sim.params.diameter);
     const seconds = (v: number) => (v === 0 ? '0' : `${num(v)} s`);
     this.powerOpts = {
       height: 180,
@@ -281,6 +285,7 @@ export class SimPanel implements PanelController {
       h('div', { class: 'eyebrow' }, t('chartPower')),
       this.powerChart.el,
       hint('chartPowerHint'),
+      this.sizes.build(),
       h('div', { class: 'eyebrow' }, t('chartCp')),
       this.cpChart.el,
       hint('chartCpHint'),
@@ -310,6 +315,7 @@ export class SimPanel implements PanelController {
 
   /** Called every frame while the panel is open: readouts at 5 Hz, the last minute at 4 Hz, the curves at 2 Hz. */
   tick(dt: number): void {
+    this.sizes.tick();
     this.lastReadouts += dt;
     this.lastCharts += dt;
     this.lastScope += dt;

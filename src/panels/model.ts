@@ -1,8 +1,11 @@
 import type { UiKey } from '../i18n/ui';
+import { buildConfig } from '../sim/config';
+import { DIAMETER_REF } from '../sim/machine';
 import { BETZ } from '../sim/physics';
+import { presetParams } from '../sim/presets';
 import { powerCoefficient } from '../sim/rotor';
 import type { PiggottParams, PiggottState, PresetId, ScenarioId, Scope } from '../sim/types';
-import type { CurvePoint, YearlyYield } from '../sim/yield';
+import { nameplate, powerCurve, windGrid, type CurvePoint, type YearlyYield } from '../sim/yield';
 
 // What the simulation panel plots and says, as plain functions of the simulation (no DOM), so that a test can check the
 // numbers behind the charts and the wording of the status line without a browser.
@@ -161,4 +164,88 @@ export function chainSegments(s: PiggottState): { key: UiKey; watts: number; col
     { key: 'chainDiodes', watts: Math.max(0, s.diodeLoss), colour: 'var(--sun)' },
     { key: 'chainCable', watts: Math.max(0, s.cableLoss), colour: 'var(--violet)' },
   ];
+}
+
+// ------------------------------------------------------------------------------------------------ the sizes of the family
+
+/** The seven rotor diameters of the family, m. reported: Tripalium (docs/research.md K3). */
+export const SIZE_DIAMETERS: readonly number[] = [1.0, 1.2, 1.8, 2.4, 3.0, 3.6, 4.2];
+/** Wind speeds of the size curves, m/s: the same grid as the power curve (0 to 25 m/s in steps of 0.5). */
+export const SIZE_WINDS: readonly number[] = windGrid(25, 0.5);
+/** The wind of the table under the chart, m/s: the wind of the ratings in Engineering for Change (K18). */
+export const SIZE_TABLE_WIND = 12;
+
+/** Key of a diameter in the cache and in the chart series ("d12" for 1.2 m): tenths of a metre. */
+export const sizeKey = (diameter: number): string => `d${Math.round(diameter * 10)}`;
+
+/**
+ * The reference machine at one diameter: the machine of the video scaled as the model scales it (the alternator and the
+ * tail follow the diameter, config.ts) with the cable section in proportion to the swept area, so that the cable
+ * costs the same share of the power at every size. The site does not matter: a steady curve is a function of the wind at the hub.
+ */
+export function sizeParams(diameter: number): PiggottParams {
+  const base = presetParams('hamlet');
+  return { ...base, diameter, cableSection: base.cableSection * (diameter / DIAMETER_REF) ** 2 };
+}
+
+const sizeCache = new Map<string, number[]>();
+
+/**
+ * Battery power, W, of the reference machine of this diameter at each wind of `SIZE_WINDS` (the steady curve, mid-charge
+ * battery). About 12 ms the first time, then cached: nothing is computed until the Sizes section is opened.
+ */
+export function sizeCurve(diameter: number): number[] {
+  const key = sizeKey(diameter);
+  let curve = sizeCache.get(key);
+  if (!curve) {
+    curve = powerCurve(buildConfig(sizeParams(diameter)), [...SIZE_WINDS]).map((p) => p.busPower);
+    sizeCache.set(key, curve);
+  }
+  return curve;
+}
+
+/** The diameters whose curve is still to compute for a chart that highlights `setDiameter` (the family, then that size). */
+export function pendingSizes(setDiameter: number): number[] {
+  const wanted = [...SIZE_DIAMETERS];
+  if (!wanted.some((d) => sizeKey(d) === sizeKey(setDiameter))) wanted.push(setDiameter);
+  return wanted.filter((d) => !sizeCache.has(sizeKey(d)));
+}
+
+export interface SizesChartData {
+  xs: number[];
+  /** One curve per diameter of the family (keys "d10" … "d42"), "set" when the set diameter is not one of them, "rated" for the label of the set size. */
+  ys: Record<string, number[]>;
+  /** Upper end of the power axis, W: a multiple of 300 above the best curve of the family, so the chart does not move with the set size. */
+  yMax: number;
+  /** Series key of the set diameter. */
+  setKey: string;
+  /** Battery power of the set size at `SIZE_TABLE_WIND` and its label (200 W scaled with the area), W. */
+  set: { model: number; rated: number };
+}
+
+/** The chart of the Sizes section: the seven curves, the set size and its label. */
+export function sizesChartData(setDiameter: number): SizesChartData {
+  const ys: Record<string, number[]> = {};
+  let top = 0;
+  for (const d of SIZE_DIAMETERS) {
+    const curve = sizeCurve(d);
+    ys[sizeKey(d)] = curve;
+    top = Math.max(top, ...curve);
+  }
+  // a multiple of 300, so that the three gridlines of the chart fall on round numbers (300, 600, 900)
+  const yMax = Math.ceil((top * 1.04) / 300) * 300;
+  const inFamily = SIZE_DIAMETERS.some((d) => sizeKey(d) === sizeKey(setDiameter));
+  const setKey = inFamily ? sizeKey(setDiameter) : 'set';
+  if (!inFamily) ys.set = sizeCurve(setDiameter);
+  const rated = nameplate(setDiameter);
+  // the label leaves the chart through the top when it is out of the axis, as the wind line of the power chart does
+  ys.rated = SIZE_WINDS.map(() => (rated <= yMax ? rated : NaN));
+  const at = SIZE_WINDS.indexOf(SIZE_TABLE_WIND);
+  return { xs: [...SIZE_WINDS], ys, yMax, setKey, set: { model: sizeCurve(setDiameter)[at], rated } };
+}
+
+/** The cells under the chart: for each size of the family, the model's battery power at 12 m/s and the label scaled with the area, W. */
+export function sizesTable(): { diameter: number; model: number; rated: number }[] {
+  const at = SIZE_WINDS.indexOf(SIZE_TABLE_WIND);
+  return SIZE_DIAMETERS.map((d) => ({ diameter: d, model: sizeCurve(d)[at], rated: nameplate(d) }));
 }

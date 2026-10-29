@@ -261,6 +261,21 @@ const LAB = {
     'In France, a mast under 12 m generally needs no formality (a prior declaration in a protected area); from 12 m, a building permit is required. Check with the mairie (town hall): local rules (PLU) and those of other countries differ.',
   ],
   chapters: ['Sommaire de la vidéo', 'Video outline'],
+
+  // ---- the Sizes section of the simulation panel and the lessons intro (lessons role, wave 3)
+  secSizes: ['Tailles', 'Sizes'],
+  sizesHint: [
+    'Une courbe par taille, de 1,0 à 4,2 m ; en cuivre, la taille réglée et son étiquette en tirets. Cases : modèle / annoncée à 12 m/s, en W.',
+    'One curve per size, 1.0 to 4.2 m; in copper, the size you set and its label in dashes. Cells: model / rated at 12 m/s, in W.',
+  ],
+  seriesRatedSize: ['Annoncée, à l’échelle de la surface', 'Rated, scaled with the area'],
+  sizesSet: ['Taille réglée', 'Size set'],
+  sizesModel: ['modèle à 12 m/s', 'model at 12 m/s'],
+  sizesRated: ['annoncée', 'rated'],
+  lessonsIntroPiggott: [
+    'Six leçons à lire dans l’ordre, trois minutes chacune environ : le vent et son cube, les pales, l’alternateur, la batterie, la tempête, puis le choix du site et de la taille. Chacune ouvre la 3D sur ce dont elle parle, et finit par un petit quiz.',
+    'Six lessons to read in order, about three minutes each: the wind and its cube, the blades, the alternator, the battery, the storm, then the choice of site and size. Each opens the 3D view on its subject and ends with a short quiz.',
+  ],
 } as const satisfies Record<string, readonly [string, string]>;
 
 registerStrings(LAB);
