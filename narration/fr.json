@@ -1,0 +1,309 @@
+{
+  "lang": "fr",
+  "voiceLabel": {
+    "fr": "Voix de synthèse",
+    "en": "Synthetic voice"
+  },
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "style": 0.35,
+    "speed": 0.95
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "scope": "intro",
+      "title": "Présentation du labo",
+      "scene": "site",
+      "text": "[[home]] Imaginez une colline balayée par le vent, et, au pied de la pente, un hameau loin du réseau électrique. Pas de ligne, pas de prise. Juste du vent, des planches, des aimants… et de la patience. [[frame:wind-turbine]] Suivons une rafale. Elle arrive du fond de la vallée, [[frame:tower]] et grimpe le long du mât haubané, tout en haut, jusqu’à la machine. [[scene:blades]] Là, trois pales de bois, taillées à la main. Elle pousse : le rotor se met à tourner. [[scene:turbine]] Là-haut, toute la machine pivote sur son mât, pour rester face au vent. [[scene:alternator]] Au cœur de la machine, des aimants défilent devant des bobines de cuivre : la rafale devient courant électrique ! Sans engrenage, sans rien de superflu. [[scene:shed]] Le courant descend le long du mât, puis traverse le local technique. Un interrupteur, un redresseur, un fusible, un régulateur. [[frame:battery-bank]] Il finit dans une batterie, qui garde l’énergie pour les jours sans vent. [[scene:site]] Retour sur le site, et dans la maison, [[frame:house]] une lampe s’allume. Voilà le voyage : une rafale, trois pales, quelques aimants… et de la lumière. [[home]] Pour commencer, quelques repères. Il y a cinq vues : le site, l’éolienne, l’alternateur, les pales et le local technique. Cliquez sur une pièce : sa fiche s’ouvre, et vous pouvez écouter son histoire. [[mode:assembly]] Le guide de montage taille les pales, construit l’alternateur, puis assemble la machine. [[mode:install]] Le guide d’installation va du choix du site à la première mise en route. [[mode:sim]] La simulation vous laisse changer le vent, la taille de la machine, et voir arriver la tempête. [[mode:lessons]] Six leçons, avec des quiz, expliquent la physique. [[mode:plans]] Huit plans réunissent les dessins techniques. [[mode:explore]] Une dernière chose : ce laboratoire est une reconstitution pédagogique, inspirée d’une vidéo publique. [[scene:site]] Ce n’est ni un plan officiel, ni un produit de fabricant. La machine montrée mesure un mètre vingt, et, sauf quand je cite la vidéo, les chiffres viennent de la simulation. [[select:none]] À vous de jouer !"
+    },
+    {
+      "id": "scene-site",
+      "scope": "scene:site",
+      "title": "Le site",
+      "scene": "site",
+      "text": "[[home]] Voici le site, à l’échelle : un champ, un mât, une maison. [[flows:on]] [[frame:obstacles]] D’abord les arbres : ils brouillent le vent, et c’est lui qui décide de tout. [[frame:tower]] Au milieu, le mât haubané, qui hisse la machine au-dessus des turbulences. [[frame:wind-turbine]] Tout en haut, l’éolienne, qui tourne dès que le vent se lève. [[frame:cable-run]] Un câble descend du mât et court dans l’herbe, [[frame:technical-room]] jusqu’au local technique. Un petit cabanon sec, où l’électronique est à l’abri. [[frame:house]] La maison prend ensuite son électricité sur la batterie. [[flows:off]] [[home]] Une brise, un mât, un câble : le vent devient lumière !"
+    },
+    {
+      "id": "scene-turbine",
+      "scope": "scene:turbine",
+      "title": "L’éolienne",
+      "scene": "turbine",
+      "text": "[[home]] Voici la machine, tout en haut du mât. [[frame:rotor]] À l’avant, le rotor : trois pales et un moyeu. [[frame:alternator]] Derrière, l’alternateur, sans engrenage. [[frame:nacelle-frame]] Un cadre d’acier soudé porte le tout, [[frame:yaw-bearing]] et pivote sur le mât, grâce à un simple tube graissé. [[frame:tail-vane]] À l’arrière, la queue garde la machine face au vent… [[frame:tail-hinge]] sur une charnière inclinée, qui lui permet de s’écarter quand le vent forcit. [[home]] [[cutaway:on]] Regardez l’alternateur en coupe. [[cutaway:off]] [[explode:0.6]] Puis écartons les pièces. [[explode:0]] Une queue qui plie : voilà la sécurité de la machine dans la tempête."
+    },
+    {
+      "id": "scene-alternator",
+      "scope": "scene:alternator",
+      "title": "L’alternateur",
+      "scene": "alternator",
+      "text": "[[home]] Voici le cœur de la machine, posé sur l’établi. [[frame:magnet-rotor,magnets]] Un disque d’acier porte huit aimants. [[frame:stator,coils]] Face à lui, un disque de résine noie six bobines de cuivre. [[frame:air-gap]] Entre les deux, environ un millimètre de vide. [[frame:bearing-hub,shaft]] Le disque tourne avec un moyeu de voiture, sur une fusée qui ne bouge jamais. [[home]] [[cutaway:on]] En coupe, on voit l’entrefer… [[cutaway:off]] [[explode:0.6]] et en éclaté, tout ce qui s’enfile. [[explode:0]] Rien ne se touche : seul un champ traverse le vide."
+    },
+    {
+      "id": "scene-blades",
+      "scope": "scene:blades",
+      "title": "Les pales",
+      "scene": "blades",
+      "text": "[[home]] Ici, on taille les pales, à la main, avec patience. [[frame:blade-blank]] Chacune naît d’un plateau de bois, léger et droit. [[frame:station-templates]] Six gabarits donnent la forme : large et épaisse au pied, fine et étroite au bout. [[frame:blade]] On creuse d’abord la face au vent, presque plate, puis on arrondit le dos, comme une aile. [[frame:hub-disc]] Enfin, un disque de contreplaqué serre les trois pieds, à cent vingt degrés. [[home]] Trois pales identiques, et un rotor tout rond."
+    },
+    {
+      "id": "scene-shed",
+      "scope": "scene:shed",
+      "title": "Le local technique",
+      "scene": "shed",
+      "text": "[[home]] Voici le local technique : un cabanon sec, et un panneau de bois. [[frame:brake-switch]] Le courant arrive d’abord à l’interrupteur de freinage, [[frame:rectifier]] puis au redresseur, qui le met à l’endroit. [[frame:fuse]] Le fusible veille sur le câble et sur la batterie, [[frame:charge-controller]] le régulateur surveille la tension, [[frame:dump-load]] et le délesteur brûle le surplus. [[frame:battery-bank]] Au bout, la batterie, posée au sol. [[home]] [[flows:on]] Suivez le courant, de la gauche vers la batterie. [[flows:off]] [[explode:0.6]] Puis décollons les appareils du panneau. [[explode:0]]"
+    },
+    {
+      "id": "part-wind-turbine",
+      "scope": "part:wind-turbine",
+      "title": "Éolienne",
+      "scene": "site",
+      "text": "Voici la machine de la vidéo, vue de loin : un mètre vingt de diamètre, trois pales, pas d’engrenage. Elle charge une batterie de douze volts. L’étiquette annonce deux cents watts, sans dire pour quel vent. La simulation, elle, trouve environ soixante watts à douze mètres par seconde. On ne l’a pas réglée pour coller à l’étiquette. Ouvrez la vue de l’éolienne pour voir chaque pièce, une à une."
+    },
+    {
+      "id": "part-tower",
+      "scope": "part:tower",
+      "title": "Mât",
+      "scene": "site",
+      "text": "Un simple tuyau d’eau en acier, haubané : le mât. Sa mission : hisser la machine au-dessus des turbulences. Six mètres si le lieu est dégagé, douze ou dix-huit sinon. Plus haut vaut mieux. En France, un mât de douze mètres ou plus demande un permis de construire : renseignez-vous en mairie."
+    },
+    {
+      "id": "part-guy-wires",
+      "scope": "part:guy-wires",
+      "title": "Haubans",
+      "scene": "site",
+      "text": "Des câbles tendus du mât vers le sol, dans plusieurs directions : les haubans. Un niveau tous les quatre mètres environ. Seuls ceux du haut portent vraiment l’effort, les autres raidissent le tube. Un tube léger haubané coûte bien moins cher qu’un mât qui tient seul. Écartez-les du bout des pales, mais pas trop : le mât plierait davantage."
+    },
+    {
+      "id": "part-tower-base",
+      "scope": "part:tower-base",
+      "title": "Pied de mât articulé",
+      "scene": "site",
+      "text": "Le pied du mât est articulé. On assemble la machine au sol, mât couché, puis on le relève, avec des haubans et plusieurs paires de bras. Et pour l’entretien, on le redescend ! Une règle : ne vous tenez jamais sous la machine pendant la levée. Une corde de levage a déjà cassé : la machine est tombée d’environ deux mètres."
+    },
+    {
+      "id": "part-cable-run",
+      "scope": "part:cable-run",
+      "title": "Câble vers les batteries",
+      "scene": "site",
+      "text": "[[flows:on]] Trois fils partent de la machine, descendent dans le mât et courent jusqu’au local technique. En douze volts, le courant est fort, et la perte dans le câble grandit comme son carré. Pour cinq cents watts, six millimètres carrés sur trente mètres en gaspillent trente-huit pour cent ! Un gros câble vaut mieux qu’un long câble. [[flows:off]]"
+    },
+    {
+      "id": "part-technical-room",
+      "scope": "part:technical-room",
+      "title": "Local technique",
+      "scene": "site",
+      "text": "Un cabanon sec, près de la maison : le local technique. Le câble y arrive. Toute l’électronique tient sur un seul panneau de contreplaqué. Un seul endroit à protéger et à surveiller, avec le frein à portée de main. Ouvrez la vue du local pour suivre le courant, appareil après appareil."
+    },
+    {
+      "id": "part-house",
+      "scope": "part:house",
+      "title": "Habitation",
+      "scene": "site",
+      "text": "Au bout du voyage, la maison. D’après la vidéo, cette petite machine alimente un peu d’éclairage, ou recharge un ordinateur. Les plus grandes de la famille, jusqu’à quatre mètres vingt, peuvent alimenter un foyer entier, chauffage excepté. Un conseil : estimez d’abord ce que vous consommez, et ensuite seulement la taille de la machine."
+    },
+    {
+      "id": "part-obstacles",
+      "scope": "part:obstacles",
+      "title": "Arbres et obstacles",
+      "scene": "site",
+      "text": "La vidéo commence par là : où poser l’éolienne ? Un arbre ralentit le vent et le rend turbulent derrière lui. Cherchez un paysage dégagé, les vents dominants, peu d’obstacles. Un arbre penché, une herbe couchée : le vent est invisible, mais il laisse des traces. Monter le mât coûte moins cher que de changer de machine !"
+    },
+    {
+      "id": "part-rotor",
+      "scope": "part:rotor",
+      "title": "Rotor (pales et moyeu)",
+      "scene": "turbine",
+      "text": "Trois pales de bois, serrées entre des disques de contreplaqué : le rotor. Il attrape le vent et entraîne l’alternateur, sans réducteur. Pourquoi trois ? Peu de pales étroites qui tournent vite font le même travail que beaucoup de pales larges et lentes : c’est le bon compromis. Un bout de bois de soixante centimètres qui s’échappe fait des dégâts : équilibrez et serrez avant de lancer."
+    },
+    {
+      "id": "part-alternator",
+      "scope": "part:alternator",
+      "title": "Alternateur",
+      "scene": "turbine",
+      "text": "[[cutaway:on]] Voici l’alternateur : des aimants sur un disque d’acier, qui tournent devant des bobines de cuivre. Pas d’engrenage, et surtout pas de fer dans les bobines. Aucun point dur : la machine démarre dans un souffle de vent. Quand le vent forcit, c’est lui qui retient les pales : la machine reste silencieuse. À un tour par seconde, il donne environ un virgule neuf volt. [[cutaway:off]]"
+    },
+    {
+      "id": "part-nacelle-frame",
+      "scope": "part:nacelle-frame",
+      "title": "Cadre de nacelle",
+      "scene": "turbine",
+      "text": "Un morceau de cornière d’acier, un tube pivot, un tube de charnière : le cadre de nacelle. Tout est soudé d’équerre, ce qu’un atelier de village sait faire. Au bout, un disque d’acier, le berceau, porte l’alternateur. Soudez par étapes, en alternant les côtés : la chaleur déforme la pièce."
+    },
+    {
+      "id": "part-yaw-bearing",
+      "scope": "part:yaw-bearing",
+      "title": "Pivot d’orientation",
+      "scene": "turbine",
+      "text": "Un tube qui s’enfile sur un autre, avec un peu de graisse : le pivot d’orientation. Rudimentaire, et pourtant ça marche très bien ! Remarquez que le rotor n’est pas sur l’axe : il est décalé de quarante et un millimètres. Le vent pousse à côté de l’axe, et cherche sans cesse à tourner la machine hors du vent. C’est le moteur du repli : sans ce décalage, elle ne se replierait jamais."
+    },
+    {
+      "id": "part-tail-hinge",
+      "scope": "part:tail-hinge",
+      "title": "Charnière inclinée",
+      "scene": "turbine",
+      "text": "[[explode:0.6]] Un axe incliné : c’est toute l’astuce. Quand le vent devient trop fort, la queue s’écarte… en montant. Son propre poids la ramène : pas de ressort, qui vibrerait, rouillerait et casserait. L’axe penche de vingt degrés, et la queue s’ouvre d’environ quatre-vingt-quinze degrés. Plus elle est lourde, plus elle s’efface tard. [[explode:0]]"
+    },
+    {
+      "id": "part-tail-boom",
+      "scope": "part:tail-boom",
+      "title": "Bras de queue",
+      "scene": "turbine",
+      "text": "Un tube d’acier soudé sur la charnière : le bras de queue. Plus il est long, plus la queue a de levier contre la poussée du vent. Deux longueurs sont publiées, cinq cents et sept cents millimètres. Montez d’abord le bras sur la charnière, réglez la butée, et seulement ensuite soudez le support du safran."
+    },
+    {
+      "id": "part-tail-vane",
+      "scope": "part:tail-vane",
+      "title": "Safran",
+      "scene": "turbine",
+      "text": "Une simple plaque de contreplaqué : le safran. Comme la dérive d’une girouette, il garde l’éolienne face au vent, jusqu’à environ dix mètres par seconde. Ensuite, il cède, et la machine se met en drapeau pour protéger l’électricité, dit la vidéo. Trop léger, il se replie trop tôt ; trop lourd, trop tard. Ça se règle sur le terrain !"
+    },
+    {
+      "id": "part-wire-loop",
+      "scope": "part:wire-loop",
+      "title": "Boucle de câble",
+      "scene": "turbine",
+      "text": "Le fil sort du stator, descend dans le tube pivot, puis dans le mât. Mais la machine tourne pour suivre le vent… et les fils tournent avec elle ! Une boucle de câble souple les laisse pivoter sans tirer ni pincer. Enfilez d’abord les fils, puis le tube : un fil se pince très vite à cet endroit."
+    },
+    {
+      "id": "part-magnet-rotor",
+      "scope": "part:magnet-rotor",
+      "title": "Disque à aimants (rotor)",
+      "scene": "alternator",
+      "text": "Un disque d’acier épais, coulé dans la résine avec ses huit aimants : le rotor. L’acier referme le champ d’un aimant à l’autre, et la résine tient et protège les aimants. Il tourne avec la cloche du moyeu, sans balais, sans contact. Un seul rotor sur cette petite machine ; la grande, de deux mètres quarante, en a deux. Acier seulement : ni aluminium, ni inox."
+    },
+    {
+      "id": "part-magnets",
+      "scope": "part:magnets",
+      "title": "Aimants néodyme",
+      "scene": "alternator",
+      "text": "[[xray:on]] Huit aimants néodyme, collés un pôle nord, puis un pôle sud, en alternance. C’est elle qui fait un courant alternatif. Huit aimants pour six bobines : quatre pour trois, et ce rapport donne trois phases et un couple régulier. Attention : ils se plaquent l’un à l’autre, ou sur l’acier, avec une force qui écrase les doigts. Tenez-en un à deux mains, et faites-le glisser. Loin des cartes bancaires et des stimulateurs cardiaques. [[xray:off]]"
+    },
+    {
+      "id": "part-stator",
+      "scope": "part:stator",
+      "title": "Stator coulé en résine",
+      "scene": "alternator",
+      "text": "[[xray:on]] Un disque de résine polyester, armé de fibre de verre et de talc : le stator. Il noie six bobines, et le bout de trois tiges. Du fer dedans ? Aucun, donc aucun point dur au démarrage. Le talc aide à évacuer la chaleur du cuivre. Il reste fixe, vissé sur le berceau de la nacelle. [[xray:off]]"
+    },
+    {
+      "id": "part-coils",
+      "scope": "part:coils",
+      "title": "Bobines",
+      "scene": "alternator",
+      "text": "[[xray:on]] Six bobines de fil de cuivre, enroulées sur un gabarit de la taille des aimants. Soixante-seize tours chacune, avec du fil de un virgule quatre millimètre : le choix de la vidéo pour du douze volts. Plus de tours, plus de volts à basse vitesse… mais un rotor plus retenu. Tous les tours dans le même sens : une seule bobine à l’envers, et la tension chute ! [[xray:off]]"
+    },
+    {
+      "id": "part-star-wiring",
+      "scope": "part:star-wiring",
+      "title": "Couplage étoile",
+      "scene": "alternator",
+      "text": "[[xray:on]] Six bobines, numérotées de un à six. Les entrées un, deux et trois sont réunies : c’est le point neutre de l’étoile. Les sorties un, deux et trois rejoignent les entrées quatre, cinq et six. Restent trois fils, les sorties quatre, cinq et six : les trois phases, décalées. Une machine à trois phases tourne sans vibrer. Numérotez avant de poser : une fois la résine coulée, une erreur ne se voit plus. [[xray:off]]"
+    },
+    {
+      "id": "part-shaft",
+      "scope": "part:shaft",
+      "title": "Fusée et berceau",
+      "scene": "alternator",
+      "text": "Un moyeu de voiture, coupé en deux : la partie qui tourne, et la fusée, qui ne tourne jamais. Elle est vissée sur le berceau, un disque d’acier soudé au bout du cadre. Tout ce qui est électrique reste fixe : pas de contact glissant. Soudez le berceau par étapes : la chaleur le gauchit, et le stator ne serait plus parallèle."
+    },
+    {
+      "id": "part-bearing-hub",
+      "scope": "part:bearing-hub",
+      "title": "Moyeu à roulements",
+      "scene": "alternator",
+      "text": "[[explode:0.6]] Un moyeu de roue arrière de voiture, récupéré pour ses roulements. Sa cloche tourne sur la fusée. On la meule jusqu’à sa plaque plate. Quatre longues tiges y fixent le disque à aimants, puis reçoivent le rotor des pales. Réglez les roulements à l’écrou, puis desserrez d’un quart de tour. Et jetez le joint arrière : il frotte trop. [[explode:0]]"
+    },
+    {
+      "id": "part-studs",
+      "scope": "part:studs",
+      "title": "Tiges du stator",
+      "scene": "alternator",
+      "text": "[[explode:0.6]] Trois tiges filetées, fendues à un bout, noyées dans la résine du stator, comme un trépied. Leurs écrous le font avancer ou reculer : c’est avec eux qu’on règle l’entrefer, sans aucun usinage. Serrez les trois ensemble, par petits tours, pour que le stator reste bien parallèle au disque. [[explode:0]]"
+    },
+    {
+      "id": "part-air-gap",
+      "scope": "part:air-gap",
+      "title": "Entrefer",
+      "scene": "alternator",
+      "text": "[[cutaway:on]] Combien d’espace entre les aimants et le stator ? Environ un millimètre. Plus il est étroit, plus la tension monte. Mais laissez de la marge : la fiabilité passe avant la performance ! Un test à un tour par seconde doit donner environ un virgule neuf volt. Sinon, regardez l’entrefer. [[cutaway:off]]"
+    },
+    {
+      "id": "part-moulds",
+      "scope": "part:moulds",
+      "title": "Moules (rotor, stator)",
+      "scene": "alternator",
+      "text": "Deux moules en contreplaqué, un pour le stator, un pour le rotor : les outils de l’atelier. On les cire avant chaque coulée, puis la résine, la fibre de verre et le talc font le reste. Une coulée n’a pas de seconde chance : faites le moule droit et propre. La résine dégage des vapeurs toxiques : masque, gants, lunettes, fenêtre ouverte."
+    },
+    {
+      "id": "part-blade-blank",
+      "scope": "part:blade-blank",
+      "title": "Plateau de bois",
+      "scene": "blades",
+      "text": "Tout commence par une poutre : un bois léger, droit, sans trop de nœuds, et qui ne pourrit pas. De l’épicéa, du douglas, du mélèze, dit la vidéo. Une seule poutre donne les trois pales, qui auront ainsi le même poids et la même rigidité. Les nœuds vers le pied, et quatre ou cinq centimètres de marge au bout."
+    },
+    {
+      "id": "part-station-templates",
+      "scope": "part:station-templates",
+      "title": "Gabarits de sections",
+      "scene": "blades",
+      "text": "Six gabarits, six sections le long de la pale. Chacune a sa largeur, son épaisseur et son décalage. On creuse, on essaie le gabarit, on creuse encore, jusqu’à ce qu’il épouse la pale. Gardez ce jeu de gabarits : le jour où il faudra remplacer une pale, vous retrouverez la forme exacte."
+    },
+    {
+      "id": "part-blade",
+      "scope": "part:blade",
+      "title": "Pale",
+      "scene": "blades",
+      "text": "Au pied, elle fait cent cinquante-trois millimètres de large et quarante-neuf d’épaisseur. Au bout, il ne reste que cinquante-cinq millimètres de large et six d’épaisseur. D’abord la face au vent, presque plate, puis le dos, arrondi comme une aile. Elle mesure soixante centimètres, et les trois doivent être parfaitement identiques. Masque anti-poussière, et si possible dehors : la poussière de bois est un danger."
+    },
+    {
+      "id": "part-hub-disc",
+      "scope": "part:hub-disc",
+      "title": "Disque de moyeu",
+      "scene": "blades",
+      "text": "Un disque de contreplaqué de neuf millimètres, et trois pales vissées à cent vingt degrés. Voilà ce qui change trois morceaux de bois en un rotor rond. Un triangle de contreplaqué serre le tout, côté vent. Assemblez à plusieurs, à plat, sur un sol propre. Un disque mal centré donne un rotor déséquilibré, qu’on ne rattrape qu’avec du plomb."
+    },
+    {
+      "id": "part-brake-switch",
+      "scope": "part:brake-switch",
+      "title": "Interrupteur de freinage",
+      "scene": "shed",
+      "text": "Un interrupteur à deux pôles, et un seul geste : l’arrêt. Fermé, il met l’alternateur en court-circuit. Les bobines s’opposent à la rotation : le rotor ne tourne plus que très lentement. Aucune pièce mécanique à user. Jamais sur la batterie : le fusible sauterait. Fermez-le avant de monter, de descendre ou de toucher la machine. Ce n’est pas un verrou : on ne s’approche pas d’une machine qui tourne."
+    },
+    {
+      "id": "part-rectifier",
+      "scope": "part:rectifier",
+      "title": "Redresseur",
+      "scene": "shed",
+      "text": "[[flows:on]] La machine produit un courant alternatif, à trois fils : la batterie n’en veut pas. Le redresseur, un pont de diodes, ne laisse passer le courant que dans un sens. Rien ne bouge, rien ne se règle. Le prix à payer : une chute d’environ un volt et demi, qui retarde le début de la charge. Un fil alternatif va sur n’importe quelle borne alternative. [[flows:off]]"
+    },
+    {
+      "id": "part-fuse",
+      "scope": "part:fuse",
+      "title": "Fusible",
+      "scene": "shed",
+      "text": "Sur chaque circuit qui part d’une batterie : un fusible. Une option ? Non : une règle de sécurité. Une batterie peut débiter un courant énorme dans un court-circuit, et sans fusible, le câble chauffe jusqu’à l’incendie. Il coupe même si l’on est loin, endormi ou distrait. S’il saute, cherchez pourquoi avant de le changer."
+    },
+    {
+      "id": "part-charge-controller",
+      "scope": "part:charge-controller",
+      "title": "Régulateur de charge",
+      "scene": "shed",
+      "text": "Qu’est-ce qui abîme une batterie au plomb ? La vider trop, ou la charger trop fort. Sous onze volts et demi, elle est trop déchargée ; au-dessus de quatorze, la charge est trop forte. Le régulateur veille : il envoie l’excédent au délesteur, et il débranche la maison quand la batterie est trop basse. Sans voltmètre : des lampes qui faiblissent disent une batterie basse."
+    },
+    {
+      "id": "part-dump-load",
+      "scope": "part:dump-load",
+      "title": "Délesteur",
+      "scene": "shed",
+      "text": "[[flows:on]] Batterie pleine, vent toujours là : où va l’énergie ? Dans le délesteur, une grosse résistance que le régulateur branche à quatorze volts. Elle transforme le surplus en chaleur. Inélégant, mais sûr : rien à régler, rien à user. Chauffer de l’eau avec cette chaleur est une belle idée, mais dimensionnez le délesteur pour le courant maximal. [[flows:off]]"
+    },
+    {
+      "id": "part-battery-bank",
+      "scope": "part:battery-bank",
+      "title": "Batteries",
+      "scene": "shed",
+      "text": "[[flows:on]] La batterie : la réserve des jours sans vent. Elle reçoit le courant redressé, et nourrit la maison. Les plans la veulent toujours chargée : vidée trop longtemps, elle se sulfate et devient inutilisable. La charge la plus saine ? Un petit courant, pendant longtemps. Attention : elle dégage un gaz qui s’enflamme, et rien de métallique ne se pose sur ses bornes. [[flows:off]]"
+    }
+  ]
+}

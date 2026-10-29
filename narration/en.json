@@ -1,0 +1,309 @@
+{
+  "lang": "en",
+  "voiceLabel": {
+    "fr": "Voix de synthèse",
+    "en": "Synthetic voice"
+  },
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "style": 0.35,
+    "speed": 0.95
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "scope": "intro",
+      "title": "Presentation of the lab",
+      "scene": "site",
+      "text": "[[home]] Picture a hillside swept by the wind, and, at the foot of the slope, a hamlet far from the power grid. No line, no socket. Just wind, planks, magnets… and patience. [[frame:wind-turbine]] Let’s follow a gust. It rushes in from the far end of the valley, [[frame:tower]] and climbs the guyed mast, all the way up to the machine. [[scene:blades]] There, three wooden blades, carved by hand. It pushes: the rotor starts to turn. [[scene:turbine]] Up there, the whole machine swivels on its mast to stay facing the wind. [[scene:alternator]] At the heart of the machine, magnets sweep past copper coils: the gust becomes electric current! No gearbox, nothing superfluous. [[scene:shed]] The current runs down the mast, then through the technical room. A switch, a rectifier, a fuse, a controller. [[frame:battery-bank]] It ends up in a battery, which keeps the energy for windless days. [[scene:site]] Back on the site, and in the house, [[frame:house]] a lamp comes on. That is the journey: a gust, three blades, a few magnets… and light. [[home]] To begin, a few landmarks. There are five views: the site, the turbine, the alternator, the blades and the technical room. Click any part: its sheet opens, and you can listen to its story. [[mode:assembly]] The assembly guide carves the blades, builds the alternator, then puts the machine together. [[mode:install]] The installation guide goes from choosing the site to the first start-up. [[mode:sim]] The simulation lets you change the wind and the size of the machine, and watch the storm arrive. [[mode:lessons]] Six lessons, with quizzes, explain the physics. [[mode:plans]] Eight drawings gather the technical plans. [[mode:explore]] One last thing: this lab is an educational reconstruction, inspired by a public video. [[scene:site]] It is neither an official plan nor a maker’s product. The machine shown is one point two metres across, and, unless I quote the video, the figures come from the simulation. [[select:none]] Over to you!"
+    },
+    {
+      "id": "scene-site",
+      "scope": "scene:site",
+      "title": "The site",
+      "scene": "site",
+      "text": "[[home]] Here is the site, to scale: a field, a mast, a house. [[flows:on]] [[frame:obstacles]] First, the trees: they muddle the wind, and the wind decides everything. [[frame:tower]] In the middle, the guyed mast, which lifts the machine above the turbulence. [[frame:wind-turbine]] At the very top, the turbine, which turns as soon as the wind rises. [[frame:cable-run]] A cable comes down the mast and runs through the grass, [[frame:technical-room]] to the technical room. A little dry shed, where the electronics are kept out of the weather. [[frame:house]] The house then takes its electricity from the battery. [[flows:off]] [[home]] A breeze, a mast, a cable: the wind becomes light!"
+    },
+    {
+      "id": "scene-turbine",
+      "scope": "scene:turbine",
+      "title": "The turbine",
+      "scene": "turbine",
+      "text": "[[home]] Here is the machine, at the top of the mast. [[frame:rotor]] At the front, the rotor: three blades and a hub. [[frame:alternator]] Behind it, the alternator, with no gearbox. [[frame:nacelle-frame]] A welded steel frame carries it all, [[frame:yaw-bearing]] and swivels on the mast, thanks to a simple greased tube. [[frame:tail-vane]] At the back, the tail keeps the machine facing the wind… [[frame:tail-hinge]] on a tilted hinge, which lets it swing aside when the wind rises. [[home]] [[cutaway:on]] Look at the alternator in section. [[cutaway:off]] [[explode:0.6]] Then let’s pull the parts apart. [[explode:0]] A tail that folds: that is the machine’s protection in a storm."
+    },
+    {
+      "id": "scene-alternator",
+      "scope": "scene:alternator",
+      "title": "The alternator",
+      "scene": "alternator",
+      "text": "[[home]] Here is the heart of the machine, on the workbench. [[frame:magnet-rotor,magnets]] A steel disc carries eight magnets. [[frame:stator,coils]] Facing it, a resin disc embeds six copper coils. [[frame:air-gap]] Between the two, about one millimetre of empty space. [[frame:bearing-hub,shaft]] The disc turns with a car hub, on a stub axle that never moves. [[home]] [[cutaway:on]] In section, you can see the air gap… [[cutaway:off]] [[explode:0.6]] and exploded, everything that slides together. [[explode:0]] Nothing touches: only a field crosses the gap."
+    },
+    {
+      "id": "scene-blades",
+      "scope": "scene:blades",
+      "title": "The blades",
+      "scene": "blades",
+      "text": "[[home]] Here, the blades are carved, by hand, with patience. [[frame:blade-blank]] Each one is born from a plank of wood, light and straight. [[frame:station-templates]] Six templates give the shape: wide and thick at the root, slim and narrow at the tip. [[frame:blade]] First the windward face is carved, almost flat, then the back is rounded, like a wing. [[frame:hub-disc]] Finally, a plywood disc clamps the three roots, a hundred and twenty degrees apart. [[home]] Three identical blades, and a perfectly round rotor."
+    },
+    {
+      "id": "scene-shed",
+      "scope": "scene:shed",
+      "title": "The technical room",
+      "scene": "shed",
+      "text": "[[home]] Here is the technical room: a dry shed, and a wooden board. [[frame:brake-switch]] The current first reaches the brake switch, [[frame:rectifier]] then the rectifier, which turns it the right way round. [[frame:fuse]] The fuse watches over the cable and the battery, [[frame:charge-controller]] the controller keeps an eye on the voltage, [[frame:dump-load]] and the dump load burns off the surplus. [[frame:battery-bank]] At the end, the battery, standing on the floor. [[home]] [[flows:on]] Follow the current, from the left towards the battery. [[flows:off]] [[explode:0.6]] Then let’s lift the devices off the board. [[explode:0]]"
+    },
+    {
+      "id": "part-wind-turbine",
+      "scope": "part:wind-turbine",
+      "title": "Wind turbine",
+      "scene": "site",
+      "text": "This is the machine from the video, seen from afar: one point two metres across, three blades, no gearbox. It charges a twelve-volt battery. The label says two hundred watts, without saying for what wind. The simulation, for its part, finds about sixty watts at twelve metres per second. It was not tuned to match the label. Open the turbine view to see each part, one by one."
+    },
+    {
+      "id": "part-tower",
+      "scope": "part:tower",
+      "title": "Tower",
+      "scene": "site",
+      "text": "A plain steel water pipe, held by guy wires: the mast. Its job: lift the machine above the turbulence. Six metres if the spot is open, twelve or eighteen otherwise. The higher, the better. In France, a mast of twelve metres or more needs planning permission: check with your local authority."
+    },
+    {
+      "id": "part-guy-wires",
+      "scope": "part:guy-wires",
+      "title": "Guy wires",
+      "scene": "site",
+      "text": "Cables stretched from the mast to the ground, in several directions: the guy wires. One level about every four metres. Only the top ones really take the load; the others stiffen the tube. A light guyed tube costs far less than a mast that stands alone. Keep them clear of the blade tips, but not too far: the mast would bend more."
+    },
+    {
+      "id": "part-tower-base",
+      "scope": "part:tower-base",
+      "title": "Hinged base",
+      "scene": "site",
+      "text": "The foot of the mast is hinged. The machine is assembled on the ground, with the mast lying down, then raised, with guy wires and several pairs of hands. And for maintenance, it comes back down! One rule: never stand under the machine during the lift. A lifting rope has already broken: the machine fell about two metres."
+    },
+    {
+      "id": "part-cable-run",
+      "scope": "part:cable-run",
+      "title": "Cable run",
+      "scene": "site",
+      "text": "[[flows:on]] Three wires leave the machine, run down the mast and across to the technical room. At twelve volts the current is strong, and the loss in the cable grows as its square. For five hundred watts, six square millimetres over thirty metres waste thirty-eight per cent! A thick cable beats a long cable. [[flows:off]]"
+    },
+    {
+      "id": "part-technical-room",
+      "scope": "part:technical-room",
+      "title": "Technical room",
+      "scene": "site",
+      "text": "A dry shed, close to the house: the technical room. The cable arrives here. All the electronics sit on a single plywood board. One place to protect and to watch, with the brake within reach. Open the room view to follow the current, device after device."
+    },
+    {
+      "id": "part-house",
+      "scope": "part:house",
+      "title": "House",
+      "scene": "site",
+      "text": "At the end of the journey, the house. According to the video, this small machine powers a little lighting, or charges a computer. The larger ones in the family, up to four point two metres, can power a whole home, heating excepted. One tip: first estimate what you use, and only then the size of the machine."
+    },
+    {
+      "id": "part-obstacles",
+      "scope": "part:obstacles",
+      "title": "Trees and obstacles",
+      "scene": "site",
+      "text": "The video starts right here: where to put the turbine? A tree slows the wind and makes it turbulent behind it. Look for open country, the prevailing winds, few obstacles. A leaning tree, flattened grass: the wind is invisible, but it leaves traces. Raising the mast costs less than changing the machine!"
+    },
+    {
+      "id": "part-rotor",
+      "scope": "part:rotor",
+      "title": "Rotor (blades and hub)",
+      "scene": "turbine",
+      "text": "Three wooden blades, clamped between plywood discs: the rotor. It catches the wind and drives the alternator directly, with no gearbox. Why three? A few narrow blades turning fast do the same job as many wide, slow ones: it is the right compromise. A sixty-centimetre piece of wood that flies off does damage: balance and tighten before spinning it up."
+    },
+    {
+      "id": "part-alternator",
+      "scope": "part:alternator",
+      "title": "Alternator",
+      "scene": "turbine",
+      "text": "[[cutaway:on]] This is the alternator: magnets on a steel disc, turning in front of copper coils. No gearbox, and above all no iron in the coils. No sticking point: the machine starts in a breath of wind. When the wind picks up, it is the alternator that holds the blades back: the machine stays quiet. At one turn per second, it gives about one point nine volts. [[cutaway:off]]"
+    },
+    {
+      "id": "part-nacelle-frame",
+      "scope": "part:nacelle-frame",
+      "title": "Nacelle frame",
+      "scene": "turbine",
+      "text": "A piece of steel angle, a pivot tube, a hinge tube: the nacelle frame. Everything is welded square, which is what a village workshop can do. At the end, a steel disc, the cradle, carries the alternator. Weld in stages, alternating sides: the heat warps the piece."
+    },
+    {
+      "id": "part-yaw-bearing",
+      "scope": "part:yaw-bearing",
+      "title": "Yaw bearing",
+      "scene": "turbine",
+      "text": "One tube that slides over another, with a little grease: the yaw bearing. Crude, and yet it works very well! Notice that the rotor is not on the axis: it is offset by forty-one millimetres. The wind pushes beside the axis, and keeps trying to turn the machine out of the wind. That is the engine of the furling: without this offset, it would never fold."
+    },
+    {
+      "id": "part-tail-hinge",
+      "scope": "part:tail-hinge",
+      "title": "Inclined tail hinge",
+      "scene": "turbine",
+      "text": "[[explode:0.6]] A tilted axis: that is the whole trick. When the wind gets too strong, the tail swings aside… while rising. Its own weight brings it back: no spring, which would vibrate, rust and break. The axis leans by twenty degrees, and the tail opens about ninety-five degrees. The heavier it is, the later it folds away. [[explode:0]]"
+    },
+    {
+      "id": "part-tail-boom",
+      "scope": "part:tail-boom",
+      "title": "Tail boom",
+      "scene": "turbine",
+      "text": "A steel tube welded to the hinge: the tail boom. The longer it is, the more leverage the tail has against the push of the wind. Two lengths are published, five hundred and seven hundred millimetres. First fit the boom on the hinge, set the stop, and only then weld the vane support."
+    },
+    {
+      "id": "part-tail-vane",
+      "scope": "part:tail-vane",
+      "title": "Tail vane",
+      "scene": "turbine",
+      "text": "A plain sheet of plywood: the tail vane. Like the fin of a weathervane, it keeps the turbine facing the wind, up to about ten metres per second. Beyond that, it gives way, and the machine turns edge-on to protect the electrics, says the video. Too light, it folds too early; too heavy, too late. It is set in the field!"
+    },
+    {
+      "id": "part-wire-loop",
+      "scope": "part:wire-loop",
+      "title": "Cable loop",
+      "scene": "turbine",
+      "text": "The wire leaves the stator, goes down the pivot tube, then down the mast. But the machine turns to follow the wind… and the wires turn with it! A loop of flexible cable lets them swivel without pulling or pinching. Thread the wires first, then the tube: a wire gets pinched very quickly there."
+    },
+    {
+      "id": "part-magnet-rotor",
+      "scope": "part:magnet-rotor",
+      "title": "Magnet rotor",
+      "scene": "alternator",
+      "text": "A thick steel disc, cast in resin with its eight magnets: the rotor. The steel closes the field from one magnet to the next, and the resin holds and protects the magnets. It turns with the hub bell, with no brushes and no contact. Just one rotor on this small machine; the large one, two point four metres, has two. Steel only: neither aluminium nor stainless."
+    },
+    {
+      "id": "part-magnets",
+      "scope": "part:magnets",
+      "title": "Neodymium magnets",
+      "scene": "alternator",
+      "text": "[[xray:on]] Eight neodymium magnets, glued north pole, then south pole, alternately. That is what makes an alternating current. Eight magnets for six coils: four to three, and that ratio gives three phases and a smooth torque. Careful: they snap together, or onto steel, with a force that crushes fingers. Hold one in both hands, and slide it. Keep them away from bank cards and pacemakers. [[xray:off]]"
+    },
+    {
+      "id": "part-stator",
+      "scope": "part:stator",
+      "title": "Resin-cast stator",
+      "scene": "alternator",
+      "text": "[[xray:on]] A polyester resin disc, reinforced with glass fibre and talc: the stator. It embeds six coils, and the ends of three rods. Iron inside? None, so no sticking point at start-up. The talc helps carry the heat away from the copper. It stays fixed, screwed onto the nacelle’s cradle. [[xray:off]]"
+    },
+    {
+      "id": "part-coils",
+      "scope": "part:coils",
+      "title": "Coils",
+      "scene": "alternator",
+      "text": "[[xray:on]] Six coils of copper wire, wound on a former the size of the magnets. Seventy-six turns each, in one point four millimetre wire: the video’s choice for twelve volts. More turns, more volts at low speed… but a rotor held back harder. All turns in the same direction: a single coil backwards, and the voltage drops! [[xray:off]]"
+    },
+    {
+      "id": "part-star-wiring",
+      "scope": "part:star-wiring",
+      "title": "Star wiring",
+      "scene": "alternator",
+      "text": "[[xray:on]] Six coils, numbered one to six. Inputs one, two and three are joined: that is the neutral point of the star. Outputs one, two and three join inputs four, five and six. That leaves three wires, outputs four, five and six: the three phases, staggered. A three-phase machine runs without vibrating. Number the coils before fitting: once the resin is cast, a mistake can no longer be seen. [[xray:off]]"
+    },
+    {
+      "id": "part-shaft",
+      "scope": "part:shaft",
+      "title": "Stub axle and cradle",
+      "scene": "alternator",
+      "text": "A car hub, cut in two: the part that turns, and the stub axle, which never turns. It is screwed onto the cradle, a steel disc welded to the end of the frame. Everything electrical stays fixed: no sliding contacts. Weld the cradle in stages: the heat warps it, and the stator would no longer be parallel."
+    },
+    {
+      "id": "part-bearing-hub",
+      "scope": "part:bearing-hub",
+      "title": "Bearing hub",
+      "scene": "alternator",
+      "text": "[[explode:0.6]] A rear car wheel hub, salvaged for its bearings. Its bell turns on the stub axle. It is ground down to its flat plate, and four long rods fix the magnet disc to it, then receive the blade rotor. Adjust the bearings at the nut, then back it off a quarter turn. And throw away the rear seal: it rubs too much. [[explode:0]]"
+    },
+    {
+      "id": "part-studs",
+      "scope": "part:studs",
+      "title": "Stator rods",
+      "scene": "alternator",
+      "text": "[[explode:0.6]] Three threaded rods, split at one end, embedded in the stator’s resin, like a tripod. Their nuts move it forward or back: that is how the air gap is set, with no machining at all. Tighten all three together, in small turns, so the stator stays parallel to the disc. [[explode:0]]"
+    },
+    {
+      "id": "part-air-gap",
+      "scope": "part:air-gap",
+      "title": "Air gap",
+      "scene": "alternator",
+      "text": "[[cutaway:on]] How much space between the magnets and the stator? About one millimetre. The narrower it is, the higher the voltage. But leave some margin: reliability comes before performance! A test at one turn per second should give about one point nine volts. If not, look at the air gap. [[cutaway:off]]"
+    },
+    {
+      "id": "part-moulds",
+      "scope": "part:moulds",
+      "title": "Moulds (rotor, stator)",
+      "scene": "alternator",
+      "text": "Two plywood moulds, one for the stator, one for the rotor: the workshop’s tools. They are waxed before every pour, then the resin, the glass fibre and the talc do the rest. A pour gets no second chance: make the mould straight and clean. The resin gives off toxic fumes: mask, gloves, goggles, window open."
+    },
+    {
+      "id": "part-blade-blank",
+      "scope": "part:blade-blank",
+      "title": "Timber blank",
+      "scene": "blades",
+      "text": "It all starts with a beam: wood that is light, straight, with few knots, and that does not rot. Spruce, Douglas fir, larch, says the video. One beam gives all three blades, which then share the same weight and stiffness. Knots towards the root, and four or five centimetres of margin at the tip."
+    },
+    {
+      "id": "part-station-templates",
+      "scope": "part:station-templates",
+      "title": "Station templates",
+      "scene": "blades",
+      "text": "Six templates, six sections along the blade. Each has its width, its thickness and its offset. You carve, you try the template, you carve again, until it fits the blade. Keep this set of templates: the day a blade needs replacing, you will find the exact shape again."
+    },
+    {
+      "id": "part-blade",
+      "scope": "part:blade",
+      "title": "Blade",
+      "scene": "blades",
+      "text": "At the root, it is one hundred and fifty-three millimetres wide and forty-nine thick. At the tip, only fifty-five millimetres wide and six thick are left. First the windward face, almost flat, then the back, rounded like a wing. It measures sixty centimetres, and all three must be perfectly identical. Dust mask, and outdoors if you can: wood dust is a hazard."
+    },
+    {
+      "id": "part-hub-disc",
+      "scope": "part:hub-disc",
+      "title": "Hub disc",
+      "scene": "blades",
+      "text": "A nine-millimetre plywood disc, and three blades screwed on a hundred and twenty degrees apart. That is what turns three pieces of wood into a round rotor. A plywood triangle clamps it all, on the wind side. Assemble with several people, flat, on a clean floor. An off-centre disc gives an unbalanced rotor, which only lead can correct."
+    },
+    {
+      "id": "part-brake-switch",
+      "scope": "part:brake-switch",
+      "title": "Brake switch",
+      "scene": "shed",
+      "text": "A two-pole switch, and a single gesture: stop. Closed, it short-circuits the alternator. The coils oppose the rotation: the rotor turns only very slowly. No mechanical part to wear out. Never on the battery: the fuse would blow. Close it before climbing, lowering or touching the machine. It is not a lock: never approach a machine that is turning."
+    },
+    {
+      "id": "part-rectifier",
+      "scope": "part:rectifier",
+      "title": "Rectifier",
+      "scene": "shed",
+      "text": "[[flows:on]] The machine produces alternating current, on three wires: the battery does not want it. The rectifier, a diode bridge, lets current through in one direction only. Nothing moves, nothing needs adjusting. The price: a drop of about one and a half volts, which delays the start of charging. An AC wire goes on any AC terminal. [[flows:off]]"
+    },
+    {
+      "id": "part-fuse",
+      "scope": "part:fuse",
+      "title": "Fuse",
+      "scene": "shed",
+      "text": "On every circuit leaving a battery: a fuse. An option? No: a safety rule. A battery can deliver an enormous current in a short circuit, and without a fuse, the cable heats up until it catches fire. It cuts off even if you are far away, asleep or distracted. If it blows, find out why before replacing it."
+    },
+    {
+      "id": "part-charge-controller",
+      "scope": "part:charge-controller",
+      "title": "Charge controller",
+      "scene": "shed",
+      "text": "What harms a lead-acid battery? Draining it too far, or charging it too hard. Below eleven and a half volts, it is too flat; above fourteen, the charge is too strong. The controller keeps watch: it sends the excess to the dump load, and disconnects the house when the battery is too low. With no voltmeter: dimming lamps mean a low battery."
+    },
+    {
+      "id": "part-dump-load",
+      "scope": "part:dump-load",
+      "title": "Dump load",
+      "scene": "shed",
+      "text": "[[flows:on]] Battery full, wind still blowing: where does the energy go? Into the dump load, a big resistor that the controller connects at fourteen volts. It turns the surplus into heat. Inelegant, but safe: nothing to adjust, nothing to wear out. Heating water with that heat is a lovely idea, but size the dump load for the maximum current. [[flows:off]]"
+    },
+    {
+      "id": "part-battery-bank",
+      "scope": "part:battery-bank",
+      "title": "Battery bank",
+      "scene": "shed",
+      "text": "[[flows:on]] The battery: the reserve for windless days. It receives the rectified current, and feeds the house. The plans want it always charged: left flat too long, it sulphates and becomes useless. The healthiest charge? A small current, for a long time. Careful: it gives off a gas that can ignite, and nothing metal ever rests across its terminals. [[flows:off]]"
+    }
+  ]
+}
