@@ -1,9 +1,15 @@
 {
   "id": "piggott-lab",
-  "title": { "fr": "Piggott Lab", "en": "Piggott Lab" },
-  "tagline": { "fr": "Un lab à remplacer", "en": "A lab to replace" },
-  "tags": [],
-  "difficulty": 1,
-  "minutes": 10,
+  "title": {
+    "fr": "Piggott Lab",
+    "en": "Piggott Lab"
+  },
+  "tagline": {
+    "fr": "Une éolienne en bois qui charge une batterie",
+    "en": "A wooden wind turbine that charges a battery"
+  },
+  "tags": ["wind", "electricity", "off-grid"],
+  "difficulty": 3,
+  "minutes": 25,
   "energyProfile": null
 }

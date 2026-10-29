@@ -6,13 +6,11 @@ import { getLang, registerStrings, tx, type CommonKey } from '@onigam/lab-kit/i1
 
 const LAB = {
   tagline: ['Explorer · Comprendre · Construire', 'Explore · Understand · Build'],
-  sceneDevice: ['Dispositif', 'Device'],
   plansIntro: [
     'Planches A3 générées à partir des cotes du modèle 3D.',
     'A3 sheets generated from the 3D model dimensions.',
   ],
   lessonsIntro: ['Leçons courtes liées à la 3D.', 'Short lessons tied to the 3D view.'],
-  groupDevice: ['Dispositif', 'Device'],
   disclaimer: [
     'Reconstitution pédagogique indépendante. Ce n’est pas un plan officiel.',
     'Independent educational reconstruction. It is not an official drawing.',
@@ -242,6 +240,27 @@ const LAB = {
   alarm_brakeOn: ['Frein fermé', 'Brake on'],
   alarm_furling: ['Queue repliée', 'Tail folded'],
   alarm_overload: ['Surintensité (plus de 20 A)', 'Overcurrent (above 20 A)'],
+
+  // ---- the four worlds and the buttons that lead to them (data role, wave 2)
+  sceneSite: ['Le site', 'The site'],
+  sceneTurbine: ['L’éolienne', 'The turbine'],
+  sceneAlternator: ['L’alternateur', 'The alternator'],
+  sceneBlades: ['Les pales', 'The blades'],
+  goSite: ['Voir le site', 'See the site'],
+  goTurbine: ['Voir l’éolienne', 'See the turbine'],
+  goAlternator: ['Voir l’alternateur', 'See the alternator'],
+  goBlades: ['Voir les pales', 'See the blades'],
+
+  // ---- sources panel: warnings and the outline of the video
+  safety: [
+    'Reconstitution pédagogique, pas un plan de construction : un stage avec un formateur reste la bonne école. Les aimants néodyme se plaquent l’un à l’autre avec une force qui écrase les doigts ; la résine polyester et la poussière de bois demandent un masque et de la ventilation. Une éolienne se lève avec un pied articulé et des haubans, jamais à l’aplomb de la machine : arrêtez-la avec l’interrupteur de freinage avant de la toucher, et ne vous en approchez pas en tempête. En 12 V, les courants sont forts : un fusible sur chaque circuit, du câble épais, jamais de court-circuit sur la batterie, qui dégage de l’hydrogène.',
+    'Educational reconstruction, not a construction plan: a course with a trainer remains the right school. Neodymium magnets snap together with a force that crushes fingers; polyester resin and wood dust call for a mask and ventilation. A turbine is raised with a hinged base and guys, never from under the machine: stop it with the brake switch before touching it, and do not approach it in a storm. At 12 V the currents are large: a fuse on every circuit, thick cable, never a short circuit on the battery, which gives off hydrogen.',
+  ],
+  legal: [
+    'En France, un mât de moins de 12 m ne demande en général aucune formalité (une déclaration préalable en secteur protégé) ; à partir de 12 m, il faut un permis de construire. Renseignez-vous auprès de la mairie : les règles locales (PLU) et celles des autres pays diffèrent.',
+    'In France, a mast under 12 m generally needs no formality (a prior declaration in a protected area); from 12 m, a building permit is required. Check with the mairie (town hall): local rules (PLU) and those of other countries differ.',
+  ],
+  chapters: ['Sommaire de la vidéo', 'Video outline'],
 } as const satisfies Record<string, readonly [string, string]>;
 
 registerStrings(LAB);
