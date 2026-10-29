@@ -120,3 +120,33 @@ Some insertion paths are not a straight offset: the tail sleeve slides up an inc
 sub-groups, as the blades world does for the plywood triangle); an `explode` that is a function of `f` returning a position and a rotation would let the guide show a part that screws in.
 
 - **Needed by**: Piggott (nuts, rods, sleeve), the ram lab (the stroke nut).
+
+## 13. An SVG chart helper for the sheets (drawings role, wave 3)
+
+`PL-08` plots seven curves, a rating scale and bars in paper space; the kit has `LineChart` for the live canvas panels and nothing for an A3 SVG. `src/drawings/chart.ts` (ported from the
+ram lab's `hydraulic/chart.ts`, second copy) draws the frame, the grid, the ticks with their labels, the axis titles, polylines, markers and text at data coordinates.
+
+- **What**: `Chart` in `@onigam/lab-kit/drawings` (axes with `min`, `max`, `step`, `label`, `fmt`; `X`, `Y`, `frame`, `line`, `hline`, `vline`, `marker`, `text`).
+- **Why**: two labs carry the same 150 lines; a fix of the label placement should reach every sheet.
+- **Needed by**: ram lab (D09), Piggott (PL-08); every lab with a performance sheet.
+
+## 14. Text and table helpers for the sheets
+
+`View.text` does not wrap and `Drawing.table` does not wrap either, so every lab rewrote the same helpers: `wrap` (greedy, by estimated width), `note`, `heading`, `grid` (a table with wrapped cells and a
+height that follows its content), `box` (a framed note with a title), `marksLegend`, `balloon`, `dimH` / `dimV` (a dimension line placed at a model coordinate instead of a paper offset) and `tube2d`.
+`src/drawings/draw.ts` is the third copy.
+
+- **What**: the same functions in `@onigam/lab-kit/drawings`, with the kit's own text-width estimate (the one that `estW` guesses).
+- **Why**: the three copies already differ in small ways; the sheets' tests of "no text on text" rely on the same estimate.
+- **Needed by**: ram lab, Pelton, Piggott.
+
+## 15. What the title block takes, and a few details of the frame
+
+`Drawing.frame` draws a title block of 178 × 38 mm at the bottom right and, left of it, the projection symbol (x from 210); a sheet has to know that rectangle to stay clear of it, and every lab copies the
+numbers 232 / 249. Also: `scale` is a plain string of at most about 12 characters (a sheet with several scales writes `1:2·1:5·1:10`), `HatchKind` has no `resin` or `concrete` (the sheets use `plastic`
+and `earth`), and `View.polyline` cannot draw a hole (a plate with its cut-out is drawn as a plate and a paper-coloured shape on top).
+
+- **What**: export `TITLE_BLOCK = { x0, y0, w, h }` (and the projection symbol's box) from the kit; add `resin` and `concrete` hatches; accept a hole (`holes: Pt[][]`, even-odd) in `View.polyline`; an angle dimension
+  `View.angle(centre, radius, a0, a1, label)` (the sheets draw an arc and a text by hand four times).
+- **Why**: layout checks in the tests (nothing under the title block) and legible sections without tricks.
+- **Needed by**: Piggott (PL-03, PL-04, PL-05), the ram lab (chamber section).
