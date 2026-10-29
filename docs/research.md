@@ -290,6 +290,10 @@ Wave 1 (commit `7ad62d6`, `docs/physics.md` §7) found a peak battery power of 6
 
 Wave 1 physics is done (above). Next: wave 2 3D ‖ data (ids of §4) → wave 3 drawings ‖ lessons → wave 4 QA → checkpoint with
 the owner. The lessons must say that the machine's power curve is nearly linear in the wind speed once the rotor is held in
-the stall (physics §7.6), not a cube. The spoken guide only after the checkpoint
+the stall (physics §7.6), not a cube. **Sizes** (the owner's idea, left to the lead, decided 2026-10-29): the diameter slider
+(1.0 to 4.2 m) has been in the simulation panel since wave 1; the comparison of the seven sizes of K3 on one power chart goes
+in wave 3 with a lesson "it depends on the size" (model, hamlet, cable scaled with the area: battery power at 12 m/s is
+42, 60, 135, 242, 382, 558 and 773 W for 1.0, 1.2, 1.8, 2.4, 3.0, 3.6 and 4.2 m, about 0.3 of the labels scaled from the 200 W).
+The spoken guide only after the checkpoint
 (`lab-kit/docs/narration-style.md`; about 35 000 to 45 000 ElevenLabs credits in two languages, about 38 500 left). The
 lead asks the owner's approval before launching each wave (token cost: the ram lab used about twice the estimate).
