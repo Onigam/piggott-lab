@@ -177,7 +177,13 @@ two faces). **Lite variant**: only `site` and `turbine`, with the alternator and
 | blades     | `hub-disc`           | Disque de moyeu / Hub disc                   | mechanical | plywood disc carrying the blades                                         |
 | blades     | `moulds`             | Moules (rotor, stator) / Moulds              | tool       | polyester resin work; dust and fumes (S7 hazards in §7)                  |
 
-About 40 ids. Guides: **assembly** (≈ 25 steps over the `blades` then `alternator` then `turbine` worlds: carve the blades,
+**Frozen on 2026-10-29 in `src/part-ids.ts`: 36 ids** (site 13, turbine 8, alternator 11, blades 4), which replaces the draft
+above. Changes: `wind-turbine` added to `site` (the machine on the mast, one part that opens `turbine`); `alternator` added to
+`turbine` (one part that opens the `alternator` world, like the ram lab's `waste-valve`); `moulds` moved from `blades` to
+`alternator` (they cast the discs and the stator); in `blades` the faces, the root and the tip are no longer parts (they
+are labels and text of `blade`: a blade is one solid piece of timber), and `station-templates` is new (the six sections
+of S4 p. 43). Categories follow the kit's five (`hydraulic`, `mechanical`, `electrical`, `structure`, `site`): the draft's
+`material` and `tool` do not exist. Guides: **assembly** (≈ 25 steps over the `blades` then `alternator` then `turbine` worlds: carve the blades,
 cast the rotors, wind and cast the stator, build the frame and tail, assemble, balance the rotor, test on the bench at one
 turn per second, wire) and **installation** (≈ 10 steps over `site`: siting, tower and guys, cable, rectifier and brake
 switch, battery, controller, raise the machine, first check). The video's own touches become _Tip_ and _Warning_ callouts
@@ -285,6 +291,9 @@ Wave 1 (commit `7ad62d6`, `docs/physics.md` §7) found a peak battery power of 6
    machines from about 600 W to about 3 kW with rotors from 2 m to 4 m. Scaled with the swept area (P ∝ D²), 600 W at 2 m
    would give about 215 W at 1.2 m, the order of the label (S3), so S11 does not by itself support 60 W; what stays open is
    the wind speed of those ratings. The first reading of S1 (08:09) is still to be read by the owner.
+
+10. **Wave 2 launched** (2026-10-29, "tu peux continuer"). The owner could not find the first reading at 08:09 on the video
+    either, so K19 stays open (the wind speed of the 200 W rating is in no source we can read) and the model is unchanged.
 
 ## 9. Next steps
 
