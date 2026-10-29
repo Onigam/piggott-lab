@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { describe, expect, it } from 'vitest';
 import { partIds } from '../../part-ids';
 import { finiteTree, isolateOne, sceneBoxes, stateWith, view } from '../test-utils';
-import { EXPLODE, createShedScene } from './scene';
+import { EXPLODE, LABEL_TOP, createShedScene } from './scene';
 
 // The `shed` world by script: ids, the devices in the order of the current, the lamps and the lever, the dots of current,
 // explode, NaN-free animation over the range of the state.
@@ -30,6 +30,24 @@ describe('shed world (the technical room)', () => {
       while (o && o !== mod.scene) o = o.parent;
       expect(o, h.partId).toBe(mod.scene);
     }
+  });
+
+  it('keeps room over the top labels in what the overview fits, and nothing there to click', () => {
+    go();
+    reg.setAllFactors(0);
+    const top = Math.max(...IDS.map((id) => reg.bounds(id).max.y));
+    expect(top).toBeGreaterThanOrEqual(LABEL_TOP + 0.1);
+    // the point that gives the room is invisible and a ray goes through it
+    const pad = reg
+      .get('brake-switch')!
+      .object.children.filter((o): o is THREE.Points => o instanceof THREE.Points && !o.visible);
+    expect(pad).toHaveLength(1);
+    const ray = new THREE.Raycaster();
+    ray.params.Points = { threshold: 50 };
+    ray.set(new THREE.Vector3(0, LABEL_TOP + 0.16, 5), new THREE.Vector3(0, 0, -1));
+    const hits: THREE.Intersection[] = [];
+    pad[0]!.raycast(ray, hits);
+    expect(hits).toEqual([]);
   });
 
   it('puts the devices on the board in the order of the current, and the battery on the floor in front of it', () => {

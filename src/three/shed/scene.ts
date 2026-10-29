@@ -24,6 +24,10 @@ const HOTSPOTS: HotspotDef[] = [
   { id: 'battery-bank', fr: 'Batterie', en: 'Battery' },
 ];
 
+/** Height of the top level of label dots, and the room kept over it for the label itself (metres, shed frame). */
+export const LABEL_TOP = 2.0;
+const HEADROOM_Y = LABEL_TOP + 0.16;
+
 /** Explode offsets, shed frame, metres: the devices come off the board towards the viewer, alternately near and far. */
 export const EXPLODE: Record<ShedPartId, [number, number, number]> = {
   'brake-switch': [0, 0.45, 0.95],
@@ -95,10 +99,22 @@ export function createShedScene(): ShedScene {
   // ---- registration
   const registry = new PartRegistry();
   for (const id of IDS) registry.add(id, shed.parts[id], new THREE.Vector3(...EXPLODE[id]));
+  // The overview fits the parts, not the labels, and with the narration bar or a sheet over the view it leaves no margin: the
+  // top level of labels stood above the picture. An invisible point over the top level (the part's bounds count it, a click
+  // does not) gives the fit that room.
+  const headroom = new THREE.Points(
+    new THREE.BufferGeometry().setAttribute(
+      'position',
+      new THREE.Float32BufferAttribute([DEVICES.brakeSwitch.x, HEADROOM_Y, BOARD_Z], 3),
+    ),
+  );
+  headroom.visible = false;
+  headroom.raycast = () => {};
+  shed.parts['brake-switch'].add(headroom);
 
   // ---- labels: the dot over each device, on three levels so that the names (read to the right of the dot) never overlap, and
   // the two on the right pulled a little to the left so that their names stay inside the picture on a narrow screen
-  const level = [2.0, 1.82, 1.64];
+  const level = [LABEL_TOP, 1.82, 1.64];
   const at: Record<ShedPartId, [number, number]> = {
     'brake-switch': [DEVICES.brakeSwitch.x - 0.05, level[0]!],
     rectifier: [DEVICES.rectifier.x - 0.05, level[1]!],
