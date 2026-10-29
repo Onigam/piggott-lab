@@ -5,6 +5,7 @@ import type { PiggottState } from '../sim/types';
 import { LABEL_HEIGHT, labelBoxes, type LabelBox } from './framing';
 import { createAlternatorScene } from './alternator/scene';
 import { createBladesScene } from './blades/scene';
+import { createShedScene } from './shed/scene';
 import { createSiteScene } from './site/scene';
 import { createTurbineScene } from './turbine/scene';
 import { stateWith, view } from './test-utils';
@@ -49,6 +50,7 @@ function check(name: string, mod: SceneModule<PiggottState>) {
 }
 
 check('site', createSiteScene());
+check('shed', createShedScene());
 check('turbine', createTurbineScene());
 check('alternator', createAlternatorScene());
 check('blades', createBladesScene());

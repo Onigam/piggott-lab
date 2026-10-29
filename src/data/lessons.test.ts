@@ -231,9 +231,9 @@ describe('the focus of each lesson opens what it talks about', () => {
     }
   });
 
-  it('uses each of the six worlds-and-parts at most once, in four different worlds, so that every lesson opens on something new', () => {
+  it('uses each of the six worlds-and-parts at most once, in five different worlds, so that every lesson opens on something new', () => {
     expect(new Set(LESSONS.map((x) => `${x.focus.scene}/${x.focus.part}`)).size).toBe(6);
-    expect(new Set(LESSONS.map((x) => x.focus.scene)).size).toBe(4);
+    expect(new Set(LESSONS.map((x) => x.focus.scene)).size).toBe(5);
     expect(new Set(LESSONS.map((x) => x.focus.scenario)).size).toBe(6);
   });
 

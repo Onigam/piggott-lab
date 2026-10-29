@@ -12,7 +12,13 @@ import { num, t, type UiKey } from './i18n/ui';
 import { SimPanel } from './panels/sim';
 import { PiggottSim } from './sim/engine';
 import type { AlarmKey } from './sim/types';
-import { createAlternatorScene, createBladesScene, createSiteScene, createTurbineScene } from './three';
+import {
+  createAlternatorScene,
+  createBladesScene,
+  createShedScene,
+  createSiteScene,
+  createTurbineScene,
+} from './three';
 
 // The lab described to the kit. Edit the content here and in src/data, src/three, src/sim, src/drawings;
 // the kit supplies the whole application frame (see BRIEF.md: the frame is locked).
@@ -113,7 +119,10 @@ export const lab: LabDefinition<PiggottSim> = {
       xrayShell: (id) => ['obstacles', 'house'].includes(id),
       overview: {
         ...OVERVIEWS.site,
-        actions: [{ label: strL('goTurbine'), scene: 'turbine', primary: true }],
+        actions: [
+          { label: strL('goTurbine'), scene: 'turbine', primary: true },
+          { label: strL('goShed'), scene: 'shed' },
+        ],
       },
     },
     {
@@ -157,9 +166,24 @@ export const lab: LabDefinition<PiggottSim> = {
         actions: [{ label: strL('goTurbine'), scene: 'turbine', primary: true }],
       },
     },
+    {
+      id: 'shed',
+      label: strL('sceneShed'),
+      module: createShedScene(),
+      cutaway: false,
+      xrayNeedsSelection: true,
+      partPadding: 2.4,
+      stepFrame: { padding: 1.6, minRadius: 0.25 },
+      xrayShell: () => false,
+      overview: {
+        ...OVERVIEWS.shed,
+        actions: [{ label: strL('goSite'), scene: 'site', primary: true }],
+      },
+    },
   ],
   partLinks: {
     'wind-turbine': { scene: 'turbine', label: strL('goTurbine') },
+    'technical-room': { scene: 'shed', label: strL('goShed') },
     rotor: { scene: 'blades', label: strL('goBlades') },
     alternator: { scene: 'alternator', label: strL('goAlternator') },
   },

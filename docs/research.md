@@ -176,7 +176,7 @@ two faces). **Lite variant**: only `site` and `turbine`, with the alternator and
 | blades     | `hub-disc`          | Disque de moyeu / Hub disc                          | mechanical | plywood disc carrying the blades                                                                                |
 | blades     | `moulds`            | Moules (rotor, stator) / Moulds                     | tool       | polyester resin work; dust and fumes (S7 hazards in §7)                                                         |
 
-**Frozen on 2026-10-29 in `src/part-ids.ts`: 35 ids** (site 13, turbine 8, alternator 10, blades 4), which replaces the draft
+**Frozen on 2026-10-29 in `src/part-ids.ts`: 35 ids** (site 13, turbine 8, alternator 10, blades 4; **36 ids later the same day**, with a fifth world `shed`, the technical room, at the owner's request: the six devices of the shed moved from `site` to it and `site` got `technical-room`, one part that opens it), which replaces the draft
 above. Changes: `wind-turbine` added to `site` (the machine on the mast, one part that opens `turbine`); `alternator` added to
 `turbine` (one part that opens the `alternator` world, like the ram lab's `waste-valve`); `moulds` moved from `blades` to
 `alternator` (they cast the discs and the stator); in `blades` the faces, the root and the tip are no longer parts (they

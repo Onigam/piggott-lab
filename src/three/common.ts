@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 
-// Small shared helpers of the four worlds: revolved profiles, extruded discs along the shaft, hex nuts, tubes, the paper floor,
+// Small shared helpers of the five worlds: revolved profiles, extruded discs along the shaft, hex nuts, tubes, the paper floor,
 // flow dots. Ported from the ram lab (docs/kit-requests.md says what should move to the kit). Geometry and materials only (no
 // canvas, no GL context), so everything here also runs in Node under vitest.
 

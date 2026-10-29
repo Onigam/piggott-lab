@@ -459,7 +459,7 @@ export const electricalSchematic: DrawingSheet = {
     'Le courant alternatif triphasé de l’alternateur descend dans le mât par un câble de trois fils, passe par l’interrupteur de freinage, puis par le redresseur qui le rend continu pour la batterie. Un fusible protège le fil positif ; le régulateur envoie l’excédent au délesteur à 14 V et coupe la maison sous 11,5 V. Le frein court-circuite l’alternateur, jamais la batterie.',
     'The alternator’s three-phase AC current goes down the mast in a three-wire cable, passes the brake switch, then the rectifier that makes it direct current for the battery. A fuse protects the positive wire; the controller sends the surplus to the dump load at 14 V and cuts the house off below 11.5 V. The brake shorts the alternator, never the battery.',
   ),
-  scene: 'site',
-  parts: ['cable-run', 'brake-switch', 'rectifier', 'fuse', 'charge-controller', 'dump-load', 'battery-bank', 'house'],
+  scene: 'shed',
+  parts: ['brake-switch', 'rectifier', 'fuse', 'charge-controller', 'dump-load', 'battery-bank'],
   render,
 };

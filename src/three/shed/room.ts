@@ -1,5 +1,7 @@
 import * as THREE from 'three';
-import { MAT, emissive, group, mesh } from '@onigam/lab-kit/three';
+import { MAT, clamp, emissive, group, mesh } from '@onigam/lab-kit/three';
+import { DUMP_MAX_CURRENT } from '../../sim/machine';
+import type { PiggottState } from '../../sim/types';
 import { DEVICES, SHED } from '../dims';
 import { tubeGeometry } from '../common';
 import { dynamic, mergeStatic } from '../merge';
@@ -306,4 +308,27 @@ export function buildShed(): Shed {
     houseOut: v(c.x + c.w / 2 - 0.02, c.y - c.h / 2, zc(0.03)),
     anchors,
   };
+}
+
+const BAR = {
+  red: new THREE.Color(0xff3b30),
+  amber: new THREE.Color(0xf5a623),
+  green: new THREE.Color(0x39d353),
+};
+
+/** What the state drives in the shed, in the site as in the technical room: the lever, the LEDs, the glowing element, the charge bar. */
+export function animateShed(shed: Shed, state: PiggottState): void {
+  shed.lever.rotation.x = state.brake ? 0.55 : -0.5;
+  shed.ledCharging.emissiveIntensity = state.busPower > 0.5 && !state.brake ? 1.8 : 0.08;
+  shed.ledFull.emissiveIntensity = state.batteryFull || state.dumpActive ? 1.8 : 0.08;
+  shed.glow.emissiveIntensity = state.dumpActive
+    ? 0.4 + 1.8 * clamp(state.dumpPower / (DUMP_MAX_CURRENT * 14), 0, 1)
+    : 0;
+  const lit = Math.round(clamp(state.soc, 0, 1) * 10);
+  const colour = state.soc < 0.2 ? BAR.red : state.soc < 0.5 ? BAR.amber : BAR.green;
+  shed.segments.forEach((m, i) => {
+    m.emissive.copy(colour);
+    m.color.copy(colour).multiplyScalar(0.35);
+    m.emissiveIntensity = i < lit ? 1.7 : 0.03;
+  });
 }

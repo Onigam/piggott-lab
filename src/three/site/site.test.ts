@@ -21,21 +21,22 @@ describe('site world', () => {
     return s;
   };
 
-  it('registers exactly the thirteen frozen ids, each with meshes of its own', () => {
+  it('registers exactly the eight frozen ids, each with meshes of its own', () => {
     go();
     expect([...reg.ids()].sort()).toEqual([...IDS].sort());
     for (const id of IDS) expect(reg.get(id)!.meshes.length, id).toBeGreaterThan(0);
   });
 
-  it('has hotspots for every part (four main labels); the machine on the mast opens the turbine world', () => {
+  it('has hotspots for every part (four main labels); the machine on the mast opens the turbine world, the shed the technical room', () => {
     expect(mod.hotspots.map((h) => h.partId).sort()).toEqual([...IDS].sort());
     expect(mod.hotspots.filter((h) => !h.minor).map((h) => h.partId)).toEqual([
       'wind-turbine',
       'tower',
-      'battery-bank',
+      'technical-room',
       'house',
     ]);
     expect(mod.hotspots.find((h) => h.partId === 'wind-turbine')!.goto).toBe('turbine');
+    expect(mod.hotspots.find((h) => h.partId === 'technical-room')!.goto).toBe('shed');
     mod.scene.updateMatrixWorld(true);
     for (const h of mod.hotspots) {
       let o: THREE.Object3D | null = h.anchor;

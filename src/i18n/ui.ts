@@ -241,12 +241,14 @@ const LAB = {
   alarm_furling: ['Queue repliée', 'Tail folded'],
   alarm_overload: ['Surintensité (plus de 20 A)', 'Overcurrent (above 20 A)'],
 
-  // ---- the four worlds and the buttons that lead to them (data role, wave 2)
+  // ---- the five worlds and the buttons that lead to them (data role, wave 2)
   sceneSite: ['Site', 'Site'],
+  sceneShed: ['Local', 'Tech room'],
   sceneTurbine: ['Éolienne', 'Turbine'],
   sceneAlternator: ['Alternateur', 'Alternator'],
   sceneBlades: ['Pales', 'Blades'],
   goSite: ['Voir le site', 'See the site'],
+  goShed: ['Voir le local technique', 'See the technical room'],
   goTurbine: ['Voir l’éolienne', 'See the turbine'],
   goAlternator: ['Voir l’alternateur', 'See the alternator'],
   goBlades: ['Voir les pales', 'See the blades'],

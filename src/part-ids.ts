@@ -3,23 +3,19 @@
 // ids. Only the lead edits this file; a role that thinks an id is missing or wrong reports it, it never adds one.
 import type { PartCategory } from '@onigam/lab-kit/content';
 
-export type WorldId = 'site' | 'turbine' | 'alternator' | 'blades';
+export type WorldId = 'site' | 'turbine' | 'alternator' | 'blades' | 'shed';
 
 export const PART_CATEGORIES: Record<WorldId, Record<string, PartCategory>> = {
-  // the field: the mast with its guys, the cable run to the battery shed, the house, the trees; the machine on top of the
-  // mast is ONE part (`wind-turbine`) that opens the `turbine` world
+  // the field: the mast with its guys, the cable run to the technical room, the house, the trees; the machine on top of the
+  // mast is ONE part (`wind-turbine`) that opens the `turbine` world and the technical room is ONE part (`technical-room`) that
+  // opens the `shed` world
   site: {
     'wind-turbine': 'mechanical',
     tower: 'structure',
     'guy-wires': 'structure',
     'tower-base': 'structure',
     'cable-run': 'electrical',
-    'brake-switch': 'electrical',
-    rectifier: 'electrical',
-    fuse: 'electrical',
-    'charge-controller': 'electrical',
-    'dump-load': 'electrical',
-    'battery-bank': 'electrical',
+    'technical-room': 'electrical',
     house: 'site',
     obstacles: 'site',
   },
@@ -57,6 +53,16 @@ export const PART_CATEGORIES: Record<WorldId, Record<string, PartCategory>> = {
     'station-templates': 'mechanical',
     blade: 'mechanical',
     'hub-disc': 'mechanical',
+  },
+  // the technical room (reached from `technical-room`): the board that carries the brake switch, the rectifier, the fuse, the
+  // charge controller and the dump load, and the battery on the floor in front of it, in the order the current goes through them
+  shed: {
+    'brake-switch': 'electrical',
+    rectifier: 'electrical',
+    fuse: 'electrical',
+    'charge-controller': 'electrical',
+    'dump-load': 'electrical',
+    'battery-bank': 'electrical',
   },
 };
 

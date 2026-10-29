@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 import { clamp, group, mesh, MAT, PartRegistry, rng } from '@onigam/lab-kit/three';
 import type { SceneModule } from '@onigam/lab-kit/three';
-import { DUMP_MAX_CURRENT, DIAMETER_REF } from '../../sim/machine';
+import { DIAMETER_REF } from '../../sim/machine';
 import type { PiggottState } from '../../sim/types';
 import { HEAD_Y, HOUSE, MAST, OBSTACLES, SHED, WINDSOCK, mastRadius } from '../dims';
 import { DEG, FlowDots } from '../common';
@@ -11,7 +11,7 @@ import { anchor, hotspots, type HotspotDef } from '../world';
 import { createHead, type HeadModel } from '../turbine/model';
 import { buildHouse, type House } from './house';
 import { minWidthMaterial, pickAlong, type Segments } from './pipes';
-import { buildShed, type Shed } from './shed';
+import { animateShed, buildShed, type Shed } from '../shed/room';
 import { createSky } from './sky';
 
 // The "site" world: the field at true scale. X = where the wind blows to (it comes from the west and keeps that direction), Y up,
@@ -23,31 +23,21 @@ const HOTSPOTS: HotspotDef[] = [
   { id: 'wind-turbine', fr: 'Éolienne', en: 'Wind turbine', goto: 'turbine' },
   { id: 'tower', fr: 'Mât', en: 'Tower' },
   { id: 'cable-run', fr: 'Câble vers les batteries', en: 'Cable run', minor: true },
-  { id: 'battery-bank', fr: 'Batterie', en: 'Battery' },
+  { id: 'technical-room', fr: 'Local technique', en: 'Technical room', goto: 'shed' },
   { id: 'house', fr: 'Maison', en: 'House' },
   { id: 'obstacles', fr: 'Arbres et obstacles', en: 'Trees and obstacles', minor: true },
   { id: 'guy-wires', fr: 'Haubans', en: 'Guy wires', minor: true },
   { id: 'tower-base', fr: 'Pied de mât articulé', en: 'Hinged base', minor: true },
-  { id: 'brake-switch', fr: 'Interrupteur de freinage', en: 'Brake switch', minor: true },
-  { id: 'rectifier', fr: 'Redresseur', en: 'Rectifier', minor: true },
-  { id: 'fuse', fr: 'Fusible', en: 'Fuse', minor: true },
-  { id: 'charge-controller', fr: 'Régulateur de charge', en: 'Charge controller', minor: true },
-  { id: 'dump-load', fr: 'Délesteur', en: 'Dump load', minor: true },
 ];
 
-/** Explode offsets, site frame, metres (every part rises by its own amount; the small devices come forward). */
+/** Explode offsets, site frame, metres (every part rises by its own amount). */
 export const EXPLODE: Record<string, [number, number, number]> = {
   'wind-turbine': [0, 8, 0],
   tower: [0, 4, 0],
   'guy-wires': [0, 2, 0],
   'tower-base': [0, 0.6, 0],
   'cable-run': [0, 1.2, 0],
-  'brake-switch': [0, 0.55, 0.9],
-  rectifier: [0, 0.4, 0.9],
-  fuse: [0, 0.25, 0.9],
-  'charge-controller': [0, 0.45, 0.9],
-  'dump-load': [0, 0.6, 0.9],
-  'battery-bank': [0, 0.5, 1.0],
+  'technical-room': [0, 2, 0],
   house: [0, 2.5, 0],
   obstacles: [0, 3, 0],
 };
@@ -328,7 +318,7 @@ export function createSiteScene(): SiteScene {
     house: house.group,
     obstacles,
   };
-  for (const id of SHED_ID) parts[id] = shed.parts[id];
+  parts['technical-room'] = shedFrame;
   for (const [id, o] of Object.entries(parts)) registry.add(id, o, new THREE.Vector3(...EXPLODE[id]));
 
   // ---- anchors of the labels
@@ -341,7 +331,7 @@ export function createSiteScene(): SiteScene {
     'guy-wires': anchor(guys, 3, 5, 3),
     'tower-base': anchor(base, 0.5, 0.45, 0.5),
   };
-  for (const id of SHED_ID) A[id] = shed.anchors[id];
+  A['technical-room'] = anchor(shedFrame, 0, SHED.wallHeight + 0.7, 0);
 
   const drawn = { mastTop: 0, guyLevels: 0, trees: -1, hub: 0, scale: 0 };
   const rebuild = (hub: number, s: number) => {
@@ -392,12 +382,6 @@ export function createSiteScene(): SiteScene {
     A['guy-wires'].position.copy(guySegs[Math.min(guySegs.length - 1, 4)][1]).add(V(0, 2, 0));
   };
 
-  const hl: Record<string, THREE.Color> = {
-    red: new THREE.Color(0xff3b30),
-    amber: new THREE.Color(0xf5a623),
-    green: new THREE.Color(0x39d353),
-  };
-  const mat1 = new THREE.Color();
   const mod: SiteScene = {
     id: 'site',
     scene,
@@ -435,19 +419,7 @@ export function createSiteScene(): SiteScene {
       sockPivot.rotation.y = 0.05 * Math.sin(view.time * 2.3 + 1) * k;
 
       // switch, LEDs, dump load, charge bar, windows
-      shed.lever.rotation.x = state.brake ? 0.55 : -0.5;
-      shed.ledCharging.emissiveIntensity = state.busPower > 0.5 && !state.brake ? 1.8 : 0.08;
-      shed.ledFull.emissiveIntensity = state.batteryFull || state.dumpActive ? 1.8 : 0.08;
-      shed.glow.emissiveIntensity = state.dumpActive
-        ? 0.4 + 1.8 * clamp(state.dumpPower / (DUMP_MAX_CURRENT * 14), 0, 1)
-        : 0;
-      const lit = Math.round(clamp(state.soc, 0, 1) * 10);
-      const colour = state.soc < 0.2 ? hl.red : state.soc < 0.5 ? hl.amber : hl.green;
-      shed.segments.forEach((m, i) => {
-        m.emissive.copy(mat1.copy(colour));
-        m.color.copy(colour).multiplyScalar(0.35);
-        m.emissiveIntensity = i < lit ? 1.7 : 0.03;
-      });
+      animateShed(shed, state);
       const on = state.loadPower > 0.5 && !state.lvdOpen;
       house.panes.emissiveIntensity = on ? 0.9 + 0.9 * clamp(state.loadPower / 150, 0, 1) : 0;
 

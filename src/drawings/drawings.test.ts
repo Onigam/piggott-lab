@@ -28,7 +28,7 @@ const CONTRACT = [
   { id: 'alternator-section', number: 'PL-04', group: 'alternator', scene: 'alternator' },
   { id: 'stator-winding', number: 'PL-05', group: 'alternator', scene: 'alternator' },
   { id: 'tower-guys', number: 'PL-06', group: 'site', scene: 'site' },
-  { id: 'electrical-schematic', number: 'PL-07', group: 'site', scene: 'site' },
+  { id: 'electrical-schematic', number: 'PL-07', group: 'site', scene: 'shed' },
   { id: 'power-by-size', number: 'PL-08', group: 'performance', scene: 'site' },
 ] as const;
 

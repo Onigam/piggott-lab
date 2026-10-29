@@ -1,4 +1,4 @@
-// The single source of dimensions of the 3D worlds, in metres (BRIEF §5). The four worlds, the part sheets and the drawings
+// The single source of dimensions of the 3D worlds, in metres (BRIEF §5). The five worlds, the part sheets and the drawings
 // all read these constants; nothing is retyped elsewhere. Whatever `src/sim/machine.ts` already knows (rotor diameter, blade
 // count, magnets, coils, stator size, offset, hinge angles) is IMPORTED from there, never repeated; this file only adds
 // geometry.

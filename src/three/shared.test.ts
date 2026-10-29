@@ -9,6 +9,7 @@ import { createBladesScene } from './blades/scene';
 import {
   createAlternatorScene as lazyAlternator,
   createBladesScene as lazyBlades,
+  createShedScene as lazyShed,
   createTurbineScene as lazyTurbine,
 } from './index';
 import { MERGE } from './merge';
@@ -100,8 +101,9 @@ describe('shared pieces', () => {
 });
 
 describe('lazy worlds', () => {
-  it('builds the turbine, alternator and blades worlds at their first use, with the frozen ids', () => {
+  it('builds the shed, turbine, alternator and blades worlds at their first use, with the frozen ids', () => {
     for (const [make, id, world] of [
+      [lazyShed, 'shed', 'shed'],
       [lazyTurbine, 'turbine', 'turbine'],
       [lazyAlternator, 'alternator', 'alternator'],
       [lazyBlades, 'blades', 'blades'],

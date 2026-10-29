@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { l } from '@onigam/lab-kit/i18n';
 import type { Hotspot } from '@onigam/lab-kit/three';
 
-// What the four worlds share: the lighting of a workshop world (paper, soft shadows, like the other labs of the series), the
+// What the five worlds share: the lighting of a workshop world (paper, soft shadows, like the other labs of the series), the
 // hotspot declarations, and the helpers of the tests (positions of anchors).
 
 export interface WorkshopOptions {

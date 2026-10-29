@@ -81,12 +81,12 @@ export const INSTALL: GuideStep[] = [
   {
     id: 'cable',
     scene: 'site',
-    title: l('Tirer le câble vers les batteries', 'Run the cable to the batteries'),
+    title: l('Tirer le câble vers le local technique', 'Run the cable to the technical room'),
     text: lf(
-      'Trois fils partent du mât jusqu’aux batteries. En 12 V le courant est fort, et la perte croît comme son carré : pour 500 W, 6 mm² sur 30 m perdent 38 % de la puissance (plans), 25 mm² seulement 13 %. Souple dans la descente du mât, le câble est protégé par un conduit ou armé au sol. Dans la simulation, 2,5 mm² sur 40 m brûlent ≈ {thinLoss} % à 8 m/s (résultat du modèle).',
-      'Three wires go from the mast to the batteries. At 12 V the current is large, and the loss grows as its square: for 500 W, 6 mm² over 30 m loses 38% of the power (plans), 25 mm² only 13%. Flexible in the mast drop, the cable is protected by conduit or armoured on the ground. In the simulation, 2.5 mm² over 40 m burns ≈ {thinLoss}% at 8 m/s (model result).',
+      'Trois fils partent du mât jusqu’au local technique, où se trouvent les batteries. En 12 V le courant est fort, et la perte croît comme son carré : pour 500 W, 6 mm² sur 30 m perdent 38 % de la puissance (plans), 25 mm² seulement 13 %. Souple dans le mât, il est protégé par un conduit ou armé au sol. Dans la simulation, 2,5 mm² sur 40 m brûlent ≈ {thinLoss} % à 8 m/s (résultat du modèle).',
+      'Three wires go from the mast to the technical room, where the batteries are. At 12 V the current is large, and the loss grows as its square: for 500 W, 6 mm² over 30 m loses 38% of the power (plans), 25 mm² only 13%. Flexible in the mast, it is protected by conduit or armoured on the ground. In the simulation, 2.5 mm² over 40 m burns ≈ {thinLoss}% at 8 m/s (model result).',
     ),
-    parts: ['cable-run'],
+    parts: ['cable-run', 'technical-room'],
     tools: [
       l('Câble souple et câble armé', 'Flexible and armoured cable'),
       l('Conduit', 'Conduit'),
@@ -100,7 +100,7 @@ export const INSTALL: GuideStep[] = [
   },
   {
     id: 'brake',
-    scene: 'site',
+    scene: 'shed',
     title: l('Poser l’interrupteur de freinage', 'Fit the brake switch'),
     text: l(
       'Au pied du mât, près des batteries, les trois fils arrivent d’abord à l’interrupteur de freinage : un interrupteur à deux pôles, de 20 A en 12 V continu. Fermé, il met l’alternateur en court-circuit et le rotor ne tourne plus que très lentement. Ne court-circuitez jamais la batterie : le fusible sauterait. Fermez-le avant de monter, de descendre ou de toucher la machine.',
@@ -120,7 +120,7 @@ export const INSTALL: GuideStep[] = [
   },
   {
     id: 'rectifier',
-    scene: 'site',
+    scene: 'shed',
     title: l('Brancher le redresseur', 'Connect the rectifier'),
     text: l(
       'Après l’interrupteur, les trois fils arrivent au redresseur : n’importe quel fil alternatif sur n’importe quelle borne alternative (les plans prennent deux ponts de diodes pour avoir assez de bornes). Les deux bornes négatives vont au moins de la batterie ; les positives iront à son plus, par le fusible. Fixez les ponts sur un dissipateur, et abritez-les de l’eau : une bouteille en plastique fait un abri de pluie.',
@@ -136,7 +136,7 @@ export const INSTALL: GuideStep[] = [
   },
   {
     id: 'fuse',
-    scene: 'site',
+    scene: 'shed',
     title: l('Mettre le fusible', 'Fit the fuse'),
     text: l(
       'Tout circuit qui part d’une batterie porte un fusible ou un disjoncteur : c’est une règle de sécurité, pas une option. Mettez celui de l’éolienne sur le fil positif entre le redresseur et la batterie, et un autre, séparé, pour la maison. Le calibre n’est pas donné par les plans : il doit protéger le câble. Sertissez les cosses : jamais de pinces crocodiles.',
@@ -156,7 +156,7 @@ export const INSTALL: GuideStep[] = [
   },
   {
     id: 'controller',
-    scene: 'site',
+    scene: 'shed',
     title: l('Installer le régulateur et le délesteur', 'Install the controller and the dump load'),
     text: l(
       'Une batterie au plomb ne doit pas tomber sous 11,5 V ni être chargée au-dessus de 14 V. Un régulateur surveille la tension : au-dessus de 14 V il envoie le surplus au délesteur, une résistance bien ventilée ; sous 11,5 V il débranche la maison. Les plans décrivent un petit circuit à deux relais de 16 A, ou l’on achète un régulateur du commerce.',
@@ -176,7 +176,7 @@ export const INSTALL: GuideStep[] = [
   },
   {
     id: 'battery',
-    scene: 'site',
+    scene: 'shed',
     title: l('Brancher la batterie', 'Connect the battery'),
     text: l(
       'Reliez la batterie 12 V en dernier dans le coffret, interrupteur de freinage fermé. Sertissez des cosses propres et ne posez rien de métallique sur les bornes : les étincelles brûlent, et le gaz d’une batterie au plomb peut exploser. Ventilez le local. Gardez la batterie chargée : en cas de panne de l’éolienne, rechargez-la sous deux semaines. La vidéo ne montre aucune batterie : sa capacité n’est donnée par aucune source.',

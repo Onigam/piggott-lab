@@ -305,7 +305,7 @@ export const LESSONS: Lesson[] = [
       chip('Perte du câble à 12 V (plans)', 'Cable loss at 12 V (plans)', '38 %'),
     ],
     formula: 'P = R · I²',
-    focus: { scene: 'site', part: 'battery-bank', preset: 'hamlet', scenario: 'battery-full' },
+    focus: { scene: 'shed', part: 'battery-bank', preset: 'hamlet', scenario: 'battery-full' },
     quiz: [
       {
         q: l(

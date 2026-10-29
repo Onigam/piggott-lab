@@ -102,7 +102,7 @@ describe('parts catalogue', () => {
     const ids = PARTS.map((p) => p.id);
     expect(new Set(ids).size).toBe(ids.length);
     expect(ids).toEqual(WORLDS.flatMap((w) => partIds(w)));
-    expect(ids.length).toBe(35);
+    expect(ids.length).toBe(36);
   });
 
   it('gives every part the frozen scene and category', () => {
@@ -386,11 +386,12 @@ describe('installation guide', () => {
     expect(INSTALL.length).toBeGreaterThanOrEqual(10);
     expect(INSTALL.length).toBeLessThanOrEqual(13);
     expect(new Set(INSTALL.map((s) => s.id)).size).toBe(INSTALL.length);
-    for (const s of INSTALL) expect(s.scene, s.id).toBe('site');
+    // every step plays in the world of its parts (the technical room has its own), the closing check on the site
+    for (const s of INSTALL) expect(s.scene, s.id).toBe(s.parts.length ? FROZEN[s.parts[0]!]?.scene : 'site');
   });
 
   it('installs every id of site exactly once, and nothing else', () => {
-    expect(guideIds(INSTALL).sort()).toEqual([...partIds('site')].sort());
+    expect(guideIds(INSTALL).sort()).toEqual([...partIds('site'), ...partIds('shed')].sort());
   });
 
   it('has one last step that installs nothing: the first check', () => {
@@ -457,7 +458,7 @@ describe('chapters and overviews', () => {
     expect(CHAPTERS[0]![0]).toBe('00:00');
   });
 
-  it('gives an overview to each of the four worlds: a title and a few short paragraphs', () => {
+  it('gives an overview to each world: a title and a few short paragraphs', () => {
     expect(Object.keys(OVERVIEWS).sort()).toEqual([...WORLDS].sort());
     for (const w of WORLDS) {
       const o = OVERVIEWS[w];
@@ -474,7 +475,8 @@ describe('chapters and overviews', () => {
 
   it('names in bold the parts of each world in its overview', () => {
     const must: Record<WorldId, string[]> = {
-      site: ['mât', 'batteries', 'maison'],
+      site: ['mât', 'local technique', 'maison'],
+      shed: ['batterie', 'délesteur', 'redresseur'],
       turbine: ['rotor', 'alternateur', 'queue'],
       alternator: ['stator', 'bobines', 'entrefer'],
       blades: ['pales', 'disque de moyeu'],

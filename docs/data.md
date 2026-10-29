@@ -1,6 +1,6 @@
 # Data of the Piggott lab (wave 2, data role)
 
-Content only: the 35 part sheets, the two guides, the chapters of the video, the overviews and the interface strings. Facts and figures,
+Content only: the 36 part sheets, the two guides, the chapters of the video, the overviews and the interface strings. Facts and figures,
 no text copied from a source. Sources are named in the texts in words (the video, the wiki, the plans, Tripalium, Service-public,
 the model), never by research code. Tests: `src/data/data.test.ts` (57 pass, 5 `todo` that record known disagreements with `dims.ts`);
 the strings test of `src/panels` is unchanged and passes.
