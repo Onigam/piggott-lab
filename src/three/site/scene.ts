@@ -13,7 +13,6 @@ import { buildHouse, type House } from './house';
 import { minWidthMaterial, pickAlong, type Segments } from './pipes';
 import { animateShed, buildShed, type Shed } from '../shed/room';
 import { createSky } from './sky';
-import { TIMBER } from '../timber';
 import { grassDetail } from '../detail';
 
 // The "site" world: the field at true scale. X = where the wind blows to (it comes from the west and keeps that direction), Y up,
@@ -167,7 +166,7 @@ export function createSiteScene(): SiteScene {
   // ---- cable run: mast foot, along the ground, up a post, to the switch of the shed
   const sx = SHED.x;
   const sz = SHED.z;
-  const shed = buildShed();
+  const shed = buildShed(true);
   const shedFrame = group('shed-frame');
   shedFrame.position.copy(shedAt);
   shedFrame.add(shed.scenery);
@@ -190,7 +189,7 @@ export function createSiteScene(): SiteScene {
   cableLine.uniforms.uPipeRadius.value = SHED.cableRadius;
   cableMesh.castShadow = false;
   const cable = group('cable-run');
-  cable.add(cableMesh, mesh(new THREE.BoxGeometry(0.09, 1.55, 0.09), TIMBER.woodDark(), [3.7, 0.78, sz - 0.8]));
+  cable.add(cableMesh, mesh(new THREE.BoxGeometry(0.09, 1.55, 0.09), MAT.woodDark(), [3.7, 0.78, sz - 0.8]));
   const cableSegs: Segments = route.slice(1).map((p, i) => [route[i], p]);
   pickAlong(
     cableMesh,
@@ -227,7 +226,7 @@ export function createSiteScene(): SiteScene {
   });
   const trunks = new THREE.InstancedMesh(
     new THREE.CylinderGeometry(1, 1.25, 1, 6).translate(0, 0.5, 0),
-    TIMBER.woodDark(),
+    MAT.woodDark(),
     spots.length,
   );
   const crowns = new THREE.InstancedMesh(

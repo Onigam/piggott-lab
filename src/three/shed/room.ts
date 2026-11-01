@@ -41,9 +41,13 @@ const wire = (pts: THREE.Vector3[], mat: THREE.Material, r = 0.004) => mesh(tube
 const v = (x: number, y: number, z: number) => new THREE.Vector3(x, y, z);
 const zc = (d: number) => BOARD_Z + d / 2;
 
-export function buildShed(): Shed {
+/**
+ * `outdoors`: the shed of the site stands in the sun and the sky, not in the paper studio: it keeps the kit's own timber, which the studio's
+ * light turns orange but the site's tone does not (the lab's recoloured timber reads grey there).
+ */
+export function buildShed(outdoors = false): Shed {
   const scenery = group('shed');
-  const timber = TIMBER.woodLight();
+  const timber = outdoors ? MAT.woodLight() : TIMBER.woodLight();
   scenery.add(
     mesh(new THREE.BoxGeometry(SHED.width + 0.3, 0.1, SHED.depth + 0.3), MAT.concrete(), [0, 0.05 - 0.04, 0]),
   );
@@ -82,7 +86,7 @@ export function buildShed(): Shed {
   );
   fading(
     new THREE.BoxGeometry(SHED.boardWidth, SHED.boardHeight, 0.02),
-    TIMBER.osb(),
+    outdoors ? MAT.osb() : TIMBER.osb(),
     [0.1, SHED.boardBottom + SHED.boardHeight / 2, BOARD_Z - 0.01],
     (v) => v.z < 0,
   );

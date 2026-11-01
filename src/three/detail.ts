@@ -14,8 +14,8 @@ const NOISE_GLSL = /* glsl */ `
     return mix( mix( a, b, u.x ), mix( c, d, u.x ), u.y ) * 2.0 - 1.0;
   }
   float dtNoise3( vec3 p ) { return 0.35 * ( dtNoise( p.xy ) + dtNoise( p.yz + 17.3 ) ) + 0.3 * dtNoise( p.zx - 9.1 ); }
-  // 1 while a cell of the pattern spans more than ~3 pixels, 0 once it is under ~1.2
-  float dtKeep( float cellsPerPixel ) { return 1.0 - smoothstep( 0.33, 0.8, cellsPerPixel ); }
+  // 1 while a cell of the pattern spans more than ~6 pixels, 0 once it is under ~2.5 (a pattern of two-pixel cells crawls as the camera moves)
+  float dtKeep( float cellsPerPixel ) { return 1.0 - smoothstep( 0.17, 0.4, cellsPerPixel ); }
 `;
 
 /** Chain a shader edit after a material's own `onBeforeCompile`, and give the program its own cache key. */
@@ -62,21 +62,24 @@ export function grassDetail(mat: THREE.MeshStandardMaterial): void {
           vec3 c = diffuseColor.rgb;
           c = mix( c, c * vec3( 1.10, 1.03, 0.80 ), 0.35 * smoothstep( 0.05, 0.6, macro ) );
           c = mix( c, c * vec3( 0.86, 0.97, 0.86 ), 0.30 * smoothstep( 0.1, 0.7, -macro ) );
-          diffuseColor.rgb = c * ( 1.0 + 0.07 * mid + 0.09 * tufts );
+          diffuseColor.rgb = c * ( 1.0 + 0.07 * mid + 0.06 * tufts );
         }`,
       )
       .replace(
         '#include <normal_fragment_maps>',
         /* glsl */ `#include <normal_fragment_maps>
         {
+          // each octave of the bump fades with its own size on screen: the 4.3 one is under two pixels long before the 1.6 one is
           vec2 p = vDtWorld.xz;
-          float k = 0.026 * dtKeep( max( length( fwidth( p ) ), 1e-4 ) * 1.6 );
-          if ( k > 0.0005 ) {
+          float mpp = max( length( fwidth( p ) ), 1e-4 );
+          float kA = dtKeep( mpp * 1.6 );
+          float kB = dtKeep( mpp * 4.3 );
+          if ( kA + kB > 0.001 ) {
             float e = 0.08;
-            float h0 = dtNoise( p * 1.6 ) + 0.5 * dtNoise( p * 4.3 );
-            float hx = dtNoise( ( p + vec2( e, 0.0 ) ) * 1.6 ) + 0.5 * dtNoise( ( p + vec2( e, 0.0 ) ) * 4.3 );
-            float hz = dtNoise( ( p + vec2( 0.0, e ) ) * 1.6 ) + 0.5 * dtNoise( ( p + vec2( 0.0, e ) ) * 4.3 );
-            normal = normalize( normal - k * ( viewMatrix * vec4( ( hx - h0 ) / e, 0.0, ( hz - h0 ) / e, 0.0 ) ).xyz );
+            float h0 = kA * dtNoise( p * 1.6 ) + 0.5 * kB * dtNoise( p * 4.3 );
+            float hx = kA * dtNoise( ( p + vec2( e, 0.0 ) ) * 1.6 ) + 0.5 * kB * dtNoise( ( p + vec2( e, 0.0 ) ) * 4.3 );
+            float hz = kA * dtNoise( ( p + vec2( 0.0, e ) ) * 1.6 ) + 0.5 * kB * dtNoise( ( p + vec2( 0.0, e ) ) * 4.3 );
+            normal = normalize( normal - 0.018 * ( viewMatrix * vec4( ( hx - h0 ) / e, 0.0, ( hz - h0 ) / e, 0.0 ) ).xyz );
           }
         }`,
       );
@@ -175,6 +178,12 @@ export function contactShadow(w: number, d: number, falloff: number, strength = 
     premultipliedAlpha: true,
     depthWrite: false,
     toneMapped: false,
+    // not fogged: a fogged plane is no longer white, and multiplied over the floor it draws a hard-edged patch from afar
+    fog: false,
+    // a plane a few millimetres over a floor seen from metres away loses the depth test in bands (the 24-bit buffer)
+    polygonOffset: true,
+    polygonOffsetFactor: -2,
+    polygonOffsetUnits: -2,
   });
   const m = new THREE.Mesh(new THREE.PlaneGeometry(W, D), mat);
   m.rotation.x = -Math.PI / 2;

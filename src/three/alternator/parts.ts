@@ -40,7 +40,7 @@ import { TIMBER } from '../timber';
 
 /** Warm amber of the polyester resin of the castings. */
 export const resinMaterial = (): THREE.MeshStandardMaterial =>
-  new THREE.MeshStandardMaterial({ color: 0xc98f3d, roughness: 0.32, metalness: 0 });
+  new THREE.MeshStandardMaterial({ color: 0xc8a063, roughness: 0.32, metalness: 0 });
 
 /** Angles ψ of the four long rotor rods (on the 100 mm circle), the eight magnets (every 45°), the six coils and the three stator rods. */
 export const ROD_ANGLES = ROTOR_RODS.anglesDeg.map((a) => a * DEG);
