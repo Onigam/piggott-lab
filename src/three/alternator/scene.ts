@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { MAT, PartRegistry, group, mesh } from '@onigam/lab-kit/three';
+import { PartRegistry, group, mesh } from '@onigam/lab-kit/three';
 import type { SceneModule } from '@onigam/lab-kit/three';
 import type { PiggottState } from '../../sim/types';
 import { CRADLE, STACK } from '../dims';
@@ -7,6 +7,8 @@ import { paperFloor } from '../common';
 import { mergeStatic } from '../merge';
 import { hotspots, workshopScene, type HotspotDef } from '../world';
 import { AXIS_HEIGHT, createAlternatorModel, type AlternatorModel } from './model';
+import { TIMBER } from '../timber';
+import { applyWear, contactShadow } from '../detail';
 
 // The "alternator" world: the axial-flux alternator on a workbench, axle horizontal, front (blades) on the left. Section
 // (the plane through the axis, the discs stop where it cuts a magnet) and explode (every part slides off along its own
@@ -50,7 +52,7 @@ export function createAlternatorScene(): AlternatorScene {
 
   // wooden holder under the cradle: a post and two boards that hug the disc of the cradle below the housing flange
   const stand = group('stand');
-  const wood = MAT.woodDark();
+  const wood = TIMBER.woodDark();
   const cx = (STACK.cradleFront + STACK.cradleBack) / 2;
   stand.add(mesh(new THREE.BoxGeometry(0.16, 0.03, 0.2), wood, [cx, -AXIS_HEIGHT + 0.015, 0]));
   const top = -0.1;
@@ -67,6 +69,11 @@ export function createAlternatorScene(): AlternatorScene {
   }
   mergeStatic(stand, { name: 'stand' });
   scene.add(stand);
+  // wear on the parts, and the floor a little darker around the stand
+  applyWear(model.root, 100);
+  const contact = contactShadow(0.16, 0.2, 0.06, 0.5);
+  contact.position.set(cx, -AXIS_HEIGHT + 0.0003, 0);
+  scene.add(contact);
 
   const mod: AlternatorScene = {
     id: 'alternator',

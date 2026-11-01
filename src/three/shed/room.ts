@@ -5,6 +5,7 @@ import type { PiggottState } from '../../sim/types';
 import { DEVICES, SHED } from '../dims';
 import { tubeGeometry } from '../common';
 import { dynamic, mergeStatic } from '../merge';
+import { TIMBER } from '../timber';
 
 // The battery shed, cut open at the front and on the left, and the devices on its board: brake switch, rectifier, fuse, charge
 // controller, dump load, battery bank. Frame of the shed: origin on the floor at the middle of the slab, +X to the right, +Z
@@ -42,7 +43,7 @@ const zc = (d: number) => BOARD_Z + d / 2;
 
 export function buildShed(): Shed {
   const scenery = group('shed');
-  const timber = MAT.woodLight();
+  const timber = TIMBER.woodLight();
   scenery.add(
     mesh(new THREE.BoxGeometry(SHED.width + 0.3, 0.1, SHED.depth + 0.3), MAT.concrete(), [0, 0.05 - 0.04, 0]),
   );
@@ -81,7 +82,7 @@ export function buildShed(): Shed {
   );
   fading(
     new THREE.BoxGeometry(SHED.boardWidth, SHED.boardHeight, 0.02),
-    MAT.osb(),
+    TIMBER.osb(),
     [0.1, SHED.boardBottom + SHED.boardHeight / 2, BOARD_Z - 0.01],
     (v) => v.z < 0,
   );

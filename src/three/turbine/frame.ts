@@ -18,6 +18,7 @@ import {
 } from '../dims';
 import { CABLE_EXIT_X } from '../alternator/parts';
 import { TAU, crispRuns, lathe, ringX, seg, tubeGeometry, type Detail } from '../common';
+import { TIMBER } from '../timber';
 
 // The steel of the head, in the HEAD frame (origin on the yaw axis at the height of the axle, X towards the tail, see dims.ts):
 // the angle iron with the yaw pipe under it, the fixed half of the yaw bearing (stub, collar, washer, mast cap and a piece of
@@ -218,7 +219,7 @@ export function buildTailVane(detail: Detail): THREE.Group {
   const centre = B0.clone()
     .multiplyScalar(TAIL.boomLength - TAIL.barWidth / 2 + TAIL.vaneLength / 2)
     .addScaledVector(SIDE, lateral);
-  const plate = mesh(new THREE.BoxGeometry(TAIL.vaneLength, TAIL.vaneHeight, TAIL.vaneThickness), MAT.woodLight());
+  const plate = mesh(new THREE.BoxGeometry(TAIL.vaneLength, TAIL.vaneHeight, TAIL.vaneThickness), TIMBER.woodLight());
   plate.quaternion.copy(quat);
   plate.position.copy(centre);
   g.add(plate);

@@ -32,6 +32,7 @@ import {
   tubeGeometry,
   type Detail,
 } from '../common';
+import { TIMBER } from '../timber';
 
 // The builders of the alternator parts, in the ALTERNATOR frame (docs in dims.ts): X along the stub axle, front towards -X, origin
 // on the axis in the mid-plane of the stator, ψ from +Y towards +Z. Each builder returns a group at the origin; the model
@@ -433,8 +434,8 @@ export const MOULD_LAYOUT = { x: 0.3, z: 0 };
 
 export function buildMoulds(): THREE.Group {
   const g = group('moulds');
-  const ply = MAT.woodLight();
-  const dark = MAT.woodDark();
+  const ply = TIMBER.woodLight();
+  const dark = TIMBER.woodDark();
   const grey = MAT.printGrey();
   const north = MAT.magnetN();
   const pin = MAT.zinc();

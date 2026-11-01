@@ -1,9 +1,10 @@
 import * as THREE from 'three';
-import { MAT, group, mesh } from '@onigam/lab-kit/three';
+import { group, mesh } from '@onigam/lab-kit/three';
 import { BLADE, HUB_DISC, M12, ROTOR_DISC, ROTOR_RODS } from '../dims';
 import { DEG, TAU, discShape, extrudeX, polyShape, seg, shapePoint, type Detail } from '../common';
 import { mergeStatic } from '../merge';
 import { bladeGeometry } from './geometry';
+import { TIMBER } from '../timber';
 
 // The rotor assembly: three carved blades clamped between a plywood disc (behind, the extrados side) and a plywood triangle
 // (in front), in the ROTOR frame (X along the axle, origin on the rear face of the disc, everything in front at x' <= 0). The
@@ -56,7 +57,7 @@ export function createRotorModel(detail: Detail = 'full'): RotorModel {
   const geo = bladeGeometry();
   geo.translate(-HUB_DISC.thickness, 0, 0);
   for (let k = 0; k < BLADE.count; k++) {
-    const b = mesh(geo, MAT.wood());
+    const b = mesh(geo, TIMBER.wood());
     b.rotation.x = (k * TAU) / BLADE.count;
     b.name = `blade-${k}`;
     blades.add(b);
@@ -70,7 +71,7 @@ export function createRotorModel(detail: Detail = 'full'): RotorModel {
     r: M12.clearanceHole / 2,
     at: shapePoint(ROTOR_DISC.boltCircleDiameter / 2, 0, psi),
   }));
-  const ply = MAT.osb();
+  const ply = TIMBER.osb();
   const recess = { r: HUB_DISC.recess / 2, at: [0, 0] as [number, number] };
   hub.add(
     mesh(

@@ -8,6 +8,8 @@ import { mergeStatic } from '../merge';
 import { anchor, hotspots, workshopScene, type HotspotDef } from '../world';
 import { sectionOutline } from './geometry';
 import { createRotorModel, type RotorModel } from './rotor';
+import { TIMBER } from '../timber';
+import { applyWear, contactShadow } from '../detail';
 
 // The "blades" world: the carving of the blades. The rotor lies flat on a balancing post (front up, the plywood disc on the post), a timber blank with the
 // station lines is drawn on the bench beside it and the six station templates lie in a row. Metres, Y up, the paper floor at
@@ -33,7 +35,7 @@ function buildBlank(): THREE.Group {
   const g = group('blade-blank');
   const t = BLADE.rootThickness;
   const w = BLADE.rootWidth;
-  g.add(mesh(new THREE.BoxGeometry(BLADE.blankLength, t, w), MAT.woodLight(), [BLADE.blankLength / 2, t / 2, 0]));
+  g.add(mesh(new THREE.BoxGeometry(BLADE.blankLength, t, w), TIMBER.woodLight(), [BLADE.blankLength / 2, t / 2, 0]));
   const line = (x0: number, z0: number, x1: number, z1: number) => {
     const len = Math.hypot(x1 - x0, z1 - z0);
     const m = mesh(new THREE.BoxGeometry(len, 0.0006, 0.0016), MAT.printBlack(), [
@@ -99,7 +101,7 @@ function buildTemplates(): THREE.Group {
       plate.holes.push(dot);
     }
     const geo = new THREE.ExtrudeGeometry(plate, { depth: t, bevelEnabled: false, curveSegments: 10 });
-    const plateMesh = mesh(geo, MAT.wood(), [x, 0, 0]);
+    const plateMesh = mesh(geo, TIMBER.wood(), [x, 0, 0]);
     plateMesh.rotation.x = -0.35; // leaning back on the rail, facing the viewer
     g.add(plateMesh);
     x += p.width + gap;
@@ -128,15 +130,19 @@ export function createBladesScene(): BladesScene {
   // balancing post: the rotor stands on it by its hub (unregistered: scenery of the bench)
   const post = group('post');
   post.add(
-    mesh(new THREE.CylinderGeometry(POST.radius, POST.radius * 1.15, POST.height, 32), MAT.woodDark(), [
+    mesh(new THREE.CylinderGeometry(POST.radius, POST.radius * 1.15, POST.height, 32), TIMBER.woodDark(), [
       0,
       POST.height / 2,
       0,
     ]),
   );
-  post.add(mesh(new THREE.BoxGeometry(0.42, 0.03, 0.42), MAT.woodDark(), [0, 0.015, 0]));
+  post.add(mesh(new THREE.BoxGeometry(0.42, 0.03, 0.42), TIMBER.woodDark(), [0, 0.015, 0]));
   mergeStatic(post, { name: 'post' });
   scene.add(post);
+  // the floor a little darker around the post's base
+  const contact = contactShadow(0.42, 0.42, 0.14, 0.5);
+  contact.position.set(0, 0.0003, 0);
+  scene.add(contact);
 
   const registry = new PartRegistry();
   const model = createRotorModel('full');
@@ -145,6 +151,7 @@ export function createBladesScene(): BladesScene {
   model.root.position.y = POST.height;
   model.blur.visible = false;
   scene.add(model.root);
+  applyWear(model.root, 40); // wear on the parts
 
   const blank = buildBlank();
   blank.rotation.y = Math.PI / 2; // lies along the table, root end towards the viewer
@@ -152,7 +159,7 @@ export function createBladesScene(): BladesScene {
   const templates = buildTemplates();
   templates.position.set(...TEMPLATES_AT);
   // a low rail behind the templates holds them upright (scenery)
-  const rail = mesh(new THREE.BoxGeometry(1.05, 0.02, 0.03), MAT.woodDark(), [
+  const rail = mesh(new THREE.BoxGeometry(1.05, 0.02, 0.03), TIMBER.woodDark(), [
     TEMPLATES_AT[0],
     0.01,
     TEMPLATES_AT[2] - 0.015,

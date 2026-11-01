@@ -7,6 +7,7 @@ import { FlowDots, paperFloor, tubeGeometry } from '../common';
 import { mergeStatic } from '../merge';
 import { hotspots, workshopScene, type HotspotDef } from '../world';
 import { BOARD_Z, animateShed, buildShed, type Shed, type ShedPartId } from './room';
+import { TIMBER } from '../timber';
 
 // The "shed" world: the technical room, at the size of the room (a garden shed, estimate), open on the front and on the left.
 // The brake switch, the rectifier, the fuse, the charge controller and the dump load are fixed on a plywood board on the back
@@ -80,7 +81,7 @@ export function createShedScene(): ShedScene {
   const cableCurve = new THREE.CatmullRomCurve3(cableRoute, false, 'centripetal', 0.2);
   stubs.add(mesh(tubeGeometry(cableCurve.getPoints(60), SHED.cableRadius, 60, 6), cableMat));
   stubs.add(
-    mesh(new THREE.BoxGeometry(0.09, DEVICES.brakeSwitch.y + 0.1, 0.09), MAT.woodDark(), [post[0], 0.83, post[1]]),
+    mesh(new THREE.BoxGeometry(0.09, DEVICES.brakeSwitch.y + 0.1, 0.09), TIMBER.woodDark(), [post[0], 0.83, post[1]]),
   );
   const out = shed.houseOut;
   const supply = [out.clone(), V(1.2, out.y - 0.1, -0.7), V(1.55, 1.2, -0.7), V(1.55, 0.03, -0.7), V(2.6, 0.03, -0.7)];

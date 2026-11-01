@@ -13,6 +13,8 @@ import { buildHouse, type House } from './house';
 import { minWidthMaterial, pickAlong, type Segments } from './pipes';
 import { animateShed, buildShed, type Shed } from '../shed/room';
 import { createSky } from './sky';
+import { TIMBER } from '../timber';
+import { grassDetail } from '../detail';
 
 // The "site" world: the field at true scale. X = where the wind blows to (it comes from the west and keeps that direction), Y up,
 // Z south, origin on the ground at the foot of the mast. The mast height, the height of the trees and the rotor diameter come from
@@ -82,7 +84,9 @@ function meadow(): THREE.Mesh {
     col.set([tmp.r, tmp.g, tmp.b], i * 3);
   }
   g.setAttribute('color', new THREE.BufferAttribute(col, 3));
-  const m = new THREE.Mesh(g, new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 1 }));
+  const mat = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 1 });
+  grassDetail(mat); // patches and tufts of the grass, each fading before it is under two pixels
+  const m = new THREE.Mesh(g, mat);
   m.receiveShadow = true;
   m.name = 'ground';
   return m;
@@ -91,6 +95,8 @@ function meadow(): THREE.Mesh {
 export function createSiteScene(): SiteScene {
   const scene = new THREE.Scene();
   scene.name = 'site';
+  // the valley's own tone (kit 0.5 `scene.userData.look`)
+  scene.userData.look = { toneMapping: 'neutral', exposure: 1.2 };
   const registry = new PartRegistry();
   const sky = createSky(scene);
   sky.focusShadow(V(8, 3, 6), 46);
@@ -184,7 +190,7 @@ export function createSiteScene(): SiteScene {
   cableLine.uniforms.uPipeRadius.value = SHED.cableRadius;
   cableMesh.castShadow = false;
   const cable = group('cable-run');
-  cable.add(cableMesh, mesh(new THREE.BoxGeometry(0.09, 1.55, 0.09), MAT.woodDark(), [3.7, 0.78, sz - 0.8]));
+  cable.add(cableMesh, mesh(new THREE.BoxGeometry(0.09, 1.55, 0.09), TIMBER.woodDark(), [3.7, 0.78, sz - 0.8]));
   const cableSegs: Segments = route.slice(1).map((p, i) => [route[i], p]);
   pickAlong(
     cableMesh,
@@ -221,7 +227,7 @@ export function createSiteScene(): SiteScene {
   });
   const trunks = new THREE.InstancedMesh(
     new THREE.CylinderGeometry(1, 1.25, 1, 6).translate(0, 0.5, 0),
-    MAT.woodDark(),
+    TIMBER.woodDark(),
     spots.length,
   );
   const crowns = new THREE.InstancedMesh(

@@ -3,6 +3,7 @@ import { MAT, group, mesh } from '@onigam/lab-kit/three';
 import { HOUSE } from '../dims';
 import { tubeGeometry } from '../common';
 import { dynamic, mergeStatic } from '../merge';
+import { TIMBER } from '../timber';
 
 // The house the battery serves: stone walls, a slate roof, a chimney, windows whose panes glow when the house draws power. Frame:
 // origin on the ground under the middle, +Z = south (the front, with the door). The supply cable (from the shed) is a tube given
@@ -24,7 +25,7 @@ export function buildHouse(supply: THREE.Vector3[]): House {
   const rise = HOUSE.ridgeRise;
   const walls = MAT.stone();
   const roof = MAT.slate();
-  const wood = MAT.woodDark();
+  const wood = TIMBER.woodDark();
   g.add(mesh(new THREE.BoxGeometry(L + 0.4, 0.3, W + 0.4), MAT.concrete(), [0, 0.05, 0]));
   g.add(mesh(new THREE.BoxGeometry(L, Hh, W), walls, [0, 0.2 + Hh / 2, 0]));
   const gable = new THREE.Shape();
@@ -55,7 +56,7 @@ export function buildHouse(supply: THREE.Vector3[]): House {
     emissive: 0xffc46b,
     emissiveIntensity: 0,
   });
-  const frame = MAT.woodLight();
+  const frame = TIMBER.woodLight();
   const window = (x: number, z: number, dir: number) => {
     g.add(mesh(new THREE.BoxGeometry(1.1, 1.3, 0.08), frame, [x, 0.2 + 1.5, z + dir * 0.02]));
     const p = mesh(new THREE.BoxGeometry(0.94, 1.14, 0.06), panes, [x, 0.2 + 1.5, z + dir * 0.05]);

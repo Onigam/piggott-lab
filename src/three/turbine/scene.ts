@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { MAT, PartRegistry, group, mesh } from '@onigam/lab-kit/three';
+import { PartRegistry, group, mesh } from '@onigam/lab-kit/three';
 import type { SceneModule } from '@onigam/lab-kit/three';
 import type { PiggottState } from '../../sim/types';
 import { HEAD_Y, YAW } from '../dims';
@@ -8,6 +8,8 @@ import { mergeStatic } from '../merge';
 import { hotspots, workshopScene, type HotspotDef } from '../world';
 import { createHead, type HeadModel } from './model';
 import { MAST_BLOCK } from './frame';
+import { TIMBER } from '../timber';
+import { applyWear, contactShadow } from '../detail';
 
 // The "turbine" world: the whole machine on its mast top at workshop scale (the 1.2 m machine of the video), the mast piece
 // planted in a wooden block on the bench. The head yaws about the mast axis and the tail swings about its inclined hinge, as
@@ -51,7 +53,7 @@ export function createTurbineScene(): TurbineScene {
   // the wooden block that holds the foot of the mast piece (scenery, unregistered)
   const block = group('block');
   block.add(
-    mesh(new THREE.BoxGeometry(MAST_BLOCK.size, MAST_BLOCK.height, MAST_BLOCK.size), MAT.woodDark(), [
+    mesh(new THREE.BoxGeometry(MAST_BLOCK.size, MAST_BLOCK.height, MAST_BLOCK.size), TIMBER.woodDark(), [
       0,
       FLOOR_Y + MAST_BLOCK.height / 2,
       0,
@@ -59,6 +61,11 @@ export function createTurbineScene(): TurbineScene {
   );
   mergeStatic(block, { name: 'block' });
   scene.add(block);
+  // wear on the parts, and the floor a little darker around the block
+  applyWear(model.root, 60);
+  const contact = contactShadow(MAST_BLOCK.size, MAST_BLOCK.size, 0.12, 0.5);
+  contact.position.set(0, FLOOR_Y + 0.0003, 0);
+  scene.add(contact);
 
   const mod: TurbineScene = {
     id: 'turbine',
