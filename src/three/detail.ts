@@ -151,10 +151,10 @@ export function contactShadow(w: number, d: number, falloff: number, strength = 
     for (let i = 0; i < N; i++) {
       const dx = Math.max(0, Math.abs(((i + 0.5) / N - 0.5) * W) - w / 2);
       const dz = Math.max(0, Math.abs(((j + 0.5) / N - 0.5) * D) - d / 2);
-      // 0 inside the footprint, rising over the first fifth of the falloff, then fading: no hard dark line at the body's foot,
+      // 0 inside the footprint, rising over the first two fifths of the falloff, then fading: no hard dark line at the body's foot,
       // which would draw a strong edge that crawls as the camera moves
       const t = dx > 0 || dz > 0 ? Math.hypot(dx, dz) / falloff : 0;
-      const rise = Math.min(1, t / 0.2);
+      const rise = Math.min(1, t / 0.4);
       const a = t > 0 ? rise * rise * (3 - 2 * rise) * Math.max(0, 1 - t) : 0;
       const v = strength * a;
       const k = (j * N + i) * 4;
