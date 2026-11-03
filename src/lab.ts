@@ -102,7 +102,7 @@ function about(ctx: AppContext<PiggottSim>): HTMLElement[] {
 
 export const lab: LabDefinition<PiggottSim> = {
   id: 'piggott-lab',
-  brand: { title: 'PIGGOTT LAB', tagline: strL('tagline'), icon: './favicon.svg' },
+  brand: { title: 'PIGGOTT LAB', tagline: strL('tagline') },
   sim: new PiggottSim(),
   defaultScene: 'site',
   video: { id: 'e_sZ3tH_15E' },
