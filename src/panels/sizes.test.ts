@@ -1,5 +1,6 @@
 import { afterEach, beforeAll, describe, expect, it } from 'vitest';
 import { setLang } from '@onigam/lab-kit/i18n';
+import { SERIES_COLORS } from '@onigam/lab-kit/ui';
 import { num, t } from '../i18n/ui';
 import { PiggottSim } from '../sim/engine';
 import { nameplate } from '../sim/yield';
@@ -14,8 +15,8 @@ import {
   sizesChartData,
   sizesTable,
 } from './model';
-import { SizesSection } from './sizes';
-import { FakeElement, installFakeDom } from './test-dom';
+import { RAMP, SizesSection } from './sizes';
+import { FakeElement, fakeDocument, installFakeDom } from './test-dom';
 
 // The Sizes section of the simulation panel: the data behind its chart (seven curves of the family, ordered, the 1.2 m one the
 // model's own curve, the figures that docs/research.md §9 and the lessons quote), the lazy cache, and the section itself in
@@ -208,6 +209,22 @@ describe('the section in the panel', () => {
     expect(text(el)).toContain('Taille réglée 3,6 m');
     expect(text(el)).not.toContain('undefined');
     expect(text(el)).not.toContain('NaN');
+  });
+  it('draws the family in the blues of the theme, the set size in copper in both', () => {
+    setLang('fr');
+    const drawn = (theme: string): string[] => {
+      fakeDocument.documentElement.dataset.theme = theme;
+      const section = new SizesSection(() => 1.2);
+      const el = section.build() as unknown as FakeElement;
+      el.open = true;
+      for (let i = 0; i < 10; i++) section.tick();
+      const opts = (section as unknown as { chartOpts: { series: { key: string; color: string }[] } }).chartOpts;
+      return opts.series.filter((s) => s.key !== 'rated').map((s) => s.color);
+    };
+    const colours = (ramp: readonly string[]) => ramp.map((c, i) => (i === 1 ? SERIES_COLORS.dump : c)); // 1.2 m is the set size
+    expect(drawn('light')).toEqual(colours(RAMP.light));
+    expect(drawn('dark')).toEqual(colours(RAMP.dark));
+    delete fakeDocument.documentElement.dataset.theme;
   });
   it('is rebuilt with the language but stays open once the visitor has opened it', () => {
     setLang('fr');

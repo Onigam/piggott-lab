@@ -1,5 +1,5 @@
 import { getLang } from '@onigam/lab-kit/i18n';
-import { fill, h, LineChart, SERIES_COLORS, section as kitSection, type SeriesDef } from '@onigam/lab-kit/ui';
+import { fill, h, isDark, LineChart, SERIES_COLORS, section as kitSection, type SeriesDef } from '@onigam/lab-kit/ui';
 import { num, t } from '../i18n/ui';
 import {
   pendingSizes,
@@ -17,8 +17,14 @@ import {
 // closed at first and computes nothing until it is opened; then one curve per frame (about 12 ms each), cached for good
 // (model.ts), and it draws again only when the set diameter or the language changes. Nothing is allocated per frame.
 
-/** From light (1.0 m) to dark (4.2 m): the size reads as a darkening of the kit's blue. */
-const RAMP = ['#9cc7e4', '#7db3d8', '#5a9ccb', '#3b86bd', '#2a6f9f', '#1f5a82', '#16456a'];
+/**
+ * From faint (1.0 m) to strong (4.2 m) on the card: the size reads as a blue that stands out more, darker on the light card, paler on the dark one. A canvas cannot read
+ * `var()`, and seven stages do not stay apart in the narrow band of blues that hold 3:1 on both cards, so each theme has its list. `model.test.ts` reads them.
+ */
+export const RAMP = {
+  light: ['#4a8fc2', '#3a7fb3', '#2f6fa1', '#26608e', '#1e5079', '#174164', '#10324f'],
+  dark: ['#3f89bf', '#4f97ca', '#67a7d4', '#82b8dd', '#9dc9e6', '#b9daee', '#d6ebf6'],
+} as const;
 const SET_COLOUR = SERIES_COLORS.dump;
 
 type ChartOpts = ConstructorParameters<typeof LineChart>[0];
@@ -87,12 +93,13 @@ export class SizesSection {
 
   /** The curves of the family (the set size in copper and bold), the set size on its own when it is not in the family, its label. */
   private seriesFor(d: SizesChartData, set: number): SeriesDef[] {
+    const ramp = isDark() ? RAMP.dark : RAMP.light;
     const family = SIZE_DIAMETERS.map((size, i): SeriesDef => {
       const on = sizeKey(size) === d.setKey;
       return {
         key: sizeKey(size),
         label: () => `${num(size, 1)} m`,
-        color: on ? SET_COLOUR : (RAMP[i] ?? SERIES_COLORS.hydro),
+        color: on ? SET_COLOUR : (ramp[i] ?? SERIES_COLORS.hydro),
         bold: on,
       };
     });

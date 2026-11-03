@@ -155,14 +155,29 @@ export function moreReadouts(s: PiggottState): Readout[] {
   ];
 }
 
+/**
+ * The gold of the charts and the chain, on the panel's card in both themes. The kit's own, `SERIES_COLORS.pv` and `--sun`, is 2.5:1 on the light card, under the
+ * 3:1 of a graphic; this one holds 3.4:1 in light and 4.1:1 in dark, as in the mass heater and the gravity battery (`docs/kit-requests.md`, 16). `model.test.ts` reads it.
+ */
+export const GOLD = '#a98000';
+
+/** The stages of the power chain and their legend. None of them colours a text: the legend's words are the kit's. `model.test.ts` reads them on both cards. */
+export const CHAIN_COLOUR = {
+  battery: 'var(--water)',
+  bearings: 'var(--ink-4)',
+  copper: 'var(--copper)',
+  diodes: GOLD,
+  cable: 'var(--violet)',
+} as const;
+
 /** The segments of the power chain, W: what the battery gets and what each stage burns (they add up to the rotor power). */
 export function chainSegments(s: PiggottState): { key: UiKey; watts: number; colour: string }[] {
   return [
-    { key: 'chainBattery', watts: Math.max(0, s.busPower), colour: 'var(--water)' },
-    { key: 'chainBearings', watts: Math.max(0, s.frictionLoss), colour: 'var(--ink-4)' },
-    { key: 'chainCopper', watts: Math.max(0, s.copperLoss), colour: 'var(--copper)' },
-    { key: 'chainDiodes', watts: Math.max(0, s.diodeLoss), colour: 'var(--sun)' },
-    { key: 'chainCable', watts: Math.max(0, s.cableLoss), colour: 'var(--violet)' },
+    { key: 'chainBattery', watts: Math.max(0, s.busPower), colour: CHAIN_COLOUR.battery },
+    { key: 'chainBearings', watts: Math.max(0, s.frictionLoss), colour: CHAIN_COLOUR.bearings },
+    { key: 'chainCopper', watts: Math.max(0, s.copperLoss), colour: CHAIN_COLOUR.copper },
+    { key: 'chainDiodes', watts: Math.max(0, s.diodeLoss), colour: CHAIN_COLOUR.diodes },
+    { key: 'chainCable', watts: Math.max(0, s.cableLoss), colour: CHAIN_COLOUR.cable },
   ];
 }
 

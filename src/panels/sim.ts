@@ -18,6 +18,7 @@ import { nameplate, type CurvePoint, type YearlyYield } from '../sim/yield';
 import type { PiggottParams, PresetId, ScenarioId } from '../sim/types';
 import {
   chainSegments,
+  GOLD,
   cpChartData,
   liveChartData,
   mainReadouts,
@@ -103,8 +104,8 @@ export class SimPanel implements PanelController {
     this.powerOpts = {
       height: 180,
       series: [
-        { key: 'wind', label: () => t('seriesWindPower'), color: SERIES_COLORS.pv },
-        { key: 'betz', label: () => t('seriesBetz'), color: SERIES_COLORS.pv, dash: true },
+        { key: 'wind', label: () => t('seriesWindPower'), color: GOLD },
+        { key: 'betz', label: () => t('seriesBetz'), color: GOLD, dash: true },
         { key: 'rotor', label: () => t('seriesRotor'), color: SERIES_COLORS.load },
         { key: 'battery', label: () => t('seriesBattery'), color: SERIES_COLORS.hydro, bold: true },
         { key: 'rated', label: () => t('seriesRated'), color: SERIES_COLORS.dump, dash: true },
@@ -122,7 +123,7 @@ export class SimPanel implements PanelController {
       height: 130,
       series: [
         { key: 'cp', label: () => t('seriesCp'), color: SERIES_COLORS.load, bold: true },
-        { key: 'betz', label: () => t('seriesBetzCp'), color: SERIES_COLORS.pv, dash: true },
+        { key: 'betz', label: () => t('seriesBetzCp'), color: GOLD, dash: true },
       ],
       yMax: 0.6,
       yFmt: (v) => num(v, 1),

@@ -150,3 +150,12 @@ and `earth`), and `View.polyline` cannot draw a hole (a plate with its cut-out i
   `View.angle(centre, radius, a0, a1, label)` (the sheets draw an arc and a text by hand four times).
 - **Why**: layout checks in the tests (nothing under the title block) and legible sections without tricks.
 - **Needed by**: Piggott (PL-03, PL-04, PL-05), the ram lab (chamber section).
+
+## 16. `--sun` as a line on the light card
+
+`SERIES_COLORS.pv` reads `--sun`, `#c99700` in light: 2.5:1 on the card, under the 3:1 of a graphic (the mass heater's request 19). The three gold curves of the simulation and the diodes' stage of the chain use
+this lab's `GOLD`, `#a98000`, 3.4:1 in light and 4.1:1 in dark, which no longer follows the theme.
+
+- **What**: a darker `--sun` in light.
+- **Why**: the charts could go back to the kit's gold, in every lab that has its own.
+- **Needed by**: Piggott, the mass heater, the gravity battery.
